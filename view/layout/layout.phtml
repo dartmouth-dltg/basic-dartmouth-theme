@@ -1,0 +1,64 @@
+<?php
+$escape = $this->plugin('escapeHtml');
+$siteTitle = $site->title();
+$this->htmlElement('html')->setAttribute('lang', $this->lang());
+$this->headMeta()->setCharset('utf-8');
+$this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1');
+$this->headTitle($siteTitle)->setSeparator(' · ');
+$this->headTitle()->append($this->setting('installation_title', 'Omeka S'));
+$this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
+$this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
+$this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700italic,700');
+$this->headScript()->prependFile($this->assetUrl('js/default.js'));
+$this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
+$this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
+$this->jsTranslate();
+$this->trigger('view.layout');
+$userBar = $this->userBar();
+?>
+<?php echo $this->doctype(); ?>
+<?php echo $this->htmlElement('html'); ?>
+    <head>
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headTitle(); ?>
+        <?php echo $this->headLink(); ?>
+        <?php echo $this->headStyle(); ?>
+        <?php echo $this->headScript(); ?>
+        
+        <style>
+            <?php if ($accentColor = $this->themeSetting('accent_color')): ?>
+            a:link,
+            a:visited {
+                color: <?php echo $accentColor; ?>
+            }
+            
+            a:active,
+            a:hover {
+                color: <?php echo $accentColor; ?>;
+                opacity: .75;
+            }
+            <?php endif; ?>
+        </style>
+    </head>
+
+    <?php echo $this->htmlElement('body'); ?>
+        <a id="skipnav" href="#content"><?php echo $this->translate('Skip to main content'); ?></a>
+        <?php echo $userBar; ?>
+        <header>
+            <h1>
+                <a href="<?php echo $site->url(); ?>" class="site-title">
+                    <img src="<?php echo $this->assetUrl('img/dartmouth-library-logo-square.png') ?>" />
+                    <?php echo $escape($siteTitle); ?>
+                </a>
+            </h1>
+        </header>
+        <div id="content" role="main"
+            <?php echo $this->content; ?>
+        </div>
+        <footer>
+            <div class="admin-link">
+                <a href="<?php echo implode(array_diff(explode("/", $site->adminUrl()),['site','s',$site->slug()]),"/"); ?>">Omeka-S Login</a>
+            </div>
+        </footer>
+    </body>
+</html>

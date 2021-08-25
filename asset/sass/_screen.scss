@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $bg;
+    font-family: "Verdana", sans-serif;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+a:link {
+    text-decoration: none;
+    color: $link;
+}
+
+a:visited {
+    color: $link;
+}
+
+a:active,
+a:hover {
+    color: $blue;
+}
+
+h1 {
+    font-size: 1.75 * $base-font-size;
+    line-height: 1.75 * $base-line-height;
+}
+
+h2 {
+    font-size: 1.5 * $base-font-size;
+    line-height: 1.5 * $base-line-height;
+}
+
+h3 {
+    font-size: 1.25 * $base-font-size;
+    line-height: 1.5 * $base-line-height;
+}
+
+h4 {
+    font-size: 1.125 * $base-font-size;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* @group ----- Navigation ----- */
+
+#skipnav {
+  position: fixed;
+  top: $spacing-l;
+  left: 50%;
+  border: 1px solid $gray;
+  transform: translateX(-50%);
+  z-index: -5;
+  padding: $spacing-s;
+  background-color: #fff;
+  opacity: 0;
+  
+  &:focus {
+    z-index: 1000;
+    opacity: 1;
+  }
+}
+/* @end */
+
+/* @group ----- Header ----- */
+
+.site-title h1 {
+    font-size: 1.25 * $base-font-size;
+    line-height: $base-line-height;
+    padding-right: $base-line-height;
+}
+
+header {
+    margin: 0 0 $spacing-m 0;
+    background-color: $dartgreen;
+    border-bottom: 1px solid $light;
+    position: relative;
+
+    & > * {
+        @include container;
+        padding: 0 gutter();
+        display: block;
+    }
+}
+
+.site-title:hover,
+.site-title:active {
+    border-bottom: 0;
+}
+
+.site-title h1 {
+    margin: 0;
+}
+
+header h1 {
+  margin: 0 0 $spacing-m 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  a,
+  a:active,
+  a:hover,
+  a:focus,
+  a:visited {
+    color: $white;
+  }
+  img {
+    float: left;
+    max-height: 65px;
+    padding: 10px 10px 10px 0;
+  }
+}
+
+/* @end */
+
+/* @group ----- Footer ----- */
+
+footer {
+    @include container;
+    padding: $spacing-l gutter() $spacing-l;
+    clear: both;
+    background-color: $gray-dark;
+    a,
+    a:active,
+    a:focus,
+    a:hover,
+    a:visited {
+      color: $white;
+    }
+    
+}
+
+/* @end */
+
+/* @group ----- Page and Blocks ----- */
+
+#content {
+    @include container;
+    padding: 0 gutter() $spacing-l;
+    line-height: normal;
+    color: $gray-dark;
+}
+
+/* @end */
+
+
+/* @group ----- Show ----- */
+
+.property {
+    margin-bottom: $spacing-l;
+}
+
+.property h4 {
+    margin-bottom: 0;
+    font-size: .75 * $base-font-size;
+}
+
+.resource-link img {
+    width: auto;
+    height: 1.5 * $spacing-l;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: $spacing-s;
+}
+
+.property .value a {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.property .value:not(:last-child) img {
+    margin-bottom: $spacing-s;
+}
+
+.property .value:not(:last-child) img + a {
+    margin-bottom: $spacing-s;
+}
+
+.property .value .language {
+    background-color: lighten($gray, 15%);
+    padding: .5 * $spacing-s;
+    font-size: .5 * $base-font-size;
+}
+
+.property .private:after {
+    content: "\f070";
+    font-family: "Font Awesome 5 Free";
+    font-size: .75 * $base-font-size;
+}
+
+#content .media.resource {
+    display: inline-block;
+    text-align: center;
+    vertical-align: bottom;
+    margin-right: $spacing-s;
+
+    &:hover {
+        border-bottom: 0;
+    }
+}
+
+#content .media.resource img {
+    vertical-align: top;
+    margin-bottom: $spacing-m;
+}
+
+.media-render > * {
+    max-width: 100%;
+}
+
+#linked-resources caption {
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 3px solid $gray;
+    padding: $spacing-s $spacing-m ($spacing-s - 3px);
+}
+
+#linked-filter h4 {
+    margin-bottom: $spacing-m;
+}
+
+#linked-resources .resource-link {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* @end */
