@@ -79,7 +79,7 @@ img {
 
 .site-title h1 {
     font-size: 1.25 * $base-font-size;
-    line-height: $base-line-height;
+    line-height: normal;
     padding-right: $base-line-height;
 }
 
@@ -188,86 +188,24 @@ footer {
 
 /* @end */
 
-
-/* @group ----- Show ----- */
-
-.property {
-    margin-bottom: $spacing-l;
-}
-
-.property h4 {
-    margin-bottom: 0;
-    font-size: .75 * $base-font-size;
-}
-
-.resource-link img {
-    width: auto;
-    height: 1.5 * $spacing-l;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: $spacing-s;
-}
-
-.property .value a {
-    display: inline-block;
-    vertical-align: bottom;
-}
-
-.property .value:not(:last-child) img {
-    margin-bottom: $spacing-s;
-}
-
-.property .value:not(:last-child) img + a {
-    margin-bottom: $spacing-s;
-}
-
-.property .value .language {
-    background-color: lighten($gray, 15%);
-    padding: .5 * $spacing-s;
-    font-size: .5 * $base-font-size;
-}
-
-.property .private:after {
-    content: "\f070";
-    font-family: "Font Awesome 5 Free";
-    font-size: .75 * $base-font-size;
-}
-
-#content .media.resource {
-    display: inline-block;
-    text-align: center;
-    vertical-align: bottom;
-    margin-right: $spacing-s;
-
-    &:hover {
-        border-bottom: 0;
+@media (max-width: 767px) {
+  #content {
+    h2 {
+      font-size: 1rem;
     }
+    .site-image {
+      max-width: 150px;
+    }
+  }
 }
 
-#content .media.resource img {
-    vertical-align: top;
-    margin-bottom: $spacing-m;
+@media (max-width: 575px) {
+  header h1 {
+    font-size: 1.5rem;
+    line-height: normal;
+    a img {
+      max-height: 60px;
+      padding-top: 8px;
+    }
+  }
 }
-
-.media-render > * {
-    max-width: 100%;
-}
-
-#linked-resources caption {
-    text-align: left;
-    font-weight: bold;
-    border-bottom: 3px solid $gray;
-    padding: $spacing-s $spacing-m ($spacing-s - 3px);
-}
-
-#linked-filter h4 {
-    margin-bottom: $spacing-m;
-}
-
-#linked-resources .resource-link {
-    margin-bottom: 0;
-    display: flex;
-    align-items: center;
-}
-
-/* @end */
