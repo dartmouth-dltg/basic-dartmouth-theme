@@ -2,7 +2,7 @@
 
 $susy: (
     columns:                            12,
-    container:                          1700px,
+    container:                          1450px,
     global-box-sizing:                  border-box
 );
 
@@ -20,8 +20,12 @@ $link:                                  #328060;
 
 // Typography
 
-$base-font-size:                        20px;
-$base-line-height:                      30px;
+$base-font-size:                        1.25rem;
+$base-line-height:                      1.875rem;
+$serif:                                 "Lora", Georgia, serif;
+$sansserif:                             "National 2", Verdana, sans-serif;
+$sansserif-bold:                        "National 2 Bold", Verdana, sans-serif;
+$sansserif-regular:                     "National 2 Regular", Verdana, sans-serif;
 
 // Units
 
@@ -29,10 +33,46 @@ $spacing-s:                             .25 * $base-line-height;
 $spacing-m:                             .5 * $base-line-height;
 $spacing-l:                             $base-line-height;
 
+// Paths
+
+$basepath:                              '..';
+$fontfolder:                            $basepath+'/fonts';
+
+
 // Mixins
 
 @mixin container {
-    max-width: 1700px;
+    max-width: 1450px;
     margin-left: auto;
     margin-right: auto;
 }
+
+@mixin font-face($style-name, $file, $family, $category:"",$weight:"") {
+    $filepath: $fontfolder + "/" + $family + "/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+        @if($weight == 'bold') {
+            font-weight: 700;
+        } 
+        @else {
+            font-weight: normal;
+        }
+    }
+    %#{$style-name} {
+        font: {
+            @if $category != "" {
+                family: "#{$style-name}", #{$category};
+            }
+            @else {
+                family: "#{$style-name}";
+            }
+        }
+    }
+}
+
+// Fonts
+@include font-face("National 2", "National2-Light", "National2", "sans-serif");
+@include font-face("National 2 Regular", "National2-Regular", "National2", "sans-serif");
+@include font-face("National 2 Bold", "National2-Bold", "National2", "sans-serif");

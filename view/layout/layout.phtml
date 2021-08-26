@@ -8,7 +8,7 @@ $this->headTitle($siteTitle)->setSeparator(' · ');
 $this->headTitle()->append($this->setting('installation_title', 'Omeka S'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
-$this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700italic,700');
+$this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Lora:400,700');
 $this->headScript()->prependFile($this->assetUrl('js/default.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
@@ -44,21 +44,27 @@ $userBar = $this->userBar();
     <?php echo $this->htmlElement('body'); ?>
         <a id="skipnav" href="#content"><?php echo $this->translate('Skip to main content'); ?></a>
         <?php echo $userBar; ?>
-        <header>
-            <h1>
-                <a href="<?php echo $site->url(); ?>" class="site-title">
-                    <img src="<?php echo $this->assetUrl('img/dartmouth-library-logo-square.png') ?>" />
-                    <?php echo $escape($siteTitle); ?>
-                </a>
-            </h1>
-        </header>
-        <div id="content" role="main"
-            <?php echo $this->content; ?>
-        </div>
-        <footer>
-            <div class="admin-link">
-                <a href="<?php echo implode(array_diff(explode("/", $site->adminUrl()),['site','s',$site->slug()]),"/"); ?>">Omeka-S Login</a>
+        <div class="page-wrapper">
+            <header>
+                <div>
+                    <h1>
+                        <a href="<?php echo $site->url(); ?>" class="site-title">
+                            <img src="<?php echo $this->assetUrl('img/dartmouth-library-logo-square.png') ?>" alt="Dartmouth Library logo" />
+                            <?php echo $escape($siteTitle); ?>
+                        </a>
+                    </h1>
+                </div>
+            </header>
+            <div id="content" role="main">
+                <?php echo $this->content; ?>
             </div>
-        </footer>
+            <footer>
+                <div>
+                    <div class="admin-link">
+                        <a href="<?php echo implode(array_diff(explode("/", $site->adminUrl()),['site','s',$site->slug()]),"/"); ?>">Omeka-S Login</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>

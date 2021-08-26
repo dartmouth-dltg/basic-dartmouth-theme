@@ -10,7 +10,7 @@ html {
 
 body {
     background-color: $bg;
-    font-family: "Verdana", sans-serif;
+    font-family: $sansserif;
     font-size: $base-font-size;
     line-height: $base-line-height;
     margin: 0;
@@ -75,6 +75,11 @@ img {
 }
 /* @end */
 
+/* @group ----- Page Wrapper */
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
 /* @group ----- Header ----- */
 
 .site-title h1 {
@@ -92,7 +97,7 @@ header {
 
     & > * {
         @include container;
-        padding: 0 gutter();
+        padding: 0;
         display: block;
     }
 }
@@ -107,8 +112,10 @@ header {
 }
 
 header h1 {
-  margin: 0 0 $spacing-m 0;
-  padding: 0.2em 0;
+  width: 90%;
+  margin: 0 0 $spacing-s 0;
+  padding: 0.8rem 0;
+  line-height: 2.1rem;
   a,
   a:active,
   a:hover,
@@ -119,8 +126,8 @@ header h1 {
   }
   img {
     float: left;
-    max-height: 65px;
-    padding: 10px 10px 10px 0;
+    max-height: 2.5rem;
+    padding-right: 1rem;
   }
 }
 
@@ -129,10 +136,16 @@ header h1 {
 /* @group ----- Footer ----- */
 
 footer {
-    @include container;
-    padding: $spacing-l gutter() $spacing-l;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
     clear: both;
     background-color: $gray-dark;
+    > * {
+      @include container;
+      width: 90%;
+    }
     a,
     a:active,
     a:focus,
@@ -140,6 +153,11 @@ footer {
     a:link,
     a:visited {
       color: $white;
+    }
+    
+    a:focus,
+    a:hover {
+      text-decoration: underline;
     }
     
 }
@@ -150,10 +168,11 @@ footer {
 
 #content {
   @include container;
-  padding: 0 5%;
+  width: 90%;
+  padding-bottom: 8rem;
   line-height: normal;
   color: $gray-dark;
-  font-size: 1rem;
+  font-size: 0.9 * $base-font-size;
   .site-promo {
     clear: both;
     padding-top: 2rem;
@@ -171,18 +190,21 @@ footer {
   }
   .site-image {
     float: left;
-    margin-right:  1em;
+    margin-right: 1.5rem;
     max-width: 200px;
     border: none;
     figure {
       margin: 0;
       figcaption p {
         margin: 0.5rem 0;
-        font-size: 0.8rem;
+        font-size: 0.8 * $base-font-size;
         line-height: normal;
         font-style: italic;
       }
     }
+  }
+  p {
+    max-width: 1100px;
   }
 }
 
@@ -202,10 +224,5 @@ footer {
 @media (max-width: 575px) {
   header h1 {
     font-size: 1.5rem;
-    line-height: normal;
-    a img {
-      max-height: 60px;
-      padding-top: 8px;
-    }
   }
 }
