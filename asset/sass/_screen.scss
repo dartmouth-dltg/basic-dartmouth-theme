@@ -37,13 +37,13 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5 * $base-font-size;
-    line-height: 1.5 * $base-line-height;
+    font-size: 1.25 * $base-font-size;
+    line-height: normal;
 }
 
 h3 {
-    font-size: 1.25 * $base-font-size;
-    line-height: 1.5 * $base-line-height;
+    font-size: 1.15 * $base-font-size;
+    line-height: 1.15 * $base-line-height;
 }
 
 h4 {
@@ -84,7 +84,8 @@ img {
 }
 
 header {
-    margin: 0 0 $spacing-m 0;
+    margin: 0 0 2 * $spacing-l 0;
+    padding: 0 5%;
     background-color: $dartgreen;
     border-bottom: 1px solid $light;
     position: relative;
@@ -107,12 +108,12 @@ header {
 
 header h1 {
   margin: 0 0 $spacing-m 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  padding: 0.2em 0;
   a,
   a:active,
   a:hover,
   a:focus,
+  a:link,
   a:visited {
     color: $white;
   }
@@ -136,6 +137,7 @@ footer {
     a:active,
     a:focus,
     a:hover,
+    a:link,
     a:visited {
       color: $white;
     }
@@ -147,10 +149,41 @@ footer {
 /* @group ----- Page and Blocks ----- */
 
 #content {
-    @include container;
-    padding: 0 gutter() $spacing-l;
-    line-height: normal;
-    color: $gray-dark;
+  @include container;
+  padding: 0 5%;
+  line-height: normal;
+  color: $gray-dark;
+  font-size: 1rem;
+  .site-promo {
+    clear: both;
+    padding-top: 2rem;
+    &:first-of-type {
+      padding-top: 0;
+    }
+    &:after,
+    &:before {
+      content: " ";
+      display: table;
+    }
+  }
+  h2 {
+    margin: 0;
+  }
+  .site-image {
+    float: left;
+    margin-right:  1em;
+    max-width: 200px;
+    border: none;
+    figure {
+      margin: 0;
+      figcaption p {
+        margin: 0.5rem 0;
+        font-size: 0.8rem;
+        line-height: normal;
+        font-style: italic;
+      }
+    }
+  }
 }
 
 /* @end */
