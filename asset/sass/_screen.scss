@@ -136,8 +136,6 @@ header h1 {
 /* @group ----- Footer ----- */
 
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     padding: 1rem 0;
     clear: both;
@@ -173,6 +171,14 @@ footer {
   line-height: normal;
   color: $gray-dark;
   font-size: 0.9 * $base-font-size;
+  .left {
+    &.file {
+    border: none;
+    }
+    .item.resource:first-of-type {
+      padding: 0;
+    }
+  }
   .site-promo {
     clear: both;
     padding-top: 2rem;
