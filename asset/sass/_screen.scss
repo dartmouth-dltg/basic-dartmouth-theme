@@ -171,14 +171,6 @@ footer {
   line-height: normal;
   color: $gray-dark;
   font-size: 0.9 * $base-font-size;
-  .left {
-    &.file {
-    border: none;
-    }
-    .item.resource:first-of-type {
-      padding: 0;
-    }
-  }
   .site-promo {
     clear: both;
     padding-top: 2rem;
@@ -197,10 +189,16 @@ footer {
   .site-image {
     float: left;
     margin-right: 1.5rem;
-    max-width: 200px;
+    max-width: 250px;
     border: none;
     figure {
       margin: 0;
+      img {
+        width: 250px;
+        height: 250px;
+        margin-top: 0.4em;
+        object-fit: cover;
+      }
       figcaption p {
         margin: 0.5rem 0;
         font-size: 0.8 * $base-font-size;
@@ -223,6 +221,11 @@ footer {
     }
     .site-image {
       max-width: 150px;
+      figure img {
+        width: 150px;
+        height: 150px;
+        margin-top: 0.2em;
+      }
     }
   }
 }
