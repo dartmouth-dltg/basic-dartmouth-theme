@@ -1,58 +1,58 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background-color: $bg;
-    font-family: $sansserif;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    margin: 0;
-    word-wrap: break-word;
+  background-color: $bg;
+  font-family: $sansserif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  margin: 0;
+  word-wrap: break-word;
 }
 
 a:link {
-    text-decoration: none;
-    color: $link;
+  text-decoration: none;
+  color: $link;
 }
 
 a:visited {
-    color: $link;
+  color: $link;
 }
 
 a:active,
 a:hover {
-    color: $blue;
+  color: $blue;
 }
 
 h1 {
-    font-size: 1.75 * $base-font-size;
-    line-height: 1.75 * $base-line-height;
+  font-size: 1.75 * $base-font-size;
+  line-height: 1.75 * $base-line-height;
 }
 
 h2 {
-    font-size: 1.25 * $base-font-size;
-    line-height: normal;
+  font-size: 1.25 * $base-font-size;
+  line-height: normal;
 }
 
 h3 {
-    font-size: 1.15 * $base-font-size;
-    line-height: 1.15 * $base-line-height;
+  font-size: 1.15 * $base-font-size;
+  line-height: 1.15 * $base-line-height;
 }
 
 h4 {
-    font-size: 1.125 * $base-font-size;
+  font-size: 1.125 * $base-font-size;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* @group ----- Navigation ----- */
@@ -67,12 +67,13 @@ img {
   padding: $spacing-s;
   background-color: #fff;
   opacity: 0;
-  
+
   &:focus {
     z-index: 1000;
     opacity: 1;
   }
 }
+
 /* @end */
 
 /* @group ----- Page Wrapper */
@@ -80,35 +81,34 @@ img {
   position: relative;
   min-height: 100vh;
 }
+
 /* @group ----- Header ----- */
 
 .site-title h1 {
-    font-size: 1.25 * $base-font-size;
-    line-height: normal;
-    padding-right: $base-line-height;
+  margin: 0;
+  font-size: 1.25 * $base-font-size;
+  line-height: normal;
+  padding-right: $base-line-height;
 }
 
 header {
-    margin: 0 0 2 * $spacing-l 0;
-    padding: 0 5%;
-    background-color: $dartgreen;
-    border-bottom: 1px solid $light;
-    position: relative;
+  margin: 0 0 2 * $spacing-l 0;
+  padding: 0 5%;
+  background-color: $dartgreen;
+  border-bottom: 1px solid $light;
+  position: relative;
 
-    & > * {
-        @include container;
-        padding: 0;
-        display: block;
-    }
+  & > * {
+    @include container;
+
+    padding: 0;
+    display: block;
+  }
 }
 
 .site-title:hover,
 .site-title:active {
-    border-bottom: 0;
-}
-
-.site-title h1 {
-    margin: 0;
+  border-bottom: 0;
 }
 
 header h1 {
@@ -136,28 +136,28 @@ header h1 {
 /* @group ----- Footer ----- */
 
 footer {
-    width: 100%;
-    padding: 1rem 0;
-    clear: both;
-    background-color: $gray-dark;
-    > * {
-      @include container;
-      width: 90%;
-    }
-    a,
-    a:active,
-    a:focus,
-    a:hover,
-    a:link,
-    a:visited {
-      color: $white;
-    }
-    
-    a:focus,
-    a:hover {
-      text-decoration: underline;
-    }
-    
+  width: 100%;
+  padding: 1rem 0;
+  clear: both;
+  background-color: $gray-dark;
+  > * {
+    @include container;
+
+    width: 90%;
+  }
+  a,
+  a:active,
+  a:focus,
+  a:hover,
+  a:link,
+  a:visited {
+    color: $white;
+  }
+
+  a:focus,
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 /* @end */
@@ -166,6 +166,7 @@ footer {
 
 #content {
   @include container;
+
   width: 90%;
   padding-bottom: 8rem;
   line-height: normal;

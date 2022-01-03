@@ -1,36 +1,28 @@
-// Susy
-
-$susy: (
-    columns:                            12,
-    container:                          1450px,
-    global-box-sizing:                  border-box
-);
-
 // Colors
 
 $gray:                                  #ababab;
-$gray-dark:                             #333333;
+$gray-dark:                             #333;
 $bold:                                  darken($gray, 20%);
 $light:                                 lighten($gray, 20%);
-$white:                                 #ffffff;
+$white:                                 #fff;
 $dartgreen:                             #00693e;
 $blue:                                  #003c73;
-$bg:                                    #white;
+$bg:                                    $white;
 $link:                                  #328060;
 
 // Typography
 
 $base-font-size:                        1.25rem;
 $base-line-height:                      1.875rem;
-$serif:                                 "Lora", Georgia, serif;
-$sansserif:                             "National 2", Verdana, sans-serif;
-$sansserif-bold:                        "National 2 Bold", Verdana, sans-serif;
-$sansserif-regular:                     "National 2 Regular", Verdana, sans-serif;
+$serif:                                 "Lora", georgia, serif;
+$sansserif:                             "National2", verdana, sans-serif;
+$sansserif-bold:                        "National2-Bold", verdana, sans-serif;
+$sansserif-regular:                     "National2-Regular", verdana, sans-serif;
 
 // Units
 
-$spacing-s:                             .25 * $base-line-height;
-$spacing-m:                             .5 * $base-line-height;
+$spacing-s:                             0.25 * $base-line-height;
+$spacing-m:                             0.5 * $base-line-height;
 $spacing-l:                             $base-line-height;
 
 // Paths
@@ -38,41 +30,44 @@ $spacing-l:                             $base-line-height;
 $basepath:                              '..';
 $fontfolder:                            $basepath+'/fonts';
 
-
 // Mixins
 
 @mixin container {
-    max-width: 1450px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 1450px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @mixin font-face($style-name, $file, $family, $category:"",$weight:"") {
-    $filepath: $fontfolder + "/" + $family + "/" + $file;
-    @font-face {
-        font-family: "#{$style-name}";
-        src: url($filepath + ".eot");
-        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
-        @if($weight == 'bold') {
-            font-weight: 700;
-        } 
-        @else {
-            font-weight: normal;
-        }
+  $filepath: $fontfolder + "/" + $family + "/" + $file;
+
+  @font-face {
+    font-family: "#{$style-name}";
+    src: url($filepath + ".eot");
+    src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+
+    @if ($weight == 'bold') {
+      font-weight: 700;
     }
-    %#{$style-name} {
-        font: {
-            @if $category != "" {
-                family: "#{$style-name}", #{$category};
-            }
-            @else {
-                family: "#{$style-name}";
-            }
-        }
+
+    @else {
+      font-weight: normal;
     }
+  }
+  %#{$style-name} {
+    font: {
+      @if $category != "" {
+        $family: "#{$style-name}", #{$category};
+      }
+
+      @else {
+        $family: "#{$style-name}";
+      }
+    }
+  }
 }
 
 // Fonts
-@include font-face("National 2", "National2-Light", "National2", "sans-serif");
-@include font-face("National 2 Regular", "National2-Regular", "National2", "sans-serif");
-@include font-face("National 2 Bold", "National2-Bold", "National2", "sans-serif");
+@include font-face("National2", "National2-Light", "National2", "sans-serif");
+@include font-face("National2-Regular", "National2-Regular", "National2", "sans-serif");
+@include font-face("National2-Bold", "National2-Bold", "National2", "sans-serif");
