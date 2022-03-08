@@ -1,11 +1,10 @@
 @import "normalize";
-@import "susy";
 @import "base";
 
 @media screen {
-    @import "screen";
+  @import "screen";
 }
 
-@media screen and (min-width:800px) {
-    @import "desktop";
+@media screen and (min-width: 800px) {
+  @import "desktop";
 }
