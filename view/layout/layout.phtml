@@ -61,7 +61,7 @@ $userBar = $this->userBar();
             <footer>
                 <div>
                     <div class="admin-link">
-                        <a href="<?php echo implode(array_diff(explode("/", $site->adminUrl()),['site','s',$site->slug()]),"/"); ?>">Omeka-S Login</a>
+                        <a href="<?php echo implode('/', array_diff(explode("/", $site->adminUrl()),['site','s',$site->slug()])); ?>">Omeka-S Login</a>
                     </div>
                 </div>
             </footer>
