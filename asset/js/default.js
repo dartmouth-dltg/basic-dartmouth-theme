@@ -2,7 +2,6 @@
   $(document).ready(function() {
     $('.item.resource.show .media-embeds').each(function(){
       if ($(this).children('.media-render').length == 1) {
-        console.log('foo')
         return;
       }
       $(this).slick(
@@ -12,7 +11,7 @@
           autoplay: false,
           autoplaySpeed: 8000,
           dots: true,
-          adaptiveHeight: false,
+          adaptiveHeight: true,
           accessibility: true,
           arrowsPlacement: "split",
           accessibility: true,
