@@ -20,112 +20,93 @@
   * {
     box-sizing: border-box;
   }
-
   html {
     height: 100%;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
-
   body {
+    margin: 0;
+    word-wrap: break-word;
     background-color: #fff;
     font-family: "National2", verdana, sans-serif;
     font-size: 1.25rem;
     line-height: 1.875rem;
-    margin: 0;
-    word-wrap: break-word;
   }
-
   a:link {
     text-decoration: none;
     color: #328060;
   }
-
   a:visited {
     color: #328060;
   }
-
   a:active,
 a:hover {
     color: #003c73;
   }
-
   h1 {
     font-size: 2.1875rem;
     line-height: 3.28125rem;
   }
-
   h2 {
     font-size: 1.5625rem;
     line-height: normal;
   }
-
   h3 {
     font-size: 1.4375rem;
     line-height: 2.15625rem;
   }
-
   h4 {
     font-size: 1.40625rem;
   }
-
   img {
     max-width: 100%;
     height: auto;
   }
-
-  /* @group ----- Navigation ----- */
   #skipnav {
     position: fixed;
+    z-index: -5;
     top: 1.875rem;
     left: 50%;
-    border: 1px solid #ababab;
-    transform: translateX(-50%);
-    z-index: -5;
     padding: 0.46875rem;
-    background-color: #fff;
+    transform: translateX(-50%);
     opacity: 0;
+    border: 1px solid #ababab;
+    background-color: #fff;
   }
   #skipnav:focus {
     z-index: 1000;
     opacity: 1;
   }
-
-  /* @end */
-  /* @group ----- Page Wrapper */
   .page-wrapper {
     position: relative;
     min-height: 100vh;
   }
-
-  /* @group ----- Header ----- */
   .site-title h1 {
     margin: 0;
+    padding-right: 1.875rem;
     font-size: 1.5625rem;
     line-height: normal;
-    padding-right: 1.875rem;
   }
-
   header {
-    margin: 0 0 3.75rem 0;
-    padding: 0 5%;
-    background-color: #00693e;
-    border-bottom: 1px solid #dedede;
     position: relative;
+    min-height: 4rem;
+    margin: 0 0 1.875rem 0;
+    padding: 0 5%;
+    border-bottom: 1px solid #dedede;
+    background-color: #00693e;
   }
   header > * {
     max-width: 1450px;
-    margin-left: auto;
     margin-right: auto;
-    padding: 0;
+    margin-left: auto;
     display: block;
+    padding: 0;
   }
-
   .site-title:hover,
 .site-title:active {
     border-bottom: 0;
   }
-
   header h1 {
     width: 90%;
     margin: 0 0 0.46875rem 0;
@@ -138,26 +119,25 @@ header h1 a:hover,
 header h1 a:focus,
 header h1 a:link,
 header h1 a:visited {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center;
     color: #fff;
   }
   header h1 img {
-    float: left;
-    max-height: 2.5rem;
-    padding-right: 1rem;
+    max-height: 4rem;
   }
-
-  /* @end */
-  /* @group ----- Footer ----- */
   footer {
+    clear: both;
     width: 100%;
     padding: 1rem 0;
-    clear: both;
     background-color: #333;
   }
   footer > * {
     max-width: 1450px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     width: 90%;
   }
   footer a,
@@ -172,18 +152,15 @@ footer a:visited {
 footer a:hover {
     text-decoration: underline;
   }
-
-  /* @end */
-  /* @group ----- Page and Blocks ----- */
   #content {
     max-width: 1450px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     width: 90%;
     padding-bottom: 8rem;
-    line-height: normal;
     color: #333;
     font-size: 1.125rem;
+    line-height: normal;
   }
   #content .site-promo {
     clear: both;
@@ -193,16 +170,16 @@ footer a:hover {
     padding-top: 0;
   }
   #content .site-promo:after, #content .site-promo:before {
-    content: " ";
     display: table;
+    content: " ";
   }
   #content h2 {
-    margin: 0;
+    margin-top: 0;
   }
   #content .site-image {
     float: left;
-    margin-right: 1.5rem;
     max-width: 250px;
+    margin-right: 1.5rem;
     border: none;
   }
   #content .site-image figure {
@@ -217,16 +194,82 @@ footer a:hover {
   #content .site-image figure figcaption p {
     margin: 0.5rem 0;
     font-size: 1rem;
-    line-height: normal;
     font-style: italic;
+    line-height: normal;
   }
   #content p {
     max-width: 1100px;
   }
-
-  /* @end */
+  #content .blocks .left.file,
+#content .blocks .right.file {
+    border: none;
+  }
+  #content .blocks .left.file .item,
+#content .blocks .right.file .item {
+    padding: 0;
+  }
+  #content .item-showcase .resource.item {
+    padding: 0 1rem 3rem 1rem;
+  }
+  .item.resource.show h4 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  .item.resource.show .media-embeds {
+    float: right;
+    width: 50%;
+    padding-left: 3rem;
+  }
+  .item.resource.show .values,
+.item.resource.show .value {
+    margin-left: 1rem;
+  }
+  .item.resource.show .values .value,
+.item.resource.show .value .value {
+    margin-left: 0;
+  }
+  ul.resource-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    column-gap: 2rem;
+    list-style: none;
+  }
+  ul.resource-list li {
+    margin-bottom: 4rem;
+  }
+  ul.resource-list h4 {
+    margin: 0.5rem 0;
+  }
+  ul.resource-list img {
+    max-height: 10rem;
+  }
+  .metadata h4 {
+    margin: 0 0 0.25rem 0;
+  }
+  .metadata .values,
+.metadata .value {
+    margin-left: 1rem;
+  }
+  .metadata .values .value,
+.metadata .value .value {
+    margin-left: 0;
+  }
+  .browse-controls {
+    margin: 1rem 0;
+  }
+}
+@media screen and (max-width: 990px) {
+  #content .item-showcase .resource.item:not(:only-child) {
+    clear: both;
+    width: 33%;
+  }
 }
 @media screen and (max-width: 767px) {
+  header h1 {
+    font-size: 1.5rem;
+    line-height: normal;
+  }
   #content h2 {
     font-size: 1rem;
   }
@@ -238,10 +281,43 @@ footer a:hover {
     height: 150px;
     margin-top: 0.2em;
   }
+  #content .item-showcase .resource.item:not(:only-child) {
+    clear: both;
+    width: 50%;
+  }
+  ul.resource-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media screen and (max-width: 575px) {
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    line-height: normal;
+  }
+  header h1 img {
+    max-height: 2.5rem;
+  }
+  .blocks .right {
+    float: none;
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .blocks .left {
+    float: none;
+    max-width: 100%;
+    margin-right: 0;
+  }
+  #content .item-showcase .resource.item:not(:only-child) {
+    clear: both;
+    width: 100%;
+  }
+  .item.resource.show .media-embeds {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+  }
+  ul.resource-list {
+    grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=style.css.map */

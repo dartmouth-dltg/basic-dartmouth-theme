@@ -1,6 +1,6 @@
 {
   "name": "basicdartmouth",
-  "version": "1.0.2",
+  "version": "^1.0.0",
   "description": "A Basic Dartmouth Library theme for Omeka-S",
   "main": "gulpfile.js",
   "repository": {
