@@ -241,6 +241,15 @@ footer {
     float: right;
     width: 50%;
     padding-left: 3rem;
+    &.slick-slider {
+      width: calc(50% - 3rem);
+      margin-left: 3rem;
+      padding: 0;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
   }
   .values,
   .value {
@@ -349,6 +358,11 @@ ul.resource-list {
     float: none;
     width: 100%;
     padding-left: 0;
+    &.slick-slider {
+      width: calc(100% - 3rem);
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
   ul.resource-list {
     grid-template-columns: 1fr;
