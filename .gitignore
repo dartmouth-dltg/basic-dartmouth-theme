@@ -1,2 +1,9 @@
-.DS_Store
-/node_modules
+**/.DS_Store
+
+!.gitignore
+!node_modules/
+node_modules/*
+!node_modules/@dltg
+!node_modules/@dltg/gulp-build
+node_modules/@dltg/gulp-build/*
+!node_modules/@dltg/gulp-build/templates
