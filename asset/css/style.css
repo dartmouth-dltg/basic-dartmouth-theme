@@ -172,9 +172,6 @@ footer a:hover {
     display: table;
     content: " ";
   }
-  #content .site-promo p {
-    max-width: 1200px;
-  }
   #content h2 {
     margin-top: 0;
   }
@@ -200,7 +197,7 @@ footer a:hover {
     line-height: normal;
   }
   #content p {
-    max-width: 950px;
+    max-width: 1200px;
   }
   #content .blocks .left.file,
 #content .blocks .right.file {
