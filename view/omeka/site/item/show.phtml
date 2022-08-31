@@ -23,7 +23,7 @@ $lang = $this->lang();
 <div class="property">
     <?php $itemSets = $item->itemSets(); ?>
     <?php if (count($itemSets) > 0): ?>
-    <h4><?php echo $translate('Item sets'); ?></h4>
+    <h3><?php echo $translate('Item sets'); ?></h3>
     <?php foreach ($itemSets as $itemSet): ?>
     <div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(null, ($filterLocale ? $lang : null)); ?></a></div>
     <?php endforeach; ?>
@@ -31,7 +31,7 @@ $lang = $this->lang();
 </div>
 <?php if (($this->siteSetting('show_attached_pages', true)) && ($sitePages = $item->sitePages($site->id()))): ?>
 <div class="property">
-    <h4><?php echo $translate('Site pages'); ?></h4>
+    <h3><?php echo $translate('Site pages'); ?></h3>
     <div class="values">
         <?php foreach ($sitePages as $sitePage): ?>
         <div class="value"><?php echo $sitePage->link($sitePage->title()); ?></div>

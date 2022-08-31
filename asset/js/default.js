@@ -21,5 +21,10 @@
         }
       );
     });
+
+    $('.value-content').each(function() {
+      const newText = $(this).text().autoLink();
+      $(this).html(newText);
+    })
   });
 })(jQuery);
