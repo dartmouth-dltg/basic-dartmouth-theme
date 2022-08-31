@@ -253,6 +253,23 @@ footer {
       }
     }
   }
+  .tobii-zoom__icon {
+    top: 0;
+    right: 0;
+    display: flex;
+    border: 1px solid $white;
+    .slick-slide & {
+      top: 0;
+    }
+    .display-type-gallery & {
+      top: 0;
+    }
+  }
+}
+.tobii .tobii__slide figure > img {
+  max-width: calc(100% - 10em);
+  max-height: calc(100% - 4em);
+  margin: 0 auto;
 }
 
 .item.resource {
@@ -263,7 +280,7 @@ footer {
     }
     .media-embeds {
       float: right;
-      width: 50%;
+      width: 25%;
       padding-left: 3rem;
       &.slick-slider {
         width: calc(50% - 3rem);

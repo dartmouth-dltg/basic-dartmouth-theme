@@ -236,13 +236,30 @@ footer a:hover {
   #content .item-showcase .resource.item img {
     max-height: 10rem;
   }
+  #content .tobii-zoom__icon {
+    top: 0;
+    right: 0;
+    display: flex;
+    border: 1px solid #fff;
+  }
+  .slick-slide #content .tobii-zoom__icon {
+    top: 0;
+  }
+  .display-type-gallery #content .tobii-zoom__icon {
+    top: 0;
+  }
+  .tobii .tobii__slide figure > img {
+    max-width: calc(100% - 10em);
+    max-height: calc(100% - 4em);
+    margin: 0 auto;
+  }
   .item.resource.show h3 {
     margin: 1rem 0 0.5rem 0;
     font-size: 1.1rem;
   }
   .item.resource.show .media-embeds {
     float: right;
-    width: 50%;
+    width: 25%;
     padding-left: 3rem;
   }
   .item.resource.show .media-embeds.slick-slider {
