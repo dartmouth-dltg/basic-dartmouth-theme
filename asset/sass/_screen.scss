@@ -138,6 +138,7 @@ header h1 {
 
 .harmful-content-wrapper {
   margin-top: -1 * $spacing-l;
+  margin-bottom: $spacing-l;
   padding: 0.25rem;
   text-align: center;
   color: $warning;
@@ -148,7 +149,30 @@ header h1 {
   a:visited {
     text-decoration: underline;
     text-underline-offset: 2px;
+    opacity: 1;
     color: $warning;
+  }
+  a:hover {
+    color: $black;
+    background-color: $white;
+  }
+}
+
+.harmful-content-inline {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.25rem 1rem;
+  color: $white;
+  border-left: 1rem solid $warning;
+  background-color: $gray-dark;
+  a,
+  a:link,
+  a:active,
+  a:visited {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    opacity: 1;
+    color: $white;
   }
   a:hover {
     color: $black;
