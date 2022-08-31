@@ -1,9 +1,6 @@
 **/.DS_Store
+node_modules/
+.eslintrc.json
+.stylelintrc.json
 
 !.gitignore
-!node_modules/
-node_modules/*
-!node_modules/@dltg
-!node_modules/@dltg/gulp-build
-!node_modules/@dltg/gulp-build/templates/eslintrc.json
-!node_modules/@dltg/gulp-build/templates/stylelintrc.json
