@@ -92,7 +92,6 @@ a:hover {
     min-height: 4rem;
     margin: 0 0 1.875rem 0;
     padding: 0 5%;
-    border-bottom: 1px solid #dedede;
     background-color: #00693e;
   }
   header > * {
@@ -126,6 +125,25 @@ header h1 a:visited {
   }
   header h1 img {
     max-height: 4rem;
+  }
+  .harmful-content-wrapper {
+    margin-top: -1.875rem;
+    padding: 0.25rem;
+    text-align: center;
+    color: #ffa00f;
+    background-color: #000;
+  }
+  .harmful-content-wrapper a,
+.harmful-content-wrapper a:link,
+.harmful-content-wrapper a:active,
+.harmful-content-wrapper a:visited {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: #ffa00f;
+  }
+  .harmful-content-wrapper a:hover {
+    color: #000;
+    background-color: #fff;
   }
   footer {
     clear: both;

@@ -95,7 +95,6 @@ header {
   min-height: 4rem;
   margin: 0 0 $spacing-l 0;
   padding: 0 5%;
-  border-bottom: 1px solid $light;
   background-color: $dartgreen;
 
   > * {
@@ -134,6 +133,28 @@ header h1 {
 }
 
 // @end
+
+// harmful content
+
+.harmful-content-wrapper {
+  margin-top: -1 * $spacing-l;
+  padding: 0.25rem;
+  text-align: center;
+  color: $warning;
+  background-color: $black;
+  a,
+  a:link,
+  a:active,
+  a:visited {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: $warning;
+  }
+  a:hover {
+    color: $black;
+    background-color: $white;
+  }
+}
 
 // @group ----- Footer -----
 
