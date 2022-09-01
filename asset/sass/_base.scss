@@ -1,5 +1,4 @@
 // Colors
-
 $gray:                                  #ababab;
 $gray-dark:                             #333;
 $bold:                                  darken($gray, 20%);
@@ -9,9 +8,10 @@ $dartgreen:                             #00693e;
 $blue:                                  #003c73;
 $bg:                                    $white;
 $link:                                  #328060;
+$warning:                               #ffa00f;
+$black:                                 #000;
 
 // Typography
-
 $base-font-size:                        1.25rem;
 $base-line-height:                      1.875rem;
 $serif:                                 "Lora", georgia, serif;
@@ -20,40 +20,24 @@ $sansserif-bold:                        "National2-Bold", verdana, sans-serif;
 $sansserif-regular:                     "National2-Regular", verdana, sans-serif;
 
 // Units
-
 $spacing-s:                             0.25 * $base-line-height;
 $spacing-m:                             0.5 * $base-line-height;
 $spacing-l:                             $base-line-height;
 
 // Paths
-
-$basepath:                              '..';
-$fontfolder:                            $basepath+'/fonts';
+$basepath:                              "..";
+$fontfolder:                            $basepath + "/fonts";
 
 // Mixins
-
 @mixin container {
   max-width: 1450px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 @mixin font-face($style-name, $file, $family, $category:"",$weight:"") {
   $filepath: $fontfolder + "/" + $family + "/" + $file;
 
-  @font-face {
-    font-family: "#{$style-name}";
-    src: url($filepath + ".eot");
-    src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
-
-    @if ($weight == 'bold') {
-      font-weight: 700;
-    }
-
-    @else {
-      font-weight: normal;
-    }
-  }
   %#{$style-name} {
     font: {
       @if $category != "" {
@@ -63,6 +47,20 @@ $fontfolder:                            $basepath+'/fonts';
       @else {
         $family: "#{$style-name}";
       }
+    }
+  }
+
+  @font-face {
+    font-family: "#{$style-name}";
+    src: url($filepath + ".eot");
+    src: url($filepath + ".eot?#iefix") format("embedded-opentype"), url($filepath + ".woff") format("woff"), url($filepath + ".ttf")  format("truetype"), url($filepath + ".svg#" + $style-name + "") format("svg");
+
+    @if $weight == "bold" {
+      font-weight: 700;
+    }
+
+    @else {
+      font-weight: normal;
     }
   }
 }

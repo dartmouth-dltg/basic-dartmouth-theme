@@ -9,10 +9,16 @@ $this->headTitle()->append($this->setting('installation_title', 'Omeka S'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
 $this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Lora:400,700');
+$this->headLink()->appendStylesheet($this->assetUrl('../node_modules/@accessible360/accessible-slick/slick/accessible-slick-theme.min.css'));
+$this->headLink()->appendStylesheet($this->assetUrl('../node_modules/@accessible360/accessible-slick/slick/slick.min.css'));
+$this->headScript()->appendFile($this->assetUrl('../node_modules/@accessible360/accessible-slick/slick/slick.min.js'));$this->jsTranslate();
+$this->headLink()->appendStylesheet($this->assetUrl('../node_modules/@midzer/tobii/dist/tobii.min.css'));
+$this->headScript()->appendFile($this->assetUrl('../node_modules/@midzer/tobii/dist/tobii.min.js'));$this->jsTranslate();
+$this->headScript()->appendFile('https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js');$this->jsTranslate();
+$this->headScript()->prependFile($this->assetUrl('js/autolink.js'));
 $this->headScript()->prependFile($this->assetUrl('js/default.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
-$this->jsTranslate();
 $this->trigger('view.layout');
 $userBar = $this->userBar();
 ?>
@@ -50,11 +56,16 @@ $userBar = $this->userBar();
                     <h1>
                         <a href="<?php echo $site->url(); ?>" class="site-title">
                             <img src="<?php echo $this->assetUrl('img/dartmouth-library-logo-square.png') ?>" alt="Dartmouth Library logo" />
-                            <?php echo $escape($siteTitle); ?>
+                            <span><?php echo $escape($siteTitle); ?></span>
                         </a>
                     </h1>
-                </div>
+                </div>      
             </header>
+            <?php if ($this->themeSetting('use_harmful_content') == 1 && $harmfulContent = $this->themeSetting('harmful_content')): ?>
+                <div class="harmful-content-wrapper">
+                    <?php echo $harmfulContent; ?>
+                </div>
+            <?php endif; ?>
             <div id="content" role="main">
                 <?php echo $this->content; ?>
             </div>

@@ -1,0 +1,6 @@
+**/.DS_Store
+node_modules/
+.eslintrc.json
+.stylelintrc.json
+
+!.gitignore
