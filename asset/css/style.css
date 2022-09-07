@@ -192,6 +192,11 @@ footer a:visited {
 footer a:hover {
     text-decoration: underline;
   }
+  .used-for-site-promo .blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1rem;
+  }
   #content {
     max-width: 1450px;
     margin-right: auto;
@@ -202,40 +207,88 @@ footer a:hover {
     font-size: 1.0625rem;
     line-height: normal;
   }
+  #content h2 {
+    margin-top: 0;
+  }
+  #content .site-promo-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+  }
+  #content .site-promo-container h2 {
+    grid-row: 1;
+    grid-column: 1/span 2;
+    margin: 0;
+    font-size: 1.3rem;
+  }
+  #content .site-promo-container a,
+#content .site-promo-container a:link,
+#content .site-promo-container a:visited {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: #fff;
+  }
+  #content .site-promo-container a:hover {
+    color: #333;
+    background-color: #fff;
+  }
   #content .site-promo {
     clear: both;
-    padding-top: 2rem;
-  }
-  #content .site-promo:first-of-type {
-    padding-top: 0;
+    padding: 2rem;
+    color: #fff;
+    background-color: #666;
   }
   #content .site-promo:after, #content .site-promo:before {
     display: table;
     content: " ";
   }
-  #content h2 {
-    margin-top: 0;
+  #content .site-promo:nth-child(2), #content .site-promo:nth-child(3), #content .site-promo:nth-child(4n+6), #content .site-promo:nth-child(4n+7) {
+    color: #000;
+    background-color: #dedede;
   }
-  #content .site-image {
-    float: left;
-    max-width: 250px;
+  #content .site-promo:nth-child(2) a,
+#content .site-promo:nth-child(2) a:link,
+#content .site-promo:nth-child(2) a:visited, #content .site-promo:nth-child(3) a,
+#content .site-promo:nth-child(3) a:link,
+#content .site-promo:nth-child(3) a:visited, #content .site-promo:nth-child(4n+6) a,
+#content .site-promo:nth-child(4n+6) a:link,
+#content .site-promo:nth-child(4n+6) a:visited, #content .site-promo:nth-child(4n+7) a,
+#content .site-promo:nth-child(4n+7) a:link,
+#content .site-promo:nth-child(4n+7) a:visited {
+    color: #000;
+  }
+  #content .site-promo:nth-child(2) a:hover, #content .site-promo:nth-child(3) a:hover, #content .site-promo:nth-child(4n+6) a:hover, #content .site-promo:nth-child(4n+7) a:hover {
+    color: #fff;
+    background-color: #333;
+  }
+  #content .site-promo-image {
+    grid-row: 2;
+    grid-column: 1;
+    max-width: 150px;
     margin-right: 1.5rem;
     border: none;
   }
-  #content .site-image figure {
+  #content .site-promo-image figure {
     margin: 0;
   }
-  #content .site-image figure img {
-    width: 250px;
-    height: 250px;
+  #content .site-promo-image figure img {
+    width: 150px;
+    height: 150px;
     margin-top: 0.4em;
     object-fit: cover;
   }
-  #content .site-image figure figcaption p {
+  #content .site-promo-image figure figcaption p {
     margin: 0.5rem 0;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-style: italic;
     line-height: normal;
+  }
+  #content .site-promo-content {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  #content .site-promo-content p {
+    margin: 0.25rem 0 1rem 0;
   }
   #content p {
     max-width: 1200px;
@@ -361,10 +414,10 @@ footer a:hover {
   #content h2 {
     font-size: 1rem;
   }
-  #content .site-image {
+  #content .site-promo-image {
     max-width: 150px;
   }
-  #content .site-image figure img {
+  #content .site-promo-image figure img {
     width: 150px;
     height: 150px;
     margin-top: 0.2em;

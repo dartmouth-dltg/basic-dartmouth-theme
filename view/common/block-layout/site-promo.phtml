@@ -1,0 +1,29 @@
+<div id="block-<?php echo $this->blockId; ?>" class="site-promo region <?php echo $this->regionClass; ?>" data-target-region-id="<?php echo $this->targetID; ?>">
+    <div class="site-promo-container">
+        <?php foreach ($attachments as $attachment): ?>
+            <?php
+                $item = $attachment->item();
+            ?>
+            <h2><a href="<?php echo $this->baseUrl . $this->siteSelectLink; ?>"><?php echo $this->siteSelectTitle; ?></a></h2>
+            <div class="site-promo-image">
+                <?php if ($item):
+                    $title = $this->plugin('escapeHtml')($item->displayTitle());
+                    $media = $attachment->media() ?: $item->primaryMedia();
+                    if ($media):
+                    $image = preg_match('/alt=""/', $this->thumbnail($media, 'medium')) == 1 ? $this->thumbnail($media, 'medium', ['alt' => $title]) : $this->thumbnail($media, 'medium');
+                ?>
+                        <figure>
+                            <?php echo $image; ?>
+                            <?php if ($attachment->caption()): ?>
+                              <figcaption><?php echo $attachment->caption(); ?></figcaption>
+                            <?php endif; ?>
+                        </figure>
+                    <?php endif; ?>
+                <?php endif; ?>
+            </div>
+        <?php endforeach; ?>
+        <div class="site-promo-content">
+          <?php echo $this->html; ?>
+        </div>
+    </div>
+</div>
