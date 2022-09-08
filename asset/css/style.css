@@ -192,9 +192,11 @@ footer a:visited {
 footer a:hover {
     text-decoration: underline;
   }
-  .used-for-site-promo .blocks {
+  #content.used-for-site-promo .blocks {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 4rem;
+    grid-column-gap: 3rem;
     font-size: 1rem;
   }
   #content {
@@ -212,80 +214,48 @@ footer a:hover {
   }
   #content .site-promo-container {
     display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr;
   }
   #content .site-promo-container h2 {
-    grid-row: 1;
-    grid-column: 1/span 2;
-    margin: 0;
-    font-size: 1.3rem;
+    grid-row: 2;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
   }
   #content .site-promo-container a,
 #content .site-promo-container a:link,
-#content .site-promo-container a:visited {
+#content .site-promo-container a:visited,
+#content .site-promo-container a:hover {
     text-decoration: underline;
     text-underline-offset: 2px;
-    color: #fff;
-  }
-  #content .site-promo-container a:hover {
-    color: #333;
-    background-color: #fff;
-  }
-  #content .site-promo {
-    clear: both;
-    padding: 2rem;
-    color: #fff;
-    background-color: #666;
-  }
-  #content .site-promo:after, #content .site-promo:before {
-    display: table;
-    content: " ";
-  }
-  #content .site-promo:nth-child(2), #content .site-promo:nth-child(3), #content .site-promo:nth-child(4n+6), #content .site-promo:nth-child(4n+7) {
-    color: #000;
-    background-color: #dedede;
-  }
-  #content .site-promo:nth-child(2) a,
-#content .site-promo:nth-child(2) a:link,
-#content .site-promo:nth-child(2) a:visited, #content .site-promo:nth-child(3) a,
-#content .site-promo:nth-child(3) a:link,
-#content .site-promo:nth-child(3) a:visited, #content .site-promo:nth-child(4n+6) a,
-#content .site-promo:nth-child(4n+6) a:link,
-#content .site-promo:nth-child(4n+6) a:visited, #content .site-promo:nth-child(4n+7) a,
-#content .site-promo:nth-child(4n+7) a:link,
-#content .site-promo:nth-child(4n+7) a:visited {
-    color: #000;
-  }
-  #content .site-promo:nth-child(2) a:hover, #content .site-promo:nth-child(3) a:hover, #content .site-promo:nth-child(4n+6) a:hover, #content .site-promo:nth-child(4n+7) a:hover {
-    color: #fff;
-    background-color: #333;
+    opacity: 1;
+    color: #00693e;
   }
   #content .site-promo-image {
-    grid-row: 2;
+    grid-row: 1;
     grid-column: 1;
-    max-width: 150px;
-    margin-right: 1.5rem;
     border: none;
   }
   #content .site-promo-image figure {
     margin: 0;
   }
   #content .site-promo-image figure img {
-    width: 150px;
-    height: 150px;
-    margin-top: 0.4em;
+    width: 100%;
+    height: 250px;
+    margin-top: 0;
     object-fit: cover;
+    object-position: left 40%;
   }
   #content .site-promo-image figure figcaption p {
-    margin: 0.5rem 0;
+    display: none;
+    margin: 0;
     font-size: 0.875rem;
     font-style: italic;
     line-height: normal;
   }
   #content .site-promo-content {
-    grid-row: 2;
-    grid-column: 2;
+    grid-row: 3;
+    grid-column: 1;
   }
   #content .site-promo-content p {
     margin: 0.25rem 0 1rem 0;
@@ -402,6 +372,9 @@ footer a:hover {
   }
 }
 @media screen and (max-width: 990px) {
+  #content.used-for-site-promo .blocks {
+    grid-template-columns: 1fr 1fr;
+  }
   #content .item-showcase {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -413,14 +386,6 @@ footer a:hover {
   }
   #content h2 {
     font-size: 1rem;
-  }
-  #content .site-promo-image {
-    max-width: 150px;
-  }
-  #content .site-promo-image figure img {
-    width: 150px;
-    height: 150px;
-    margin-top: 0.2em;
   }
   #content .item-showcase {
     grid-template-columns: 1fr 1fr;
@@ -446,6 +411,12 @@ footer a:hover {
     float: none;
     max-width: 100%;
     margin-right: 0;
+  }
+  #content.used-for-site-promo .blocks {
+    grid-template-columns: 1fr;
+  }
+  #content.used-for-site-promo h2 {
+    font-size: 1rem;
   }
   #content .item-showcase {
     grid-template-columns: 1fr;

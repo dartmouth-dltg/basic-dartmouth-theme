@@ -4,7 +4,6 @@
             <?php
                 $item = $attachment->item();
             ?>
-            <h2><a href="<?php echo $this->baseUrl . $this->siteSelectLink; ?>"><?php echo $this->siteSelectTitle; ?></a></h2>
             <div class="site-promo-image">
                 <?php if ($item):
                     $title = $this->plugin('escapeHtml')($item->displayTitle());
@@ -22,6 +21,7 @@
                 <?php endif; ?>
             </div>
         <?php endforeach; ?>
+        <h2><a href="<?php echo $this->baseUrl . $this->siteSelectLink; ?>"><?php echo $this->siteSelectTitle; ?></a></h2>
         <div class="site-promo-content">
           <?php echo $this->html; ?>
         </div>
