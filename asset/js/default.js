@@ -5,7 +5,7 @@
   }
 
   function imageRatio() {
-    const promoImg = $('#content .site-promo-image figure img');
+    const promoImg = $('#content.used-for-site-promo .site-promo-image figure img');
     const promoImgWidth = promoImg.width();
     promoImg.css('height', promoImgWidth * 0.625)
   }
@@ -13,7 +13,7 @@
   $(document).ready(function() {
 
     imageRatio();
-    
+
     $(window).on('resize', function() {
       imageRatio();
     });
