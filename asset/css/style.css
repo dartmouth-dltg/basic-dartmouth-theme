@@ -215,6 +215,10 @@ footer a:hover {
     height: 250px;
     object-position: center center;
   }
+  #content.not-used-for-site-promo .site-promo-container .site-promo-harmful-content-flag {
+    grid-row: 1/span 2;
+    align-self: auto;
+  }
   #content.not-used-for-site-promo .site-promo-container h2 {
     grid-row: 1;
     grid-column: 2;
@@ -254,6 +258,20 @@ footer a:hover {
     text-underline-offset: 2px;
     opacity: 1;
     color: #00693e;
+  }
+  #content .site-promo-harmful-content-flag {
+    z-index: 2;
+    grid-row: 1;
+    grid-column: 1;
+    align-self: end;
+  }
+  #content .site-promo-harmful-content-flag p {
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+    color: #ffa00f;
+    background-color: #000;
+    font-weight: bold;
   }
   #content .site-promo-image {
     grid-row: 1;

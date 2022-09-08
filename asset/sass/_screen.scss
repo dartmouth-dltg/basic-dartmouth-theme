@@ -237,6 +237,10 @@ footer {
         }
       }
     }
+    .site-promo-harmful-content-flag {
+      grid-row: 1 / span 2;
+      align-self: auto;
+    }
     h2 {
       grid-row: 1;
       grid-column: 2;
@@ -276,6 +280,20 @@ footer {
       text-underline-offset: 2px;
       opacity: 1;
       color: $dartgreen;
+    }
+  }
+  .site-promo-harmful-content-flag {
+    z-index: 2;
+    grid-row: 1;
+    grid-column: 1;
+    align-self: end;
+    p {
+      margin: 0;
+      padding: 0.5rem;
+      text-align: center;
+      color: $warning;
+      background-color: $black;
+      font-weight: bold;
     }
   }
   .site-promo-image {
