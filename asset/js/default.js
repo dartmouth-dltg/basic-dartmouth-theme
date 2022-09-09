@@ -54,42 +54,44 @@
       $(this).attr('id', uuid);
     });
 
-    const tobii = new Tobii({
-      selector: '.dcl-lightbox'
-    });
+    if (typeof(Tobii) !== 'undefined') {
+      const tobii = new Tobii({
+        selector: '.dcl-lightbox'
+      });
 
-    $('.tobii-image img').each(function() {
-      const src = $(this).data('src')
-      const slickImgId = $('a[href="' + src + '"]').attr('id')
-      $(this).data('slick-id', slickImgId)
-    });
+      $('.tobii-image img').each(function() {
+        const src = $(this).data('src')
+        const slickImgId = $('a[href="' + src + '"]').attr('id')
+        $(this).data('slick-id', slickImgId)
+      });
 
-    $('.tobii-zoom__icon').attr('tabindex',0);
+      $('.tobii-zoom__icon').attr('tabindex',0);
 
-    // basic sync lightbox and carousel
-    $('.tobii__btn--next, .tobii__btn--previous').click(function() {
-      // find active slide
-      const activeSlide = $('.tobii__slide--is-active');
-      const activeId = activeSlide.find('img').data('slick-id');
-      const linkedHref = $('a[id="' + activeId + '"]');
-      const activeSlider = linkedHref.closest('.slick-slider');
-      if ($(this).hasClass('tobii__btn--next')) {
-        activeSlider.slick('slickNext');
-      }
-      else activeSlider.slick('slickPrev');
-    });
+      // basic sync lightbox and carousel
+      $('.tobii__btn--next, .tobii__btn--previous').click(function() {
+        // find active slide
+        const activeSlide = $('.tobii__slide--is-active');
+        const activeId = activeSlide.find('img').data('slick-id');
+        const linkedHref = $('a[id="' + activeId + '"]');
+        const activeSlider = linkedHref.closest('.slick-slider');
+        if ($(this).hasClass('tobii__btn--next')) {
+          activeSlider.slick('slickNext');
+        }
+        else activeSlider.slick('slickPrev');
+      });
 
-    // expand/compress image in lightbox
-    $('a.lightbox-control').click(function(e) {
-      e.preventDefault();
-      if ($(this).children('.fa').hasClass('fa-expand')) {
-        $(this).children('.fa').removeClass('fa-expand').addClass('fa-compress');
-        $(this).closest('.lightbox-details-img').removeClass('with-description');
-      }
-      else {
-        $(this).children('.fa').removeClass('fa-compress').addClass('fa-expand');
-        $(this).closest('.lightbox-details-img').addClass('with-description');
-      }
-    });
+      // expand/compress image in lightbox
+      $('a.lightbox-control').click(function(e) {
+        e.preventDefault();
+        if ($(this).children('.fa').hasClass('fa-expand')) {
+          $(this).children('.fa').removeClass('fa-expand').addClass('fa-compress');
+          $(this).closest('.lightbox-details-img').removeClass('with-description');
+        }
+        else {
+          $(this).children('.fa').removeClass('fa-compress').addClass('fa-expand');
+          $(this).closest('.lightbox-details-img').addClass('with-description');
+        }
+      });
+    }
   });
 })(jQuery);
