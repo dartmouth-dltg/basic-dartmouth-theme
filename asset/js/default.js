@@ -23,7 +23,7 @@
       if ($(this).children('.media-render').length == 1) {
         return;
       }
-      $(this).slick(
+      $(this).not('.slick-initalized').slick(
         {
           slidesToShow: 1,
           slidesToScroll: 1,
