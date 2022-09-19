@@ -7,8 +7,14 @@ $itemMedia = $item->media();
 
 $filterLocale = (bool) $this->siteSetting('filter_locale_values');
 $lang = $this->lang();
-?>
 
+if ($this->themeSetting('theme_og_image') && $this->themeSetting('theme_og_image_include') == 1) {
+    $this->headMeta()->appendProperty('og:image', $this->themeSettingAssetUrl('theme_og_image'));
+    if ($this->themeSettingAsset('theme_og_image')->altText()) {
+        $this->headMeta()->appendProperty('og:image:alt', $this->themeSettingAsset('theme_og_image')->altText());
+    }
+}
+?>
 <?php echo $this->pageTitle($item->displayTitle(null, ($filterLocale ? $lang : null)), 2); ?>
 <?php $this->trigger('view.show.before'); ?>
 <?php if ($embedMedia && $itemMedia): ?>
