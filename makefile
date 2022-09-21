@@ -1,8 +1,8 @@
 SHELL = /bin/sh
 
 clean:
-	rm .eslintrc.json
-	rm .stylelintrc.json
+	rm -f .eslintrc.json
+	rm -f .stylelintrc.json
 
 linters: 
 	ln -s node_modules/@dltg/gulp-build/templates/eslintrc.json .eslintrc.json
