@@ -19,5 +19,9 @@
   },
   "devDependencies": {
     "@dltg/gulp-build": "^1.0.0"
+  },
+  "scripts": {
+    "preinstall": "make clean",
+    "postinstall": "if test -d node_modules/@dltg/gulp-build; then make linters; fi"
   }
 }
