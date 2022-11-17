@@ -11,12 +11,14 @@
                     if ($media):
                     $image = preg_match('/alt=""/', $this->thumbnail($media, 'medium')) == 1 ? $this->thumbnail($media, 'medium', ['alt' => $title]) : $this->thumbnail($media, 'medium');
                 ?>
+                    <a href="<?php echo $this->baseUrl . $this->siteSelectLink; ?>">
                         <figure>
                             <?php echo $image; ?>
                             <?php if ($attachment->caption()): ?>
                               <figcaption><?php echo $attachment->caption(); ?></figcaption>
                             <?php endif; ?>
                         </figure>
+                    </a>
                     <?php endif; ?>
                 <?php endif; ?>
             </div>
