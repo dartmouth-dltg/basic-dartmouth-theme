@@ -1,16 +1,18 @@
 // Colors
 $gray:                                  #ababab;
 $gray-dark:                             #333;
-$gary-medium-dark:                      #666;
+$gray-medium-dark:                      #666;
 $bold:                                  darken($gray, 20%);
 $light:                                 lighten($gray, 20%);
 $white:                                 #fff;
 $dartgreen:                             #00693e;
 $blue:                                  #003c73;
+$blue-light:                            #b3d9ff;
 $bg:                                    $white;
 $link:                                  #328060;
 $warning:                               #ffa00f;
 $black:                                 #000;
+$yellow:                                #ffa00f;
 
 // Typography
 $base-font-size:                        1.25rem;
@@ -19,6 +21,7 @@ $serif:                                 "Lora", georgia, serif;
 $sansserif:                             "National2", verdana, sans-serif;
 $sansserif-bold:                        "National2-Bold", verdana, sans-serif;
 $sansserif-regular:                     "National2-Regular", verdana, sans-serif;
+$max-paragraph-width:                   1200px;
 
 // Units
 $spacing-s:                             0.25 * $base-line-height;
