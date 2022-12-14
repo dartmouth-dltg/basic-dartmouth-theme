@@ -122,10 +122,12 @@ a:hover {
     line-height: normal;
   }
   header {
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
     min-height: 4rem;
     margin: 0 0 1.875rem 0;
-    padding: 0 5%;
+    padding: 0 calc(5% + 0.25rem);
     background-color: #00693e;
   }
   header > * {
@@ -133,6 +135,7 @@ a:hover {
     margin-right: auto;
     margin-left: auto;
     display: block;
+    width: 100%;
     padding: 0;
   }
   .site-title:hover,
@@ -140,6 +143,7 @@ a:hover {
     border-bottom: 0;
   }
   header h1 {
+    grid-column: 1;
     width: 90%;
     margin: 0 0 0.46875rem 0;
     padding: 0.8rem 0;
@@ -152,13 +156,34 @@ header h1 a:focus,
 header h1 a:link,
 header h1 a:visited {
     display: grid;
+    grid-template-rows: 1fr;
     grid-template-columns: auto 1fr;
     grid-column-gap: 1.5rem;
     align-items: center;
+  }
+  header a,
+header a:active,
+header a:hover,
+header a:focus,
+header a:link,
+header a:visited {
     color: #fff;
   }
-  header h1 img {
+  header img {
     max-height: 4rem;
+  }
+  header .language-switcher-wrapper {
+    display: grid;
+    grid-row: 1;
+    grid-column: 2;
+  }
+  header .language-switcher-wrapper label {
+    padding-left: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+  }
+  header .language-switcher-wrapper select {
+    padding: 0 2rem 0 1rem;
   }
   .harmful-content-wrapper {
     margin-top: -1.875rem;
@@ -462,6 +487,9 @@ footer a:hover {
   header h1 {
     font-size: 1.5rem;
     line-height: normal;
+  }
+  header select {
+    font-size: 0.7rem;
   }
   #content h2 {
     font-size: 1rem;

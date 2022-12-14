@@ -52,6 +52,7 @@ $userBar = $this->userBar();
         <?php echo $userBar; ?>
         <div class="page-wrapper">
             <header>
+                <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>   
                 <div>
                     <h1>
                         <a href="<?php echo $site->url(); ?>" class="site-title">
@@ -59,7 +60,7 @@ $userBar = $this->userBar();
                             <span><?php echo $escape($siteTitle); ?></span>
                         </a>
                     </h1>
-                </div>      
+                </div>
             </header>
             <?php if ($this->themeSetting('use_harmful_content') == 1 && $harmfulContent = $this->themeSetting('harmful_content')): ?>
                 <div class="harmful-content-wrapper">

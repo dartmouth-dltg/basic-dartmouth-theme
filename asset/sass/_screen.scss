@@ -133,16 +133,19 @@ select {
 }
 
 header {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
   min-height: 4rem;
   margin: 0 0 $spacing-l 0;
-  padding: 0 5%;
+  padding: 0 calc(5% + 0.25rem);
   background-color: $dartgreen;
 
   > * {
     @include container;
 
     display: block;
+    width: 100%;
     padding: 0;
   }
 }
@@ -152,25 +155,49 @@ header {
   border-bottom: 0;
 }
 
-header h1 {
-  width: 90%;
-  margin: 0 0 $spacing-s 0;
-  padding: 0.8rem 0;
-  line-height: 2.1rem;
+header {
+  h1 {
+    grid-column: 1;
+    width: 90%;
+    margin: 0 0 $spacing-s 0;
+    padding: 0.8rem 0;
+    line-height: 2.1rem;
+    a,
+    a:active,
+    a:hover,
+    a:focus,
+    a:link,
+    a:visited {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: auto 1fr;
+      grid-column-gap: 1.5rem;
+      align-items: center;
+    }
+  }
   a,
   a:active,
   a:hover,
   a:focus,
   a:link,
   a:visited {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-column-gap: 1.5rem;
-    align-items: center;
     color: $white;
   }
   img {
     max-height: 4rem;
+  }
+  .language-switcher-wrapper {
+    display: grid;
+    grid-row: 1;
+    grid-column: 2;
+    label {
+      padding-left: 1rem;
+      color: $white;
+      font-size: 0.8rem;
+    }
+    select {
+      padding: 0 2rem 0 1rem;
+    }
   }
 }
 
@@ -505,9 +532,14 @@ ul.resource-list {
 }
 
 @media (max-width: 767px) {
-  header h1 {
-    font-size: 1.5rem;
-    line-height: normal;
+  header {
+    h1 {
+      font-size: 1.5rem;
+      line-height: normal;
+    }
+    select {
+      font-size: 0.7rem;
+    }
   }
   #content {
     h2 {
