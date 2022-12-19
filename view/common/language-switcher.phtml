@@ -1,0 +1,38 @@
+<?php
+/**
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ * @var \Omeka\Api\Representation\SiteRepresentation $site
+ * @var array $locales
+ * @var array $localeLabels
+ * @var string $displayLocale "code" (the 2 or 3 letters language code, default) or "flag".
+ */
+
+// No switcher if there is only one site or a single language.
+if (count($locales) <= 1) {
+    return;
+}
+
+// Support old themes.
+if ($this->resolver('common/helper/language-switcher')) {
+    $vars = $this->vars();
+    $vars->offsetSet('locale_labels', $localeLabels);
+    $vars->offsetSet('locale_as_code', $displayLocale === 'code');
+    echo $this->partial('common/helper/language-switcher');
+    return;
+}
+
+$currentLocale = $this->siteSetting('locale') ?: 'en_US';
+?>
+<div class="language-switcher-wrapper">
+    <label for="language-switcher"><?php echo $this->translate('Select') . ' ' . $this->translate('Language'); ?></label>
+    <select id="language-switcher" class="language-switcher locale-<?= $displayLocale ?>">
+        <?php foreach ($locales as $locale): ?>
+            <?php $lang_matches = explode('(',$locale['locale_label']); ?>
+            <?php if ($currentLocale == $locale['locale']): ?>
+                <option class="active" title="<?= $locale['locale_label'] ?>" value="<?= $locale['locale'] ?>" selected><?= ucfirst(trim($lang_matches[0])) ?></option>
+            <?php else: ?>
+                <option class="active" title="<?= $locale['locale_label'] ?>" value="<?= $locale['locale'] ?>" data-href="<?= $locale['url'] ?>"><?= ucfirst(trim($lang_matches[0])) ?></option>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </select>
+</div>

@@ -93,5 +93,10 @@
         }
       });
     }
+
+    // language switcher
+    $('header select.language-switcher').on('change', function() {
+      window.location.pathname = $(this).find('option[value="' + this.value + '"]').data('href')
+    })
   });
 })(jQuery);
