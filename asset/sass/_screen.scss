@@ -588,15 +588,11 @@ ul.resource-list {
     }
   }
   .blocks {
-    .right {
-      float: none;
-      max-width: 100%;
-      margin-left: 0;
-    }
-    .left {
-      float: none;
-      max-width: 100%;
-      margin-right: 0;
+    .right.assets,
+    .right.file,
+    .left.assets,
+    .left.file {
+      max-width: 50%;
     }
   }
   #content.used-for-site-promo {
