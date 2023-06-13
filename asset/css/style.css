@@ -22,7 +22,8 @@
     position: relative;
     width: 100%;
     max-width: calc(100vw - 2rem);
-    height: calc(56.25vw + 20px);
+    height: 80vh;
+    min-height: 56.25vw;
     margin-bottom: 60px;
   }
   .slideshow-with-audio {
@@ -152,33 +153,17 @@
     left: unset;
     color: #fff;
   }
-}
-@media screen and (max-width: 767px) {
-  .slideshow-block,
-.slideshow-with-audio {
-    max-width: calc(70vw - 2rem) !important;
-    height: 39.375vw;
-  }
-  .slideshow .slick-slide > div {
-    height: 39.375vw;
-  }
-}
-@media screen {
   .fullscreen-wrapper {
     position: absolute;
     top: 0;
     right: 0;
     background-color: #000;
   }
-}
-@media screen {
   .fullscreen-label {
     text-align: left;
     font-size: 0.8rem;
     line-height: normal;
   }
-}
-@media screen {
   .slide-fullscreen-openBtn {
     justify-content: left;
     width: auto;
@@ -198,8 +183,6 @@
     background-color: #333;
     background-size: 20px;
   }
-}
-@media screen {
   .slide-fullscreen-closeBtn {
     position: absolute;
     top: 0;
@@ -219,8 +202,6 @@
     border: 2px solid #000;
     background: #333;
   }
-}
-@media screen {
   .slideshow-block,
 .slideshow-with-audio {
     position: relative;
@@ -229,8 +210,6 @@
 .slideshow-with-audio .slideshow {
     border-top: 6px solid #fff;
   }
-}
-@media screen {
   .slideshow-block .slick-slider.slick-dotted {
     margin-bottom: 30px;
   }
@@ -266,13 +245,13 @@
     top: unset !important;
   }
   .slideshow-block .slick-prev {
-    left: 1rem;
+    left: 0;
   }
   .slideshow-block .slick-prev:before {
     content: "\f0a8";
   }
   .slideshow-block .slick-next {
-    left: 5.075rem;
+    left: 4.075rem;
   }
   .slideshow-block .slick-next:after {
     right: 0;
@@ -285,57 +264,12 @@
     top: initial;
     right: 0;
     bottom: -37px;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    height: 2rem;
-    margin: 0;
-    padding: 0;
-    column-count: unset;
-    transform: scale(0.5);
     text-align: right;
-  }
-  .slideshow-block .slick-dots li.slick-active:after {
-    color: #003c73;
-  }
-  .slideshow-block .slick-dots li:hover:after {
-    color: #003c73;
-  }
-  .slideshow-block .slick-dots li {
-    display: flex;
-    width: 3rem;
-    height: 100%;
-    padding-left: 1rem;
-    cursor: pointer;
-    background: url("../../asset/img/svg/icons/two_dashes.svg") no-repeat;
-    background-position: 2px center;
-    background-size: 1rem;
-  }
-  .slideshow-block .slick-dots li:after {
-    position: relative;
-    right: 0;
-    display: block;
-    box-sizing: border-box;
-    width: 2rem;
-    height: 2rem;
-    content: " ";
-    color: #ababab;
-    border: 3px solid;
-    border-radius: 50%;
-  }
-  .slideshow-block .slick-dots li:first-child {
-    background: none;
-  }
-  .slideshow-block .slick-dots li:first-of-type {
-    padding-left: 0;
-  }
-  .slideshow-block .slick-dots button {
-    display: none !important;
   }
   .slideshow-block .slick-autoplay-toggle-button {
     z-index: 1000;
     bottom: -35px;
-    left: 2.8rem;
+    left: 1.8rem;
     width: auto;
     min-width: auto;
     opacity: 1;
@@ -360,6 +294,15 @@
     content: "\f144";
     font-family: "Font Awesome 5 Free";
     font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .slideshow-block {
+    margin-bottom: 90px;
+  }
+  .slideshow-block .slick-dots {
+    position: relative;
+    text-align: left;
   }
 }
 @media screen {
