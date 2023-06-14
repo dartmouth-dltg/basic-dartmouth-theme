@@ -32,6 +32,7 @@ $spacing-l:                             $base-line-height;
 // Paths
 $basepath:                              "..";
 $fontfolder:                            $basepath + "/fonts";
+$dart-sprite-path:                      "../img/sprite-dart.png";
 
 // Mixins
 @mixin container {

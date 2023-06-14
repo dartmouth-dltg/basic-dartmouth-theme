@@ -568,11 +568,32 @@ header a:visited {
   }
 }
 @media screen {
+  #back-to-top-btn {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
+    padding: 0.25rem 0.5rem 0.5rem;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+    background-color: #333;
+  }
+  #back-to-top-btn:hover {
+    color: #333;
+    border-color: #333;
+    background-color: #666;
+  }
+  #back-to-top-btn svg {
+    width: 1.5rem;
+  }
+}
+@media screen {
   footer {
     clear: both;
     width: 100%;
     padding: 1rem 0;
-    background-color: #333;
+    background-color: #000;
   }
   footer > * {
     max-width: 1450px;
@@ -591,6 +612,159 @@ footer a:visited {
   footer a:focus,
 footer a:hover {
     text-decoration: underline;
+  }
+}
+@media screen {
+  .standard-dcl-footer {
+    display: grid;
+    grid-template-rows: fit-content(100%) fit-content(100%);
+    color: #fff;
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+  }
+  .standard-dcl-footer h2 {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .standard-dcl-footer .row-1 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(min-content, 100%));
+    grid-column-gap: 2rem;
+  }
+  .standard-dcl-footer .row-1 span.fa[role=button] {
+    display: none;
+  }
+  .standard-dcl-footer .row-1 #footer-aboutus-collapse .menu {
+    column-count: 2;
+    column-gap: 2rem;
+  }
+  .standard-dcl-footer .row-1 .region-footer-fourth section {
+    padding-left: 2rem;
+    border-left: 2px solid #fff;
+  }
+  .standard-dcl-footer .row-1 .region-footer-fourth section a {
+    display: inline-block;
+    padding: 0 0 0 30px !important;
+    color: transparent;
+    line-height: em(25px);
+  }
+  .standard-dcl-footer .row-1 .region-footer-fourth section a.logo-facebook {
+    width: 75px;
+    height: 15px;
+    background: url("../img/sprite-dart.png") no-repeat 0 -50px;
+  }
+  .standard-dcl-footer .row-1 .region-footer-fourth section a.logo-facebook:focus {
+    border-bottom: none;
+    background-position: -100px -50px;
+  }
+  .standard-dcl-footer .row-1 .region-footer-fourth section a.logo-instagram {
+    width: 74px;
+    height: 18px;
+    background: url("../img/sprite-dart.png") no-repeat 0 -219px;
+  }
+  .standard-dcl-footer .row-1 .region-footer-fourth section a.logo-instagram:focus {
+    border-bottom: none;
+    background-position: -100px -219px;
+  }
+  .standard-dcl-footer .row-1 .region-footer-fourth section a.logo-twitter {
+    width: 80px;
+    height: 15px;
+    background: url("../img/sprite-dart.png") no-repeat 0 -75px;
+  }
+  .standard-dcl-footer .row-1 .region-footer-fourth section a.logo-twitter:focus {
+    border-bottom: none;
+    background-position: -100px -75px;
+  }
+  .standard-dcl-footer .row-1 .region-footer-fourth section a.logo-youtube {
+    width: 75px;
+    height: 22px;
+    background: url("../img/sprite-dart.png") no-repeat 0 -150px;
+  }
+  .standard-dcl-footer .row-1 .region-footer-fourth section a.logo-youtube:focus {
+    border-bottom: none;
+    background-position: -100px -150px;
+  }
+  .standard-dcl-footer .row-2 {
+    text-align: center;
+  }
+  .standard-dcl-footer .row-2 ul.menu li {
+    display: inline;
+  }
+  .standard-dcl-footer .row-2 ul.menu li:before {
+    content: "\f111";
+    vertical-align: middle;
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.3rem;
+  }
+  .standard-dcl-footer .row-2 ul.menu li:first-of-type {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  .standard-dcl-footer .row-2 ul.menu li:first-of-type:before {
+    content: "";
+  }
+  .standard-dcl-footer .row-2 ul.menu li:nth-of-type(2)::before {
+    content: "";
+  }
+  .standard-dcl-footer ul {
+    padding: 0;
+    list-style: none;
+  }
+  .standard-dcl-footer ul ul.menu {
+    padding-left: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .standard-dcl-footer h2 {
+    margin-bottom: 0;
+  }
+  .standard-dcl-footer .row-1 {
+    grid-template-columns: 100%;
+  }
+  .standard-dcl-footer .row-1 .region-footer-fourth section {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .standard-dcl-footer .row-1 #footer-aboutus-collapse .menu {
+    column-count: 1;
+    column-gap: 0;
+  }
+}
+@media screen {
+  .visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    border: 0;
+  }
+  .visually-hidden.sr-only-focusable {
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+  .visually-hidden.focusable:active, .visually-hidden.focusable:focus {
+    position: static !important;
+    z-index: 1000;
+    overflow: visible;
+    clip: auto;
+    -webkit-clip-path: unset;
+    clip-path: unset;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    outline: solid 3px #ffa00f !important;
+    outline-offset: 2px !important;
   }
 }
 @media screen {
