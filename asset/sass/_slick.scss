@@ -133,36 +133,48 @@
 }
 
 .slideshow.slick-slider.fullscreen-enabled {
+  border: none;
   .item {
+    display: inline-block !important;
     grid-template-rows: 100%;
-    grid-template-columns: fit-content(100%) 1fr;
-    grid-column-gap: 2rem;
+    figure {
+      height: 100%;
+    }
+  }
+  .slide-contents {
+    display: none;
   }
   h3,
   p {
     color: $white;
   }
+  img {
+    width: unset !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    transform-origin: unset !important;
+    object-fit: unset !important;
+    object-position: unset !important;
+  }
   .slick-prev,
   .slick-next {
     bottom: 0;
-    &:after,
-    &:before {
-      color: $white;
+    &:before,
+    &:after {
+      border-radius: 50%;
+      background-color: $white;
     }
   }
-  .slick-prev {
-    right: 5.075rem;
-    left: unset;
-  }
-  .slick-next {
-    right: 1rem;
-    left: unset;
-  }
   .slick-autoplay-toggle-button {
-    right: 2.75rem;
     bottom: 11px;
-    left: unset;
-    color: $white;
+    .slick-pause-icon,
+    .slick-play-icon {
+      &:before {
+        border-radius: 50%;
+        background-color: $white;
+      }
+    }
   }
 }
 

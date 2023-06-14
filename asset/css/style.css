@@ -121,37 +121,49 @@
     margin-right: 0;
     object-position: bottom right;
   }
+  .slideshow.slick-slider.fullscreen-enabled {
+    border: none;
+  }
   .slideshow.slick-slider.fullscreen-enabled .item {
+    display: inline-block !important;
     grid-template-rows: 100%;
-    grid-template-columns: fit-content(100%) 1fr;
-    grid-column-gap: 2rem;
+  }
+  .slideshow.slick-slider.fullscreen-enabled .item figure {
+    height: 100%;
+  }
+  .slideshow.slick-slider.fullscreen-enabled .slide-contents {
+    display: none;
   }
   .slideshow.slick-slider.fullscreen-enabled h3,
 .slideshow.slick-slider.fullscreen-enabled p {
     color: #fff;
   }
+  .slideshow.slick-slider.fullscreen-enabled img {
+    width: unset !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    transform-origin: unset !important;
+    object-fit: unset !important;
+    object-position: unset !important;
+  }
   .slideshow.slick-slider.fullscreen-enabled .slick-prev,
 .slideshow.slick-slider.fullscreen-enabled .slick-next {
     bottom: 0;
   }
-  .slideshow.slick-slider.fullscreen-enabled .slick-prev:after, .slideshow.slick-slider.fullscreen-enabled .slick-prev:before,
-.slideshow.slick-slider.fullscreen-enabled .slick-next:after,
-.slideshow.slick-slider.fullscreen-enabled .slick-next:before {
-    color: #fff;
-  }
-  .slideshow.slick-slider.fullscreen-enabled .slick-prev {
-    right: 5.075rem;
-    left: unset;
-  }
-  .slideshow.slick-slider.fullscreen-enabled .slick-next {
-    right: 1rem;
-    left: unset;
+  .slideshow.slick-slider.fullscreen-enabled .slick-prev:before, .slideshow.slick-slider.fullscreen-enabled .slick-prev:after,
+.slideshow.slick-slider.fullscreen-enabled .slick-next:before,
+.slideshow.slick-slider.fullscreen-enabled .slick-next:after {
+    border-radius: 50%;
+    background-color: #fff;
   }
   .slideshow.slick-slider.fullscreen-enabled .slick-autoplay-toggle-button {
-    right: 2.75rem;
     bottom: 11px;
-    left: unset;
-    color: #fff;
+  }
+  .slideshow.slick-slider.fullscreen-enabled .slick-autoplay-toggle-button .slick-pause-icon:before,
+.slideshow.slick-slider.fullscreen-enabled .slick-autoplay-toggle-button .slick-play-icon:before {
+    border-radius: 50%;
+    background-color: #fff;
   }
   .fullscreen-wrapper {
     position: absolute;
