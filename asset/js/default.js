@@ -98,5 +98,20 @@
     $('header select.language-switcher').on('change', function() {
       window.location.pathname = $(this).find('option[value="' + this.value + '"]').data('href')
     })
+
+    // back to top
+    topButton = $("#back-to-top-btn");
+    
+    topButton.click(function(){
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    });
+    
+    $(window).on('load scroll', function() {
+      if ($(window).scrollTop() > 400) {
+        topButton.show();
+      }
+      else topButton.hide();
+    });
   });
 })(jQuery);

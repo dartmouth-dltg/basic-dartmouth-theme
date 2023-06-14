@@ -573,14 +573,13 @@ header a:visited {
     right: 1rem;
     bottom: 1rem;
     display: none;
-    padding: 0.25rem 0.5rem 0.5rem;
+    padding: 0.25rem 0.5rem 0 0.5rem;
     color: #fff;
     border: 1px solid #fff;
     border-radius: 0.5rem;
     background-color: #333;
   }
   #back-to-top-btn:hover {
-    color: #333;
     border-color: #333;
     background-color: #666;
   }

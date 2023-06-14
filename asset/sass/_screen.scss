@@ -255,13 +255,12 @@ header {
   right: 1rem;
   bottom: 1rem;
   display: none;
-  padding: 0.25rem 0.5rem 0.5rem;
+  padding: 0.25rem 0.5rem 0 0.5rem;
   color: $white;
   border: 1px solid $white;
   border-radius: 0.5rem;
   background-color: $gray-dark;
   &:hover {
-    color: $gray-dark;
     border-color: $gray-dark;
     background-color: $gray-medium-dark;
   }
