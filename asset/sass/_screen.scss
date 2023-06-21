@@ -249,13 +249,33 @@ header {
   }
 }
 
+// back to top
+#back-to-top-btn {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  padding: 0.25rem 0.5rem 0 0.5rem;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 0.5rem;
+  background-color: $gray-dark;
+  &:hover {
+    border-color: $gray-dark;
+    background-color: $gray-medium-dark;
+  }
+  svg {
+    width: 1.5rem;
+  }
+}
+
 // @group ----- Footer -----
 
 footer {
   clear: both;
   width: 100%;
   padding: 1rem 0;
-  background-color: $gray-dark;
+  background-color: $black;
   > * {
     @include container;
 
@@ -276,7 +296,168 @@ footer {
   }
 }
 
+// standard dcl footer
+.standard-dcl-footer {
+  display: grid;
+  grid-template-rows: fit-content(100%) fit-content(100%);
+  color: $white;
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+  h2 {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .row-1 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(min-content, 100%));
+    grid-column-gap: 2rem;
+    span.fa[role="button"] {
+      display: none;
+    }
+    #footer-aboutus-collapse .menu {
+      column-count: 2;
+      column-gap: 2rem;
+    }
+    .region-footer-fourth section {
+      padding-left: 2rem;
+      border-left: 2px solid $white;
+      a {
+        display: inline-block;
+        padding: 0 0 0 30px !important;
+        color: transparent;
+        line-height: em(25px);
+      }
+      a.logo-facebook {
+        width: 75px;
+        height: 15px;
+        background: url($dart-sprite-path) no-repeat 0 -50px;
+        &:focus {
+          border-bottom: none;
+          background-position: -100px -50px;
+        }
+      }
+      a.logo-instagram {
+        width: 74px;
+        height: 18px;
+        background: url($dart-sprite-path) no-repeat 0 -219px;
+        &:focus {
+          border-bottom: none;
+          background-position: -100px -219px;
+        }
+      }
+      a.logo-twitter {
+        width: 80px;
+        height: 15px;
+        background: url($dart-sprite-path) no-repeat 0 -75px;
+        &:focus {
+          border-bottom: none;
+          background-position: -100px -75px;
+        }
+      }
+      a.logo-youtube {
+        width: 75px;
+        height: 22px;
+        background: url($dart-sprite-path) no-repeat 0 -150px;
+        &:focus {
+          border-bottom: none;
+          background-position: -100px -150px;
+        }
+      }
+    }
+  }
+  .row-2 {
+    text-align: center;
+    ul.menu {
+      li {
+        display: inline;
+        &:before {
+          content: "\f111";
+          vertical-align: middle;
+          font-family: $icon-font;
+          font-size: 0.3rem;
+        }
+        &:first-of-type {
+          display: block;
+          text-transform: uppercase;
+          font-size: 1rem;
+          &:before {
+            content: "";
+          }
+        }
+        &:nth-of-type(2)::before {
+          content: "";
+        }
+      }
+    }
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+    ul.menu {
+      padding-left: 1rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .standard-dcl-footer {
+    h2 {
+      margin-bottom: 0;
+    }
+    .row-1 {
+      grid-template-columns: 100%;
+      .region-footer-fourth section {
+        padding-left: 0;
+        border-left: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .standard-dcl-footer {
+    .row-1 {
+      #footer-aboutus-collapse .menu {
+        column-count: 1;
+        column-gap: 0;
+      }
+    }
+  }
+}
+
 // @end
+
+// visually hidden
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+  &.sr-only-focusable {
+    clip-path: none;
+  }
+  &.focusable:active,
+  &.focusable:focus {
+    position: static !important;
+    z-index: 1000;
+    overflow: visible;
+    clip: auto;
+    clip-path: unset;
+    width: auto;
+    height: auto;
+    margin: 5px;
+    outline: solid 3px $yellow !important;
+    outline-offset: 2px !important;
+  }
+}
 
 // @group ----- Page and Blocks -----
 
@@ -588,15 +769,11 @@ ul.resource-list {
     }
   }
   .blocks {
-    .right {
-      float: none;
-      max-width: 100%;
-      margin-left: 0;
-    }
-    .left {
-      float: none;
-      max-width: 100%;
-      margin-right: 0;
+    .right.assets,
+    .right.file,
+    .left.assets,
+    .left.file {
+      max-width: 50%;
     }
   }
   #content.used-for-site-promo {

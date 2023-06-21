@@ -72,12 +72,123 @@ $userBar = $this->userBar();
                 <?php echo $this->content; ?>
             </div>
             <footer>
-                <div>
-                    <div class="admin-link">
-                        <a href="<?php echo implode('/', array_diff(explode("/", $site->adminUrl()),['site','s',$site->slug()])); ?>">Omeka-S <?php echo $this->translate('Login') ;?></a>
+                <div class="standard-dcl-footer">
+                    <div class="row-1">
+                        <div class="region region-footer-first">
+                        <nav role="navigation" aria-labelledby="block-footerlibrarylinks-menu" id="block-footerlibrarylinks" class="footer-library-list-links">
+                            <h2 id="block-footerlibrarylinks-menu">
+                            Dartmouth Library
+                            </h2>
+                            <ul class="menu nav">
+                            <li class="expanded dropdown"> <a href="https://www.dartmouth.edu/library/bakerberry/">Baker-Berry Library <span class="caret"></span></a>
+                            <ul class="menu dropdown-menu">
+                                <li> <a href="https://www.library.dartmouth.edu/book-arts">Book Arts Workshop</a></li>
+                                <li> <a href="https://www.dartmouth.edu/library/maproom/">Evans Map Room</a> </li>
+                                <li> <a href="https://www.dartmouth.edu/library/mediactr/">Jones Media Center</a> </li>
+                            </ul>
+                            </li>
+                            <li> <a href="https://www.dartmouth.edu/library/biomed/">Biomedical Libraries</a> </li>
+                            <li> <a href="https://www.library.dartmouth.edu/feldberg">Feldberg Business &amp; Engineering Library </a> </li>
+                            <li> <a href="https://www.dartmouth.edu/library/rauner/">Rauner Special Collections Library</a> </li>
+                            <li> <a href="https://www.library.dartmouth.edu/records-management">Records Management</a></li>
+                            <li> <a href="https://www.dartmouth.edu/library/sherman/">Sherman Art Library</a> </li>
+                            </ul>
+                        </nav>
+                        </div>
+                        <div class="region region-footer-second">
+                        <nav role="navigation" aria-labelledby="block-footeraboutus-menu" id="block-footeraboutus">
+                            <h2 id="block-footeraboutus-menu">
+                            <span data-toggle="collapse" href="#footer-aboutus-collapse" tabindex="0">About Us<span class="fa fa-caret-down" role="button" aria-label="Open Menu"></span></span>
+                            </h2>
+                            <div id="footer-aboutus-collapse" class="collapse" role="list" aria-expanded="true">
+                            <div role="listitem">
+                                <ul class="menu nav">
+                                <li> <a href="https://www.library.dartmouth.edu/about/strategic-objectives-priorities">Strategic Objectives</a> </li>
+                                <li> <a href="https://www.library.dartmouth.edu/about/staff-and-departments">Staff &amp; Departments</a> </li>
+                                <li> <a href="https://researchguides.dartmouth.edu/subjectlibrarians">Subject Librarians</a> </li>
+                                <li> <a href="https://www.library.dartmouth.edu/services/faculty">Faculty Services</a> </li>
+                                <li> <a href="https://www.library.dartmouth.edu/borrow-renew/alumni">Alumni Services</a> </li>
+                                <li> <a href="https://www.library.dartmouth.edu/about/visit-history">Visiting &amp; History</a> </li>
+                                <li> <a href="https://www.library.dartmouth.edu/libraries-and-spaces/accessibility">Accessibility</a> </li>
+                                <li> <a href="https://search.library.dartmouth.edu/discovery/search?vid=01DCL_INST:01DCL">Library Catalog</a> </li>
+                                <li> <a href="https://www.library.dartmouth.edu/about/careers-jobs">Careers</a> </li>
+                                <li> <a href="https://www.library.dartmouth.edu/about/friends-library">Friends of the Library</a></li>
+                                <li class="last"> <a href="https://www.library.dartmouth.edu/about">More About Us</a> </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </nav>
+                        </div>
+                        <div class="region region-footer-third">
+                        <section id="block-footercontactus" class="block block-block-content block-block-contentd216f7f4-bcca-429f-a900-db0ec9828214 clearfix">
+                            <h2 class="block-title">
+                            <span data-toggle="collapse" href="#footer-contactus-collapse" tabindex="0">Contact Us<span class="fa fa-caret-down" role="button" aria-label="Open Menu"></span></span>
+                            </h2>
+                            <div id="footer-contactus-collapse" class="collapse" role="list" aria-expanded="true">
+                            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item" role="listitem">
+                                <ul class="library-info">
+                                <li>25 North Main Street<br />
+                                Hanover, NH, USA 03755</li>
+                                <li>Phone: <a href="tel:+1-603-646-2567">603-646-2567</a></li>
+                                <li><a href="https://www.library.dartmouth.edu/help/contact-us">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                            <p><a href="https://www.library.dartmouth.edu/feedback">Give Us Feedback</a></p>
+                            </div>
+                        </section>
+                        </div>
+                        <div class="region region-footer-fourth">
+                        <section id="block-footerconnectwithus" class="block block-block-content block-block-contentc36f95a7-e463-4baf-ab99-52cb3bdb2102 clearfix">
+                            <h2 class="block-title">
+                            Connect with Us
+                            </h2>
+                            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                            <ul class="group footer-social" role="menu">
+                                <li role="menuitem"><a class="logo-facebook hide-txt" href="https://www.facebook.com/dartmouth.college.library">Facebook</a></li>
+                                <li role="menuitem"><a class="logo-instagram hide-txt" href="https://www.instagram.com/dartmouthlibrary/">Instagram</a></li>
+                                <li role="menuitem"><a class="logo-youtube hide-txt" href="https://www.youtube.com/playlist?list=PLA161361549CB448C">YouTube</a></li>
+                            </ul>
+                            </div>
+                        </section>
+                        </div>
+                    </div>
+                    <div class="row-2">
+                        <div class="region region-footer-copyright">
+                        <nav role="navigation" aria-labelledby="block-bootstrap-dcl-footercopyright-menu" id="block-bootstrap-dcl-footercopyright">
+                            <h2 class="visually-hidden" id="block-bootstrap-dcl-footercopyright-menu">
+                            Footer copyright
+                            </h2>
+                            <ul class="menu menu--footer-copyright nav">
+                            <li>
+                                <a href="https://home.dartmouth.edu/" title="Dartmouth College home">Dartmouth</a>
+                            </li>
+                            <li>
+                                <a href="https://www.dartmouth.edu/copyright/">Copyright &copy; <?php echo date("Y"); ?> Trustees of Dartmouth College</a>
+                            </li>
+                            <li>
+                                <a href="https://www.library.dartmouth.edu/about/privacy-policy">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo implode('/', array_diff(explode("/", $site->adminUrl()),['site','s',$site->slug()])); ?>">Site Editor <?php echo $this->translate('Login') ;?></a>
+                            </li>
+                            </ul>
+                        </nav>
+                        <section id="block-emergencybannerscriptblock" class="block block-dcl-emergency-banner block-dcl-emergency-banner-script-block clearfix">
+                            <div id="emergency-banner-content-div" class="form-group">
+                            <script src="https://library.dartmouth.edu/emergency/banner.php">
+                            </script>
+                            </div>
+                        </section>
+                        </div>
                     </div>
                 </div>
             </footer>
+            <a id="back-to-top-btn" href="#" data-offset="100" data-duration="300">
+                <svg aria-hidden="true" class="icon" viewBox="0 0 16 16"><title>Go to top of page</title><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,11.5 8,4 0.5,11.5 "></polyline></g></svg>
+                <span class="sr-only">Back to top</span>
+            </a>
         </div>
     </body>
 </html>

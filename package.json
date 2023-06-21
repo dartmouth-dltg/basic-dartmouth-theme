@@ -15,10 +15,10 @@
   "license": "GPL-3.0",
   "dependencies": {
     "@accessible360/accessible-slick": "^1.0",
-    "@midzer/tobii": "^2.4.0"
+    "@midzer/tobii": "^2.5.0"
   },
   "devDependencies": {
-    "@dltg/gulp-build": "^1.0.0"
+    "@dltg/gulp-build": "^1.0.4"
   },
   "scripts": {
     "preinstall": "make clean",
