@@ -994,6 +994,12 @@ footer a:hover {
   }
 }
 @media screen {
+  .property dt {
+    margin: 1.25rem 0 0.25rem 0;
+    font-weight: 700;
+  }
+}
+@media screen {
   ul.resource-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
