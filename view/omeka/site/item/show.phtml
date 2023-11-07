@@ -1,12 +1,14 @@
 <?php
 $translate = $this->plugin('translate');
 $escape = $this->plugin('escapeHtml');
+$this->headLink()->appendStylesheet($this->assetUrl('css/resource-page-blocks.css', 'Omeka'));
 $this->htmlElement('body')->appendAttribute('class', 'item resource show');
 $embedMedia = $this->siteSetting('item_media_embed', false);
 $itemMedia = $item->media();
 
 $filterLocale = (bool) $this->siteSetting('filter_locale_values');
 $lang = $this->lang();
+$valueLang = $filterLocale ? [$lang, ''] : null;
 
 if ($this->themeSetting('theme_og_image') && $this->themeSetting('theme_og_image_include') == 1) {
     $this->headMeta()->appendProperty('og:image', $this->themeSettingAssetUrl('theme_og_image'));
@@ -15,7 +17,7 @@ if ($this->themeSetting('theme_og_image') && $this->themeSetting('theme_og_image
     }
 }
 ?>
-<?php echo $this->pageTitle($item->displayTitle(null, ($filterLocale ? $lang : null)), 2); ?>
+<?php echo $this->pageTitle($item->displayTitle(null, $valueLang), 2); ?>
 <?php $this->trigger('view.show.before'); ?>
 <?php if ($embedMedia && $itemMedia): ?>
     <div class="media-embeds">
@@ -56,7 +58,11 @@ if ($this->themeSetting('theme_og_image') && $this->themeSetting('theme_og_image
 <?php
 $page = $this->params()->fromQuery('page', 1);
 $property = $this->params()->fromQuery('property');
-$subjectValues = $item->displaySubjectValues($page, 25, $property);
+$subjectValues = $item->displaySubjectValues([
+    'page' => $page, 
+    'perPage' => 25, 
+    'resourceProperty' => $property
+]);
 ?>
 <?php if ($subjectValues): ?>
 <div id="item-linked">

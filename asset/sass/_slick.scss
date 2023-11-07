@@ -271,6 +271,7 @@
       color: $black;
       font-family: $icon-font;
       font-size: 1.5rem;
+      font-weight: bold;
       line-height: 1.5rem;
     }
     &:hover:before,
@@ -334,11 +335,13 @@
       content: "\f28b";
       font-family: $icon-font;
       font-size: 1.5rem;
+      font-weight: bold;
     }
     .slick-play-icon::before {
       content: "\f144";
       font-family: $icon-font;
       font-size: 1.5rem;
+      font-weight: bold;
     }
   }
 }

@@ -17,9 +17,10 @@ if ($this->status()->isSiteRequest()) {
 }
 ?>
 
+<dl>
 <?php foreach ($values as $term => $propertyData): ?>
     <div class="property">
-        <h3>
+        <dt>
         <?php if ($propertyData['alternate_label']): ?>
         <?php echo $escape($translate($propertyData['alternate_label'])); ?>
         <?php else: ?>
@@ -30,8 +31,7 @@ if ($this->status()->isSiteRequest()) {
         <?php elseif ('vocab' === $labelInfo): ?>
         <span class="field-term">(<?php echo $escape($propertyData['property']->vocabulary()->label()); ?>)</span>
         <?php endif; ?>
-        </h3>
-        <div class="values">
+        </dt>
         <?php foreach ($propertyData['values'] as $value): ?>
             <?php
             $valueType = $value->type();
@@ -46,9 +46,9 @@ if ($this->status()->isSiteRequest()) {
             }
             ?>
             <?php if ((!$filterLocale) || ($valueLang == '') || (strcasecmp($valueLang, $lang) == 0)): ?>
-            <div class="<?php echo implode(' ', $class); ?>"<?php if ($valueLang != ''): ?>lang="<?php echo $escape($valueLang); ?>"<?php endif; ?>>
+            <dd class="<?php echo implode(' ', $class); ?>"<?php if ($valueLang != ''): ?>lang="<?php echo $escape($valueLang); ?>"<?php endif; ?>>
                 <?php if ($showLocale && $valueLang): ?>
-                <span class="language"><?php echo $valueLang; ?></span>
+                    <span class="language"><?php echo $valueLang; ?></span>
                 <?php endif; ?>
                 <span class="value-content"><?php echo $filterLocale ? $value->asHtml($lang) : $value->asHtml(); ?></span>
                 <?php if(!$value->isPublic()): ?>
@@ -63,9 +63,9 @@ if ($this->status()->isSiteRequest()) {
                     </div>
                 <?php endif; ?>
                 <?php $this->trigger('view.show.value', ['value' => $value]); ?>
-            </div>
+                </dd>
             <?php endif; ?>
         <?php endforeach; ?>
-        </div>
     </div>
 <?php endforeach; ?>
+</dl>

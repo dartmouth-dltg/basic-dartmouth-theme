@@ -253,6 +253,7 @@
     color: #000;
     font-family: "Font Awesome 5 Free";
     font-size: 1.5rem;
+    font-weight: bold;
     line-height: 1.5rem;
   }
   .slideshow-block .slick-prev:hover:before, .slideshow-block .slick-prev:hover:after,
@@ -309,11 +310,13 @@
     content: "\f28b";
     font-family: "Font Awesome 5 Free";
     font-size: 1.5rem;
+    font-weight: bold;
   }
   .slideshow-block .slick-autoplay-toggle-button .slick-play-icon::before {
     content: "\f144";
     font-family: "Font Awesome 5 Free";
     font-size: 1.5rem;
+    font-weight: bold;
   }
 }
 @media screen and (max-width: 450px) {
@@ -703,6 +706,7 @@ footer a:hover {
     vertical-align: middle;
     font-family: "Font Awesome 5 Free";
     font-size: 0.3rem;
+    font-weight: bold;
   }
   .standard-dcl-footer .row-2 ul.menu li:first-of-type {
     display: block;
@@ -987,6 +991,12 @@ footer a:hover {
   .item.resource.show .values .value,
 .item.resource.show .value .value {
     margin-left: 0;
+  }
+}
+@media screen {
+  .property dt {
+    margin: 1.25rem 0 0.25rem 0;
+    font-weight: 700;
   }
 }
 @media screen {
