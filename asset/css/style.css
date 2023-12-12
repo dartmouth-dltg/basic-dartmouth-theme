@@ -941,6 +941,33 @@ footer a:hover {
   #content .alternate-html-block .switch-alternate-html {
     max-width: 1200px;
   }
+  #content #linked-resources table {
+    width: 100%;
+    margin: 27px 0;
+    text-align: left;
+  }
+  #content #linked-resources table caption {
+    margin-left: 4px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+  }
+  #content #linked-resources table th:nth-of-type(2),
+#content #linked-resources table td:nth-of-type(2) {
+    display: none;
+  }
+  #content #linked-resources table .resource-link {
+    display: grid;
+    grid-template-columns: fit-content(100%) fit-content(100%);
+    grid-gap: 18px;
+  }
+  #content #linked-resources table .resource-link img {
+    max-height: 200px;
+  }
+  #content #linked-resources table .resource-link .resource-name {
+    align-self: center;
+  }
 }
 @media screen {
   .tobii .tobii__slide figure > img {
@@ -950,6 +977,9 @@ footer a:hover {
   }
 }
 @media screen {
+  .item.resource .media-render.file {
+    margin-top: 0;
+  }
   .item.resource.show h3 {
     margin: 1rem 0 0.5rem 0;
     font-size: 1.1rem;
