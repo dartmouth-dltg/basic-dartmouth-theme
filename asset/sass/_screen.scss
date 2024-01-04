@@ -631,6 +631,38 @@ footer {
   .alternate-html-block .switch-alternate-html {
     max-width: $max-paragraph-width;
   }
+
+  #linked-resources {
+    table {
+      width: 100%;
+      margin: 27px 0;
+      text-align: left;
+      caption {
+        margin-left: 4px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: italic;
+      }
+      th,
+      td {
+        &:nth-of-type(2) {
+          display: none;
+        }
+      }
+      .resource-link {
+        display: grid;
+        grid-template-columns: fit-content(100%) fit-content(100%);
+        grid-gap: 18px;
+        img {
+          max-height: 200px;
+        }
+        .resource-name {
+          align-self: center;
+        }
+      }
+    }
+  }
 }
 .tobii .tobii__slide figure > img {
   max-width: calc(100% - 10em);
@@ -639,6 +671,9 @@ footer {
 }
 
 .item.resource {
+  .media-render.file {
+    margin-top: 0;
+  }
   &.show {
     h3 {
       margin: 1rem 0 0.5rem 0;
