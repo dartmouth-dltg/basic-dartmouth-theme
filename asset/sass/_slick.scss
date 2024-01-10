@@ -23,6 +23,28 @@
   padding-bottom: 0;
 }
 
+.slick-next,
+.slick-prev {
+  .slick-next-icon,
+  .slick-prev-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $spring-green;
+    &::before {
+      content: "\ef7d";
+      color: $black;
+      font-family: $font-primary-icons;
+    }
+  }
+}
+.slick-next .slick-next-icon::before {
+  content: "\e941";
+}
+.slick-dots li.slick-active button .slick-dot-icon {
+  color: $spring-green;
+}
+
 .media-embeds {
   .slideshow,
   .slick-list,
@@ -268,7 +290,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      color: $black;
+      color: $spring-green;
       font-family: $icon-font;
       font-size: 1.5rem;
       font-weight: bold;
@@ -276,10 +298,14 @@
     }
     &:hover:before,
     &:hover:after {
-      color: $gray-medium-dark;
+      color: $spring-green;
     }
     &:focus {
       top: unset !important;
+    }
+    .slick-next-icon,
+    .slick-prev-icon {
+      color: $spring-green;
     }
   }
 
