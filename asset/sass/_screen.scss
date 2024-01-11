@@ -40,6 +40,15 @@ img {
   height: auto;
 }
 
+blockquote,
+blockquote * {
+  padding: 0;
+  color: $gray-medium-dark;
+  border: none !important;
+  font-family: $font-family-serif !important;
+  font-style: normal !important;
+}
+
 select {
   // see https://www.filamentgroup.com/lab/select-css.html
   display: inline-block;
@@ -319,12 +328,20 @@ footer {
 }
 
 .site-page-pagination {
+  display: grid;
+  grid-template-columns: 33% 33%;
+  gap: 9px;
   .site-pagination-next,
   .site-pagination-prev {
+    display: grid;
+    gap: 9px;
+    text-align: left;
+    white-space: normal;
     color: $white !important;
     border: none !important;
-    border-radius: 18px;
+    border-radius: 0;
     background-color: $dart-green;
+    font-size: $base-font-size * 0.9;
     font-weight: bold;
     &:hover,
     &:focus {
@@ -336,15 +353,23 @@ footer {
   .site-pagination-prev::before {
     vertical-align: middle;
     font-family: $font-primary-icons;
+    font-size: $base-font-size * 1.5;
     font-variation-settings: "FILL" 1;
+    line-height: 23px;
   }
-  .site-pagination-next::after {
-    margin-left: 4px;
-    content: "\e941";
+  .site-pagination-next {
+    grid-template-columns: 1fr fit-content(100%);
+    &::after {
+      margin-left: 4px;
+      content: "\e941";
+    }
   }
-  .site-pagination-prev::before {
-    margin-right: 4px;
-    content: "\ef7d";
+  .site-pagination-prev {
+    grid-template-columns: fit-content(100%) 1fr;
+    &::before {
+      margin-right: 4px;
+      content: "\ef7d";
+    }
   }
 }
 
@@ -699,6 +724,12 @@ footer {
   .media-render.file {
     margin-top: 0;
   }
+  .caption {
+    margin-top: 6px;
+    font-family: $font-family-serif;
+    font-size: $base-font-size * 0.9;
+    line-height: normal;
+  }
   &.show {
     h3 {
       margin: 1rem 0 0.5rem 0;
@@ -824,6 +855,9 @@ ul.resource-list {
       }
     }
   }
+  .site-page-pagination {
+    grid-template-columns: 50% 50%;
+  }
 }
 
 @media (max-width: 575px) {
@@ -887,6 +921,9 @@ ul.resource-list {
   }
   ul.resource-list {
     grid-template-columns: 1fr;
+  }
+  .site-page-pagination {
+    grid-template-columns: 100%;
   }
 }
 

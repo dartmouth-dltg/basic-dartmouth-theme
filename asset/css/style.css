@@ -555,6 +555,16 @@ a:hover {
   }
 }
 @media screen {
+  blockquote,
+blockquote * {
+    padding: 0;
+    color: #666;
+    border: none !important;
+    font-family: "DartmouthRuzicka", "Times New Roman", georgia, garamond, serif !important;
+    font-style: normal !important;
+  }
+}
+@media screen {
   select {
     display: inline-block;
     box-sizing: border-box;
@@ -828,12 +838,22 @@ footer a:hover {
   }
 }
 @media screen {
+  .site-page-pagination {
+    display: grid;
+    grid-template-columns: 33% 33%;
+    gap: 9px;
+  }
   .site-page-pagination .site-pagination-next,
 .site-page-pagination .site-pagination-prev {
+    display: grid;
+    gap: 9px;
+    text-align: left;
+    white-space: normal;
     color: #fff !important;
     border: none !important;
-    border-radius: 18px;
+    border-radius: 0;
     background-color: #00693e;
+    font-size: 16.2px;
     font-weight: bold;
   }
   .site-page-pagination .site-pagination-next:hover, .site-page-pagination .site-pagination-next:focus,
@@ -846,11 +866,19 @@ footer a:hover {
 .site-page-pagination .site-pagination-prev::before {
     vertical-align: middle;
     font-family: "Material Symbols Outlined";
+    font-size: 27px;
     font-variation-settings: "FILL" 1;
+    line-height: 23px;
+  }
+  .site-page-pagination .site-pagination-next {
+    grid-template-columns: 1fr fit-content(100%);
   }
   .site-page-pagination .site-pagination-next::after {
     margin-left: 4px;
     content: "\e941";
+  }
+  .site-page-pagination .site-pagination-prev {
+    grid-template-columns: fit-content(100%) 1fr;
   }
   .site-page-pagination .site-pagination-prev::before {
     margin-right: 4px;
@@ -1187,6 +1215,12 @@ footer a:hover {
   .item.resource .media-render.file {
     margin-top: 0;
   }
+  .item.resource .caption {
+    margin-top: 6px;
+    font-family: "DartmouthRuzicka", "Times New Roman", georgia, garamond, serif;
+    font-size: 16.2px;
+    line-height: normal;
+  }
   .item.resource.show h3 {
     margin: 1rem 0 0.5rem 0;
   }
@@ -1300,6 +1334,9 @@ footer a:hover {
   .item.resource.show .media-list .resource-link {
     flex-basis: calc(50% - 1rem);
   }
+  .site-page-pagination {
+    grid-template-columns: 50% 50%;
+  }
 }
 @media screen and (max-width: 575px) {
   header {
@@ -1355,6 +1392,9 @@ footer a:hover {
   }
   ul.resource-list {
     grid-template-columns: 1fr;
+  }
+  .site-page-pagination {
+    grid-template-columns: 100%;
   }
 }
 @media screen and (max-width: 450px) {
