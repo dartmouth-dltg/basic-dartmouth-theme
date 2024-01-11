@@ -678,7 +678,7 @@ header h1 a:hover span,
 header h1 a:focus span,
 header h1 a:link span,
 header h1 a:visited span {
-    display: block;
+    display: inline-block;
     margin-top: 8px;
     padding: 6px 0 6px 9px;
     -webkit-text-decoration: underline solid transparent 1.5px;
