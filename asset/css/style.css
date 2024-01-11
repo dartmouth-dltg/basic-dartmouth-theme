@@ -549,28 +549,6 @@ a:hover {
   }
 }
 @media screen {
-  h1 {
-    font-size: 31.5px;
-    line-height: 31.5px;
-  }
-}
-@media screen {
-  h2 {
-    font-size: 22.5px;
-    line-height: normal;
-  }
-}
-@media screen {
-  h3 {
-    font-size: 20.25px;
-  }
-}
-@media screen {
-  h4 {
-    font-size: 19.8px;
-  }
-}
-@media screen {
   img {
     max-width: 100%;
     height: auto;
@@ -1089,7 +1067,7 @@ footer a:hover {
     height: 250px;
     margin-top: 0;
     object-fit: cover;
-    object-position: left 40%;
+    object-position: center 40%;
   }
   #content .site-promo-image figure figcaption p {
     display: none;

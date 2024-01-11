@@ -3,8 +3,37 @@ $escape = $this->plugin('escapeHtml');
 $siteTitle = $site->title();
 $this->htmlElement('html')->setAttribute('lang', $this->lang());
 $this->headMeta()->setCharset('utf-8');
-$this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1');
+$this->headMeta()->appendName('viewport', 'width="device-width", initial-scale="1"');
 $this->headTitle($siteTitle)->setSeparator(' · ');
+$this->headLink([
+    'rel' => 'manifest',
+    'href' => $this->assetUrl('site.webmanifest')
+], 'PREPEND');
+$this->headLink([
+    'rel' => 'mask-icon',
+    'color' => '#5bbad5',
+    'href' => $this->assetUrl('safari-pinned-tab.svg')
+], 'PREPEND');
+$this->headMeta()->appendName('msapplication-TileColor', 'color="#da532c"');
+$this->headMeta()->appendName('theme-color', 'color="#fff"');
+$this->headLink([
+    'rel' => 'apple-touch-icon', 
+    'type' => 'image/png',
+    'sizes' => '180x180',
+    'href' => $this->assetUrl('img/apple-touch-icon.png')
+], 'PREPEND');
+$this->headLink([
+    'rel' => 'shortcut icon', 
+    'type' => 'image/png',
+    'sizes' => '32x32',
+    'href' => $this->assetUrl('img/favicon-32x32.png')
+], 'PREPEND');
+$this->headLink([
+    'rel' => 'shortcut icon', 
+    'type' => 'image/png',
+    'sizes' => '16x16',
+    'href' => $this->assetUrl('img/favicon-16x16.png')
+], 'PREPEND');
 $this->headTitle()->append($this->setting('installation_title', 'Omeka S'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
 $this->headLink()->prependStylesheet($this->assetUrl('font-awesome/css/font-awesome.min.css'));

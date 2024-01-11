@@ -35,24 +35,6 @@ a:hover {
   color: $link;
 }
 
-h1 {
-  font-size: 1.75 * $base-font-size;
-  line-height: 1.75 * $base-line-height;
-}
-
-h2 {
-  font-size: 1.25 * $base-font-size;
-  line-height: normal;
-}
-
-h3 {
-  font-size: 1.125 * $base-font-size;
-}
-
-h4 {
-  font-size: 1.1 * $base-font-size;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -588,7 +570,7 @@ footer {
         height: 250px;
         margin-top: 0;
         object-fit: cover;
-        object-position: left 40%;
+        object-position: center 40%;
       }
       figcaption p {
         display: none;
