@@ -17,6 +17,10 @@ body {
   line-height: $base-line-height;
 }
 
+a {
+  text-underline-offset: 3px;
+}
+
 a:link {
   text-decoration: none;
   color: $link;

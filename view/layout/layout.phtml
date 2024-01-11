@@ -68,7 +68,7 @@ $userBar = $this->userBar();
                     </h1>
                 </div>
                 <?php if ($this->themeSetting('use_for_site_list') != 1 || is_null($this->themeSetting('use_for_site_list'))): ?>
-                    <a href="<?php echo explode("/admin", $site->adminUrl())[0] . '/'; ?>" class="all-exhibits-link">All Exhibits</a>
+                    <a href="<?php echo explode("/admin", $site->adminUrl())[0] . '/'; ?>" class="all-exhibits-link">Exhibits Home</a>
                 <?php endif; ?>
             </header>
             <?php if ($this->themeSetting('use_harmful_content') == 1 && $harmfulContent = $this->themeSetting('harmful_content')): ?>
