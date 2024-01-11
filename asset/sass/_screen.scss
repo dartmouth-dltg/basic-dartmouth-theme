@@ -162,6 +162,7 @@ header {
     a:focus,
     a:link,
     a:visited {
+      display: inline-block;
       text-decoration: none;
       opacity: 1;
       span {

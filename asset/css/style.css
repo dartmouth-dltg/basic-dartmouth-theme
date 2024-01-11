@@ -669,6 +669,7 @@ header h1 a:hover,
 header h1 a:focus,
 header h1 a:link,
 header h1 a:visited {
+    display: inline-block;
     text-decoration: none;
     opacity: 1;
   }

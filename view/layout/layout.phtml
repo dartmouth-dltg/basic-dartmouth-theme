@@ -91,9 +91,11 @@ $userBar = $this->userBar();
                         <a href="https://www.library.dartmouth.edu/">
                             <img src="<?php echo $this->assetUrl('img/Dartmouth_Libraries_Lockup_White_RGB.png') ?>" alt="Dartmouth Libraries" />
                         </a>
-                        <a href="<?php echo $site->url(); ?>" class="site-title">
-                            <span><?php echo $escape($siteTitle); ?></span>
-                        </a>
+                        <span>
+                            <a href="<?php echo $site->url(); ?>" class="site-title">
+                                <span><?php echo $escape($siteTitle); ?></span>
+                            </a>
+                        </span>
                     </h1>
                 </div>
                 <?php if ($this->themeSetting('use_for_site_list') != 1 || is_null($this->themeSetting('use_for_site_list'))): ?>
