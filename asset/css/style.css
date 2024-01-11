@@ -557,6 +557,8 @@ a:hover {
 @media screen {
   blockquote,
 blockquote * {
+    display: flex;
+    max-width: 767px;
     padding: 0;
     color: #666;
     border: none !important;
