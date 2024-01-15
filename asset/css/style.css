@@ -729,7 +729,7 @@ header h1 a:link span,
 header h1 a:visited span {
     display: inline-block;
     margin-top: 8px;
-    padding: 6px 0 6px 9px;
+    padding: 6px 0 6px 18px;
     -webkit-text-decoration: underline solid transparent 1.5px;
     text-decoration: underline solid transparent 1.5px;
     text-underline-offset: 4px;
@@ -792,15 +792,37 @@ header a:visited {
     color: #000;
     background-color: #a5d75f;
     font-size: 14.4px;
+    font-weight: bold;
   }
   .harmful-content-wrapper a,
 .harmful-content-wrapper a:link,
 .harmful-content-wrapper a:active,
 .harmful-content-wrapper a:visited {
-    text-decoration: underline;
+    -webkit-text-decoration: underline solid 1px;
+    text-decoration: underline solid 1px;
     text-underline-offset: 2px;
     opacity: 1;
     color: #000;
+  }
+  .harmful-content-wrapper a:hover, .harmful-content-wrapper a:focus,
+.harmful-content-wrapper a:link:hover,
+.harmful-content-wrapper a:link:focus,
+.harmful-content-wrapper a:active:hover,
+.harmful-content-wrapper a:active:focus,
+.harmful-content-wrapper a:visited:hover,
+.harmful-content-wrapper a:visited:focus {
+    text-decoration-thickness: 1.5px;
+  }
+  .harmful-content-wrapper .harmful-content-statement {
+    display: inline;
+  }
+  .harmful-content-wrapper .harmful-content-statement::before {
+    margin-right: 4px;
+    content: "\e002";
+    vertical-align: middle;
+    font-family: "Material Symbols Outlined";
+    font-variation-settings: "FILL" 1;
+    font-size: 22.5px;
   }
 }
 @media screen {
@@ -1174,6 +1196,14 @@ footer a:hover {
     background-color: #a5d75f;
     font-size: 14.4px;
     font-weight: bold;
+  }
+  #content .site-promo-harmful-content-flag p::before {
+    margin-right: 4px;
+    content: "\e002";
+    vertical-align: middle;
+    font-family: "Material Symbols Outlined";
+    font-variation-settings: "FILL" 1;
+    font-size: 22.5px;
   }
   #content .site-promo-image {
     grid-row: 1;

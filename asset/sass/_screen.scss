@@ -180,7 +180,7 @@ header {
       span {
         display: inline-block;
         margin-top: 8px;
-        padding: 6px 0 6px 9px;
+        padding: 6px 0 6px 18px;
         text-decoration: underline solid transparent 1.5px;
         text-underline-offset: 4px;
         letter-spacing: normal;
@@ -247,14 +247,30 @@ header {
   color: $black;
   background-color: $spring-green;
   font-size: $base-font-size * 0.8;
+  font-weight: bold;
   a,
   a:link,
   a:active,
   a:visited {
-    text-decoration: underline;
+    text-decoration: underline solid 1px;
     text-underline-offset: 2px;
     opacity: 1;
     color: $black;
+    &:hover,
+    &:focus {
+      text-decoration-thickness: 1.5px;
+    }
+  }
+  .harmful-content-statement {
+    display: inline;
+    &::before {
+      margin-right: 4px;
+      content: "\e002";
+      vertical-align: middle;
+      font-family: $font-primary-icons;
+      font-variation-settings: "FILL" 1;
+      font-size: $base-font-size * 1.25;
+    }
   }
 }
 
@@ -643,6 +659,14 @@ nav.sub-menu {
       background-color: $spring-green;
       font-size: $base-font-size * 0.8;
       font-weight: bold;
+      &::before {
+        margin-right: 4px;
+        content: "\e002";
+        vertical-align: middle;
+        font-family: $font-primary-icons;
+        font-variation-settings: "FILL" 1;
+        font-size: $base-font-size * 1.25;
+      }
     }
   }
   .site-promo-image {

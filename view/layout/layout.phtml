@@ -104,7 +104,7 @@ $userBar = $this->userBar();
             </header>
             <?php if ($this->themeSetting('use_harmful_content') == 1 && $harmfulContent = $this->themeSetting('harmful_content')): ?>
                 <div class="harmful-content-wrapper">
-                    <?php echo $harmfulContent; ?>
+                    <div class="harmful-content-statement"><?php echo $harmfulContent; ?></div>
                 </div>
             <?php endif; ?>
             <div id="content" role="main" class="<?php echo $content_class; ?>">
