@@ -669,14 +669,16 @@ blockquote * {
 }
 @media screen {
   header {
+    margin: 0 0 18px 0;
+    padding: 9px calc(5% + 0.25rem);
+    background-color: #00693e;
+  }
+  header > div {
     display: grid;
     grid-template-columns: 1fr auto auto;
     gap: 18px;
     align-items: center;
     min-height: 4rem;
-    margin: 0 0 18px 0;
-    padding: 9px calc(5% + 0.25rem);
-    background-color: #00693e;
   }
   header > * {
     max-width: 1450px;
@@ -1710,7 +1712,7 @@ li#sharing-embed a::before {
   }
 }
 @media screen and (max-width: 575px) {
-  header {
+  header > div {
     grid-template-columns: 1fr;
     gap: 0;
   }

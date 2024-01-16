@@ -85,8 +85,8 @@ $userBar = $this->userBar();
         <?php echo $userBar; ?>
         <div class="page-wrapper">
             <header class="<?php echo $content_class; ?>">
-                <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>   
                 <div>
+                    <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>   
                     <h1>
                         <a href="https://www.library.dartmouth.edu/">
                             <img src="<?php echo $this->assetUrl('img/Dartmouth_Libraries_Lockup_White_RGB.png') ?>" alt="Dartmouth Libraries" />
@@ -97,10 +97,10 @@ $userBar = $this->userBar();
                             </a>
                         </span>
                     </h1>
+                    <?php if ($this->themeSetting('use_for_site_list') != 1 || is_null($this->themeSetting('use_for_site_list'))): ?>
+                        <a href="<?php echo explode("/admin", $site->adminUrl())[0] . '/'; ?>" class="all-exhibits-link">Exhibits Home</a>
+                    <?php endif; ?>
                 </div>
-                <?php if ($this->themeSetting('use_for_site_list') != 1 || is_null($this->themeSetting('use_for_site_list'))): ?>
-                    <a href="<?php echo explode("/admin", $site->adminUrl())[0] . '/'; ?>" class="all-exhibits-link">Exhibits Home</a>
-                <?php endif; ?>
             </header>
             <?php if ($this->themeSetting('use_harmful_content') == 1 && $harmfulContent = $this->themeSetting('harmful_content')): ?>
                 <div class="harmful-content-wrapper">
