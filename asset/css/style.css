@@ -701,7 +701,7 @@ blockquote * {
   }
 }
 @media screen {
-  header h1 {
+  header .logo-title {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: auto 1fr;
@@ -713,22 +713,30 @@ blockquote * {
     padding: 0.8rem 0;
     line-height: 2.1rem;
   }
-  header h1 a,
-header h1 a:active,
-header h1 a:hover,
-header h1 a:focus,
-header h1 a:link,
-header h1 a:visited {
+  header .logo-title > div {
+    border-left: 1px solid #fff;
+  }
+  header .logo-title h1 {
+    margin: 0;
+    font-size: 18px;
+    line-height: normal;
+  }
+  header .logo-title a,
+header .logo-title a:active,
+header .logo-title a:hover,
+header .logo-title a:focus,
+header .logo-title a:link,
+header .logo-title a:visited {
     display: inline-block;
     text-decoration: none;
     opacity: 1;
   }
-  header h1 a span,
-header h1 a:active span,
-header h1 a:hover span,
-header h1 a:focus span,
-header h1 a:link span,
-header h1 a:visited span {
+  header .logo-title a span,
+header .logo-title a:active span,
+header .logo-title a:hover span,
+header .logo-title a:focus span,
+header .logo-title a:link span,
+header .logo-title a:visited span {
     display: inline-block;
     margin-top: 8px;
     padding: 6px 0 6px 18px;
@@ -737,8 +745,7 @@ header h1 a:visited span {
     text-underline-offset: 4px;
     letter-spacing: normal;
     border-bottom: none;
-    border-left: 1px solid #fff;
-    font-size: 14.4px;
+    font-size: 18px;
   }
   header a,
 header a:active,
@@ -767,12 +774,17 @@ header a:visited {
     font-size: 14.4px;
   }
   header .all-exhibits-link {
-    border: 1.5px solid transparent;
-    font-size: 14.4px;
+    text-decoration: none;
+    border: none;
+    font-size: 18px;
     font-weight: bold;
   }
   header .all-exhibits-link:hover {
-    border-bottom: 1.5px solid #a5d75f;
+    -webkit-text-decoration: underline solid #a5d75f 1.5px;
+    text-decoration: underline solid #a5d75f 1.5px;
+    text-underline-offset: 3px;
+    opacity: 1;
+    border: none;
   }
 }
 @media screen {
@@ -786,27 +798,37 @@ header a:visited {
   }
 }
 @media screen {
-  .harmful-content-wrapper {
-    margin-top: -18px;
+  header .harmful-content-wrapper,
+.harmful-content-wrapper {
+    display: block;
     margin-bottom: 18px;
-    padding: 9px;
-    text-align: center;
-    color: #000;
-    background-color: #a5d75f;
+    color: #fff;
     font-size: 14.4px;
-    font-weight: bold;
   }
-  .harmful-content-wrapper a,
+  header .harmful-content-wrapper a,
+header .harmful-content-wrapper a:link,
+header .harmful-content-wrapper a:active,
+header .harmful-content-wrapper a:visited,
+.harmful-content-wrapper a,
 .harmful-content-wrapper a:link,
 .harmful-content-wrapper a:active,
 .harmful-content-wrapper a:visited {
+    display: inline;
     -webkit-text-decoration: underline solid 1px;
     text-decoration: underline solid 1px;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
     opacity: 1;
-    color: #000;
+    color: #fff;
   }
-  .harmful-content-wrapper a:hover, .harmful-content-wrapper a:focus,
+  header .harmful-content-wrapper a:hover, header .harmful-content-wrapper a:focus,
+header .harmful-content-wrapper a:link:hover,
+header .harmful-content-wrapper a:link:focus,
+header .harmful-content-wrapper a:active:hover,
+header .harmful-content-wrapper a:active:focus,
+header .harmful-content-wrapper a:visited:hover,
+header .harmful-content-wrapper a:visited:focus,
+.harmful-content-wrapper a:hover,
+.harmful-content-wrapper a:focus,
 .harmful-content-wrapper a:link:hover,
 .harmful-content-wrapper a:link:focus,
 .harmful-content-wrapper a:active:hover,
@@ -814,11 +836,17 @@ header a:visited {
 .harmful-content-wrapper a:visited:hover,
 .harmful-content-wrapper a:visited:focus {
     text-decoration-thickness: 1.5px;
+    -webkit-text-decoration-color: #a5d75f;
+    text-decoration-color: #a5d75f;
+    text-underline-offset: 3px;
   }
-  .harmful-content-wrapper .harmful-content-statement {
-    display: inline;
+  header .harmful-content-wrapper .harmful-content-statement,
+.harmful-content-wrapper .harmful-content-statement {
+    display: inline-block;
+    padding: 0 0 0 18px;
   }
-  .harmful-content-wrapper .harmful-content-statement::before {
+  header .harmful-content-wrapper .harmful-content-statement::before,
+.harmful-content-wrapper .harmful-content-statement::before {
     margin-right: 4px;
     content: "\e002";
     vertical-align: middle;
@@ -1361,7 +1389,7 @@ footer a:hover {
   }
   #content .random-items .random-items-button button::before {
     margin-right: 4px;
-    content: "\f854";
+    content: "\e043";
     vertical-align: top;
     font-family: "Material Symbols Outlined";
     font-size: 27px;
@@ -1723,7 +1751,6 @@ li#sharing-embed a::before {
   header .all-exhibits-link {
     margin-bottom: 6px;
     text-align: right;
-    font-size: 10.8px;
   }
   nav.sub-menu ul.navigation li {
     width: 100%;

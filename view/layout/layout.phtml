@@ -87,26 +87,30 @@ $userBar = $this->userBar();
             <header class="<?php echo $content_class; ?>">
                 <div>
                     <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>   
-                    <h1>
+                    <div class="logo-title">
                         <a href="https://www.library.dartmouth.edu/">
                             <img src="<?php echo $this->assetUrl('img/Dartmouth_Libraries_Lockup_White_RGB.png') ?>" alt="Dartmouth Libraries" />
                         </a>
-                        <span>
-                            <a href="<?php echo $site->url(); ?>" class="site-title">
-                                <span><?php echo $escape($siteTitle); ?></span>
-                            </a>
-                        </span>
-                    </h1>
+                        <div>
+                            <h1>
+                                <a href="<?php echo $site->url(); ?>" class="site-title">
+                                    <span><?php echo $escape($siteTitle); ?></span>
+                                </a>
+                            </h1>
+                            <?php if ($this->themeSetting('use_harmful_content') == 1 && $harmfulContent = $this->themeSetting('harmful_content')): ?>
+                                <span class="harmful-content-wrapper">
+                                    <span class="harmful-content-statement"><?php echo $harmfulContent; ?></span>
+                            </span>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                        
                     <?php if ($this->themeSetting('use_for_site_list') != 1 || is_null($this->themeSetting('use_for_site_list'))): ?>
                         <a href="<?php echo explode("/admin", $site->adminUrl())[0] . '/'; ?>" class="all-exhibits-link">Exhibits Home</a>
                     <?php endif; ?>
                 </div>
+
             </header>
-            <?php if ($this->themeSetting('use_harmful_content') == 1 && $harmfulContent = $this->themeSetting('harmful_content')): ?>
-                <div class="harmful-content-wrapper">
-                    <div class="harmful-content-statement"><?php echo $harmfulContent; ?></div>
-                </div>
-            <?php endif; ?>
             <div id="content" role="main" class="<?php echo $content_class; ?>">
                 <?php echo $this->content; ?>
             </div>

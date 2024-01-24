@@ -159,7 +159,7 @@ header {
 }
 
 header {
-  h1 {
+  .logo-title {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: auto 1fr;
@@ -170,6 +170,14 @@ header {
     margin: 0 0 $spacing-s 0;
     padding: 0.8rem 0;
     line-height: 2.1rem;
+    > div {
+      border-left: 1px solid $white;
+    }
+    h1 {
+      margin: 0;
+      font-size: $base-font-size;
+      line-height: normal;
+    }
     a,
     a:active,
     a:hover,
@@ -187,8 +195,7 @@ header {
         text-underline-offset: 4px;
         letter-spacing: normal;
         border-bottom: none;
-        border-left: 1px solid $white;
-        font-size: $base-font-size * 0.8;
+        font-size: $base-font-size;
       }
     }
   }
@@ -219,11 +226,15 @@ header {
     }
   }
   .all-exhibits-link {
-    border: 1.5px solid transparent;
-    font-size: $base-font-size * 0.8;
+    text-decoration: none;
+    border: none;
+    font-size: $base-font-size;
     font-weight: bold;
     &:hover {
-      border-bottom: 1.5px solid $spring-green;
+      text-decoration: underline solid $spring-green 1.5px;
+      text-underline-offset: 3px;
+      opacity: 1;
+      border: none;
     }
   }
 }
@@ -241,30 +252,31 @@ header {
 
 // harmful content
 
+header .harmful-content-wrapper,
 .harmful-content-wrapper {
-  margin-top: -1 * $spacing-l;
-  margin-bottom: $spacing-l;
-  padding: $base-font-size * 0.5;
-  text-align: center;
-  color: $black;
-  background-color: $spring-green;
+  display: block;
+  margin-bottom: $base-font-size;
+  color: $white;
   font-size: $base-font-size * 0.8;
-  font-weight: bold;
   a,
   a:link,
   a:active,
   a:visited {
+    display: inline;
     text-decoration: underline solid 1px;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
     opacity: 1;
-    color: $black;
+    color: $white;
     &:hover,
     &:focus {
       text-decoration-thickness: 1.5px;
+      text-decoration-color: $spring-green;
+      text-underline-offset: 3px;
     }
   }
   .harmful-content-statement {
-    display: inline;
+    display: inline-block;
+    padding: 0 0 0 $base-font-size;
     &::before {
       margin-right: 4px;
       content: "\e002";
@@ -831,7 +843,7 @@ nav.sub-menu {
       }
       &::before {
         margin-right: 4px;
-        content: "\f854";
+        content: "\e043";
         vertical-align: top;
         font-family: $font-primary-icons;
         font-size: $base-font-size * 1.5;
@@ -1216,7 +1228,6 @@ li#sharing-embed a {
     .all-exhibits-link {
       margin-bottom: 6px;
       text-align: right;
-      font-size: $base-font-size * 0.6;
     }
   }
   nav.sub-menu ul.navigation li {
