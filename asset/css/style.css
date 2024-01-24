@@ -800,10 +800,21 @@ header a:visited {
 @media screen {
   header .harmful-content-wrapper,
 .harmful-content-wrapper {
-    display: block;
+    display: grid;
+    grid-template-columns: fit-content(100%) 1fr;
+    gap: 4.5px;
     margin-bottom: 18px;
+    padding: 0 0 0 18px;
     color: #fff;
     font-size: 14.4px;
+  }
+  header .harmful-content-wrapper::before,
+.harmful-content-wrapper::before {
+    content: "\e002";
+    vertical-align: middle;
+    font-family: "Material Symbols Outlined";
+    font-variation-settings: "FILL" 1;
+    font-size: 22.5px;
   }
   header .harmful-content-wrapper a,
 header .harmful-content-wrapper a:link,
@@ -843,16 +854,6 @@ header .harmful-content-wrapper a:visited:focus,
   header .harmful-content-wrapper .harmful-content-statement,
 .harmful-content-wrapper .harmful-content-statement {
     display: inline-block;
-    padding: 0 0 0 18px;
-  }
-  header .harmful-content-wrapper .harmful-content-statement::before,
-.harmful-content-wrapper .harmful-content-statement::before {
-    margin-right: 4px;
-    content: "\e002";
-    vertical-align: middle;
-    font-family: "Material Symbols Outlined";
-    font-variation-settings: "FILL" 1;
-    font-size: 22.5px;
   }
 }
 @media screen {

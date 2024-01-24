@@ -254,10 +254,20 @@ header {
 
 header .harmful-content-wrapper,
 .harmful-content-wrapper {
-  display: block;
+  display: grid;
+  grid-template-columns: fit-content(100%) 1fr;
+  gap: $base-font-size * 0.25;
   margin-bottom: $base-font-size;
+  padding: 0 0 0 $base-font-size;
   color: $white;
   font-size: $base-font-size * 0.8;
+  &::before {
+    content: "\e002";
+    vertical-align: middle;
+    font-family: $font-primary-icons;
+    font-variation-settings: "FILL" 1;
+    font-size: $base-font-size * 1.25;
+  }
   a,
   a:link,
   a:active,
@@ -276,15 +286,6 @@ header .harmful-content-wrapper,
   }
   .harmful-content-statement {
     display: inline-block;
-    padding: 0 0 0 $base-font-size;
-    &::before {
-      margin-right: 4px;
-      content: "\e002";
-      vertical-align: middle;
-      font-family: $font-primary-icons;
-      font-variation-settings: "FILL" 1;
-      font-size: $base-font-size * 1.25;
-    }
   }
 }
 
