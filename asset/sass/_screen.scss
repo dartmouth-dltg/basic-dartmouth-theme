@@ -197,6 +197,12 @@ header {
         border-bottom: none;
         font-size: $base-font-size;
       }
+      &:hover,
+      &:focus {
+        span {
+          text-decoration-color: $spring-green;
+        }
+      }
     }
   }
   a,

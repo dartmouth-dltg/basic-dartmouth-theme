@@ -747,6 +747,20 @@ header .logo-title a:visited span {
     border-bottom: none;
     font-size: 18px;
   }
+  header .logo-title a:hover span, header .logo-title a:focus span,
+header .logo-title a:active:hover span,
+header .logo-title a:active:focus span,
+header .logo-title a:hover:hover span,
+header .logo-title a:hover:focus span,
+header .logo-title a:focus:hover span,
+header .logo-title a:focus:focus span,
+header .logo-title a:link:hover span,
+header .logo-title a:link:focus span,
+header .logo-title a:visited:hover span,
+header .logo-title a:visited:focus span {
+    -webkit-text-decoration-color: #a5d75f;
+    text-decoration-color: #a5d75f;
+  }
   header a,
 header a:active,
 header a:hover,
