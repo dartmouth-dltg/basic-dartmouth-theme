@@ -12,6 +12,43 @@
 
   $(document).ready(function() {
 
+    const fontAwesome = new FontFaceObserver('FontAwesome');
+    const nationalWeb = new FontFaceObserver('National2');
+    const ruzicka = new FontFaceObserver('DartmouthRuzicka');
+    const manukaBlack = new FontFaceObserver('ManukaBlack');
+
+    const html = document.documentElement;
+
+    const fontNames = {
+      'headings-font-family-h1': manukaBlack,
+      'headings-font-family-others': nationalWeb,
+      'font-primary-icons': fontAwesome,
+      'font-family-sans-serif': nationalWeb,
+      'font-family-serif': ruzicka,
+    };
+
+    const domain = window.location.hostname.replace(/\./g, '_');
+
+    $.each(fontNames, (index, font) => {
+      const storageKey = `${index}-${domain}-omeka`;
+      if (!localStorage[storageKey]) {
+        font
+          .load(null, 5000)
+          .then(() => {
+            if (typeof Storage !== 'undefined') {
+              localStorage[storageKey] = true;
+            }
+            html.classList.add(`${index}-loaded`);
+          })
+          .catch(() => {
+            if (typeof Storage !== 'undefined') {
+              localStorage[storageKey] = false;
+            }
+            html.classList.add(`${index}-failed`);
+          });
+      }
+    });
+
     imageRatio();
 
     $(window).on('resize', function() {

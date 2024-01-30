@@ -1,0 +1,8 @@
+<IfModule mod_headers.c>
+  <FilesMatch ".(eot|otf|svg|ttf|woff|woff2)$">
+      SetEnvIfNoCase Origin "https?://((libcat|libanswers|libcal|researchguides|staging|www|library-beta|js\.libdev|eb\.libdev|mt\.libdev|pm\.libdev|qa\.libdev|www\.libdev|www\.library)\.dartmouth\.edu|customertesting\.libcal\.com)(:\d+)?$" ACAO=$0
+      Header append Vary Origin
+      # Header set Access-Control-Allow-Origin %{ACAO}e env=ACAO
+      Header set Access-Control-Allow-Origin * env=ACAO
+  </FilesMatch>
+</IfModule>

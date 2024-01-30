@@ -23,6 +23,31 @@
   padding-bottom: 0;
 }
 
+.slick-next,
+.slick-prev {
+  .slick-next-icon,
+  .slick-prev-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $spring-green;
+    &::before {
+      content: "\ef7d";
+      color: $black;
+      font-family: $font-primary-icons;
+    }
+  }
+}
+.slick-next .slick-next-icon::before {
+  content: "\e941";
+}
+.slick-dots li button:focus .slick-dot-icon::before {
+  color: $forest-green;
+}
+.slick-dots li.slick-active button .slick-dot-icon {
+  color: $spring-green;
+}
+
 .media-embeds {
   .slideshow,
   .slick-list,
@@ -178,7 +203,7 @@
     }
   }
   .slick-autoplay-toggle-button {
-    bottom: 11px;
+    bottom: 5px;
     .slick-pause-icon,
     .slick-play-icon {
       &:before {
@@ -197,14 +222,17 @@
   background-color: $black;
 }
 .fullscreen-label {
+  display: inline-block;
+  margin-left: 9px;
   text-align: left;
-  font-size: 0.8rem;
+  font-size: $base-font-size * 0.8;
   line-height: normal;
 }
 .slide-fullscreen-openBtn {
+  display: grid;
   justify-content: left;
   width: auto;
-  min-width: 10rem;
+  min-width: $base-font-size * 10;
   color: $white;
   border: 0;
   border-radius: 0;
@@ -249,7 +277,8 @@
 }
 
 // !Slick Controls
-.slideshow-block {
+.slideshow-block,
+.section-intro-splash {
   .slick-slider.slick-dotted {
     margin-bottom: 30px;
   }
@@ -259,8 +288,8 @@
     z-index: 1000;
     top: unset;
     bottom: -46px;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: $base-font-size * 1.5;
+    height: $base-font-size * 1.5;
     margin: 0;
     cursor: pointer;
     &::before,
@@ -268,18 +297,22 @@
       position: absolute;
       top: 0;
       left: 0;
-      color: $black;
+      color: $spring-green;
       font-family: $icon-font;
-      font-size: 1.5rem;
+      font-size: $base-font-size * 1.5;
       font-weight: bold;
-      line-height: 1.5rem;
+      line-height: $base-font-size * 1.5;
     }
     &:hover:before,
     &:hover:after {
-      color: $gray-medium-dark;
+      color: $spring-green;
     }
     &:focus {
       top: unset !important;
+    }
+    .slick-next-icon,
+    .slick-prev-icon {
+      color: $spring-green;
     }
   }
 
@@ -291,7 +324,7 @@
   }
 
   .slick-next {
-    left: 4.075rem;
+    left: $base-font-size * 4;
     &:after {
       right: 0;
       left: unset;
@@ -310,8 +343,8 @@
 
   .slick-autoplay-toggle-button {
     z-index: 1000;
-    bottom: -35px;
-    left: 1.8rem;
+    bottom: -37px;
+    left: $base-font-size * 1.8;
     width: auto;
     min-width: auto;
     opacity: 1;
@@ -334,13 +367,13 @@
     .slick-pause-icon::before {
       content: "\f28b";
       font-family: $icon-font;
-      font-size: 1.5rem;
+      font-size: $base-font-size * 1.5;
       font-weight: bold;
     }
     .slick-play-icon::before {
       content: "\f144";
       font-family: $icon-font;
-      font-size: 1.5rem;
+      font-size: $base-font-size * 1.5;
       font-weight: bold;
     }
   }

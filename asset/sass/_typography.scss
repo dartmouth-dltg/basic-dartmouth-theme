@@ -1,0 +1,152 @@
+// @file _typography.scss
+
+// Headings
+// -------------------------
+h1,
+.h1 {
+  margin: 12px 0 18px 0;
+  letter-spacing: -1px;
+  text-transform: none;
+  font-family: $font-family-base;
+  font-weight: bold;
+  line-height: 100%;
+  .font-family-sans-serif-loaded & {
+    font-family: $font-family-sans-serif;
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+.h2,
+.h3,
+.h4,
+.h5 {
+  max-width: $max-text-width;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  .headings-font-family-others-loaded & {
+    font-family: $headings-font-family-others;
+  }
+}
+
+h1,
+.h1 {
+  font-size: $base-font-size * 3.25;
+}
+
+h2,
+.h2 {
+  margin: $base-font-size 0 $base-font-size 0;
+  letter-spacing: -1px;
+  font-size: 36px;
+  line-height: 100%;
+}
+
+h3,
+.h3 {
+  margin: $base-font-size 0 $base-font-size 0;
+  font-size: 24px;
+  line-height: 115%;
+}
+
+h4,
+.h4 {
+  margin: $base-font-size 0 $base-font-size 0;
+  margin: 20px 0 15px;
+  font-size: 21px;
+  line-height: 110%;
+}
+
+h5,
+.h5 {
+  margin: $base-font-size 0 $base-font-size * 0.8 0;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+// Body
+// -------------------------
+body {
+  color: $black;
+  font-family: $font-family-base;
+  font-size: $base-font-size;
+  line-height: 1.5;
+  .font-family-sans-serif-loaded & {
+    font-family: $font-family-sans-serif;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  p,
+  ul {
+    max-width: $max-text-width;
+  }
+
+  blockquote {
+    position: relative;
+    margin: 20px 0;
+    color: $gray;
+    font-family: $font-family-serif-base;
+    font-size: $base-font-size * 1.25;
+    .font-family-serif-loaded & {
+      font-family: $font-family-serif;
+    }
+  }
+  .main-container p.large-emphasized-text {
+    margin: 3rem 0;
+    font-family: $font-family-serif-base;
+    font-size: em(30px);
+    font-weight: bold;
+    .font-family-serif-loaded & {
+      font-family: $font-family-serif;
+    }
+  }
+
+  .main-container p.dcl-highlight {
+    color: $gray-dark !important;
+    background-color: $spring-green !important;
+  }
+}
+
+@media (max-width: 576px) {
+  $base-font-size: 17px;
+
+  h1 {
+    font-size: 48px;
+    line-height: 125%;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 125%;
+  }
+  h3 {
+    font-size: 21px;
+    line-height: 115%;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 125%;
+  }
+  h5 {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  body {
+    font-size: $base-font-size;
+    .region-content,
+    .region-home-feature-primary-second,
+    .region-home-feature-primary-third,
+    .region-home-feature-secondary-first,
+    .region-home-feature-secondary-second {
+      color: $black;
+      font-size: em($base-font-size);
+    }
+  }
+}

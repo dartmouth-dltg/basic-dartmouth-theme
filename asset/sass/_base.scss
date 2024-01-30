@@ -6,23 +6,42 @@ $bold:                                  darken($gray, 20%);
 $light:                                 lighten($gray, 20%);
 $white:                                 #fff;
 $dartgreen:                             #00693e;
+$dart-green: #00693e;
+$forest-green: #12312b;
+$spring-green: #a5d75f;
+$off-white: #f5f5f5;
+$summer-yellow: #f5dc69;
+$light-blue: #9bc8eb;
 $blue:                                  #003c73;
 $blue-light:                            #b3d9ff;
 $bg:                                    $white;
-$link:                                  #328060;
+$link:                                  $dart-green;
 $warning:                               #ffa00f;
 $black:                                 #000;
 $yellow:                                #ffa00f;
 
 // Typography
-$base-font-size:                        1.25rem;
-$base-line-height:                      1.875rem;
+$material-symbols: "Material Symbols Outlined";
+$font-primary-icons: $material-symbols;
+$base-font-size: 18px;
+$base-line-height: 18px;
 $serif:                                 "Lora", georgia, serif;
 $sansserif:                             "National2", verdana, sans-serif;
 $sansserif-bold:                        "National2-Bold", verdana, sans-serif;
 $sansserif-regular:                     "National2-Regular", verdana, sans-serif;
 $icon-font:                             "Font Awesome 5 Free";
 $max-paragraph-width:                   1200px;
+$font-family-serif-base: "Times New Roman", georgia, garamond, serif;
+$font-family-base: verdana, geneva, sans-serif;
+$font-family-sans-serif: "National2Web", $font-family-base;
+$font-family-serif: "DartmouthRuzicka", $font-family-serif-base;
+$headings-font-family-h1: "ManukaBlack", $font-family-base;
+$headings-font-family-others: "National2Web", $font-family-base;
+$font-weight-strong: 700;
+
+// Full-width page adjustment
+$max-text-width: 930px;
+$component-spacing-bottom: $base-font-size * 2;
 
 // Units
 $spacing-s:                             0.25 * $base-line-height;
