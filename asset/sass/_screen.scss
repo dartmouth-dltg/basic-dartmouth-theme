@@ -732,6 +732,18 @@ nav.sub-menu {
       }
     }
   }
+  .center.large.file {
+    .item {
+      margin-bottom: $base-font-size * 2;
+      h3,
+      p {
+        margin: 0 auto;
+        br {
+          margin: auto;
+        }
+      }
+    }
+  }
   .left.file,
   .left.assets {
     margin: 0 $base-font-size $base-font-size 0;

@@ -1289,6 +1289,17 @@ footer a:hover {
 #content .blocks .right.file .item {
     padding: 0;
   }
+  #content .center.large.file .item {
+    margin-bottom: 36px;
+  }
+  #content .center.large.file .item h3,
+#content .center.large.file .item p {
+    margin: 0 auto;
+  }
+  #content .center.large.file .item h3 br,
+#content .center.large.file .item p br {
+    margin: auto;
+  }
   #content .left.file,
 #content .left.assets {
     margin: 0 18px 18px 0;
