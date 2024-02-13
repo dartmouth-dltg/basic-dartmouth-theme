@@ -7,12 +7,12 @@ $this->headMeta()->appendName('viewport', 'width="device-width", initial-scale="
 $this->headTitle($siteTitle)->setSeparator(' · ');
 $this->headLink([
     'rel' => 'manifest',
-    'href' => $this->assetUrl('site.webmanifest')
+    'href' => $this->assetUrl('favicon_misc/site.webmanifest')
 ], 'PREPEND');
 $this->headLink([
     'rel' => 'mask-icon',
     'color' => '#5bbad5',
-    'href' => $this->assetUrl('safari-pinned-tab.svg')
+    'href' => $this->assetUrl('img/safari-pinned-tab.svg')
 ], 'PREPEND');
 $this->headMeta()->appendName('msapplication-TileColor', 'color="#da532c"');
 $this->headMeta()->appendName('theme-color', 'color="#fff"');
