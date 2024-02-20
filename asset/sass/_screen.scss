@@ -42,8 +42,6 @@ img {
 
 blockquote,
 blockquote * {
-  display: flex;
-  max-width: 767px;
   padding: 0;
   color: $gray-medium-dark;
   border: none !important;
