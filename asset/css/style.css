@@ -1086,46 +1086,51 @@ footer a:hover {
   }
 }
 @media screen {
-  nav.sub-menu {
-    margin: 18px 0;
-  }
-  nav.sub-menu ul.navigation {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    max-width: 1191px;
-    padding-left: 0;
-    list-style: none;
-  }
-  nav.sub-menu ul.navigation li {
-    margin-bottom: 4px;
-    line-height: normal;
-  }
-  nav.sub-menu ul.navigation li a {
+  .dcl-sub-menu-control {
     display: grid;
     grid-template-columns: 1fr fit-content(100%);
     gap: 9px;
+    margin-bottom: 18px;
     padding: 4.5px 9px;
     text-decoration: none;
     color: #fff !important;
-    border-bottom: none !important;
+    border: none;
     background-color: #00693e;
     font-size: 16.2px;
     font-weight: bold;
   }
-  nav.sub-menu ul.navigation li a::after {
-    content: "\e941";
-    font-family: "Material Symbols Outlined";
-    font-variation-settings: "FILL" 1;
-  }
-  nav.sub-menu ul.navigation li a:hover {
+  .dcl-sub-menu-control:hover {
     color: #fff !important;
     outline: none;
     background-color: #12312b;
   }
-  nav.sub-menu ul.navigation li a:focus {
+  .dcl-sub-menu-control:focus {
     color: #fff !important;
     background-color: #12312b;
+  }
+  .dcl-sub-menu-control::after {
+    margin-left: 4px;
+    content: "\e5cf";
+    vertical-align: middle;
+    font-family: "Material Symbols Outlined";
+    font-variation-settings: "FILL" 1;
+  }
+  .dcl-sub-menu-control[aria-expanded=true]::after {
+    content: "\e5ce";
+  }
+}
+@media screen {
+  nav.sub-menu {
+    display: none;
+    margin: 18px 0;
+  }
+  nav.sub-menu ul.navigation {
+    gap: 9px;
+    max-width: 1191px;
+  }
+  nav.sub-menu ul.navigation li {
+    margin-bottom: 4px;
+    line-height: normal;
   }
 }
 @media screen {

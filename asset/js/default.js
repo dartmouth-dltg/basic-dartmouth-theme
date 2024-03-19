@@ -1,17 +1,17 @@
-(function($) {
-
+(($) => {
   function createUniqueId() {
     return uuidv4();
   }
 
   function imageRatio() {
-    const promoImg = $('#content.used-for-site-promo .site-promo-image figure img');
+    const promoImg = $(
+      "#content.used-for-site-promo .site-promo-image figure img"
+    );
     const promoImgWidth = promoImg.width();
-    promoImg.css('height', promoImgWidth * 0.625)
+    promoImg.css("height", promoImgWidth * 0.625);
   }
 
-  $(document).ready(function() {
-
+  $(document).ready(() => {
     const fontAwesome = new FontFaceObserver('FontAwesome');
     const nationalWeb = new FontFaceObserver('National2');
     const ruzicka = new FontFaceObserver('DartmouthRuzicka');
@@ -20,14 +20,14 @@
     const html = document.documentElement;
 
     const fontNames = {
-      'headings-font-family-h1': manukaBlack,
-      'headings-font-family-others': nationalWeb,
-      'font-primary-icons': fontAwesome,
-      'font-family-sans-serif': nationalWeb,
-      'font-family-serif': ruzicka,
+      "headings-font-family-h1": manukaBlack,
+      "headings-font-family-others": nationalWeb,
+      "font-primary-icons": fontAwesome,
+      "font-family-sans-serif": nationalWeb,
+      "font-family-serif": ruzicka,
     };
 
-    const domain = window.location.hostname.replace(/\./g, '_');
+    const domain = window.location.hostname.replace(/\./g, "_");
 
     $.each(fontNames, (index, font) => {
       const storageKey = `${index}-${domain}-omeka`;
@@ -149,6 +149,18 @@
         topButton.show();
       }
       else topButton.hide();
+    });
+
+    // explore: page sub-menu nav
+    $(".dcl-sub-menu-control").on("click", (evt) => {
+      const target = $(evt.currentTarget);
+      if (target.attr("aria-expanded") === "false") {
+        target.attr("aria-expanded", "true");
+        $("#dcl-sub-menu-content").show();
+      } else {
+        target.attr("aria-expanded", "false");
+        $("#dcl-sub-menu-content").hide();
+      }
     });
   });
 })(jQuery);
