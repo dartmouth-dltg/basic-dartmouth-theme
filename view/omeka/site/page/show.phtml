@@ -24,7 +24,8 @@ if ($activePage):
 
 <?php if ($activePage): ?>
     <?php if ($this->displayNavigation && $activePage['page']->hasPages()): ?>
-    <nav class="sub-menu"><?php echo $nav->menu()->renderSubMenu(); ?></nav>
+    <button class="dcl-sub-menu-control" aria-controls="dcl-sub-menu-content" aria-expanded="false" role="button">Read More</button>
+    <nav class="sub-menu" id="dcl-sub-menu-content"><?php echo $nav->menu()->renderSubMenu(); ?></nav>
     <?php endif; ?>
 <?php endif; ?>
 
