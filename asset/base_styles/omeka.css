@@ -2393,101 +2393,101 @@ input[type=button].btn-block {
 
 @font-face {
   font-family: "National2Web";
-  src: url("https://library.dartmouth.edu/sitelib/National-font/National2Web-ExtraLight.woff2") format("woff2");
+  src: url("/sitelib/National-font/National2Web-ExtraLight.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "National2Web";
-  src: url("https://library.dartmouth.edu/sitelib/National-font/National2Web-ExtralightItalic.woff2") format("woff2");
+  src: url("/sitelib/National-font/National2Web-ExtralightItalic.woff2") format("woff2");
   font-weight: 100;
   font-style: italic;
 }
 @font-face {
   font-family: "National2Web";
-  src: url("https://library.dartmouth.edu/sitelib/National-font/National2Web-Light.woff2") format("woff2");
+  src: url("/sitelib/National-font/National2Web-Light.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "National2Web";
-  src: url("https://library.dartmouth.edu/sitelib/National-font/National2Web-LightItalic.woff2") format("woff2");
+  src: url("/sitelib/National-font/National2Web-LightItalic.woff2") format("woff2");
   font-weight: 200;
   font-style: italic;
 }
 @font-face {
   font-family: "National2Web";
-  src: url("https://library.dartmouth.edu/sitelib/National-font/National2Web-Regular.woff2") format("woff2");
+  src: url("/sitelib/National-font/National2Web-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "National2Web";
-  src: url("https://library.dartmouth.edu/sitelib/National-font/National2Web-RegularItalic.woff2") format("woff2");
+  src: url("/sitelib/National-font/National2Web-RegularItalic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "National2Web";
-  src: url("https://library.dartmouth.edu/sitelib/National-font/National2Web-Medium.woff2") format("woff2");
+  src: url("/sitelib/National-font/National2Web-Medium.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "National2Web";
-  src: url("https://library.dartmouth.edu/sitelib/National-font/National2Web-MediumItalic.woff2") format("woff2");
+  src: url("/sitelib/National-font/National2Web-MediumItalic.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
 }
 @font-face {
   font-family: "National2Web";
-  src: url("https://library.dartmouth.edu/sitelib/National-font/National2Web-Bold.woff2") format("woff2");
+  src: url("/sitelib/National-font/National2Web-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "National2Web";
-  src: url("https://library.dartmouth.edu/sitelib/National-font/National2Web-BoldItalic.woff2") format("woff2");
+  src: url("/sitelib/National-font/National2Web-BoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
 }
 @font-face {
   font-family: "National2Web";
-  src: url("https://library.dartmouth.edu/sitelib/National-font/National2Web-Extrabold.woff2") format("woff2");
+  src: url("/sitelib/National-font/National2Web-Extrabold.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "National2Web";
-  src: url("https://library.dartmouth.edu/sitelib/National-font/National2Web-ExtraboldItalic.woff2") format("woff2");
+  src: url("/sitelib/National-font/National2Web-ExtraboldItalic.woff2") format("woff2");
   font-weight: 900;
   font-style: italic;
 }
 @font-face {
   font-family: DartmouthRuzicka;
-  src: url("https://library.dartmouth.edu/sitelib/Ruzicka-font/DartmouthRuzicka-ExtraLight.woff2") format("woff2");
+  src: url("/sitelib/Ruzicka-font/DartmouthRuzicka-ExtraLight.woff2") format("woff2");
   font-weight: 400;
 }
 @font-face {
   font-family: DartmouthRuzicka;
-  src: url("https://library.dartmouth.edu/sitelib/Ruzicka-font/DartmouthRuzicka-ExtraLightItalic.woff2") format("woff2");
+  src: url("/sitelib/Ruzicka-font/DartmouthRuzicka-ExtraLightItalic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: DartmouthRuzicka;
-  src: url("https://library.dartmouth.edu/sitelib/Ruzicka-font/DartmouthRuzicka-Regular.woff2") format("woff2");
+  src: url("/sitelib/Ruzicka-font/DartmouthRuzicka-Regular.woff2") format("woff2");
   font-weight: 700;
 }
 @font-face {
   font-family: DartmouthRuzicka;
-  src: url("https://library.dartmouth.edu/sitelib/Ruzicka-font/DartmouthRuzicka-Italic.woff2") format("woff2");
+  src: url("/sitelib/Ruzicka-font/DartmouthRuzicka-Italic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
 }
 @font-face {
   font-family: ManukaBlack;
-  src: url("https://library.dartmouth.edu/sitelib/Manuka-font/manuka-black.woff2") format("woff2");
+  src: url("/sitelib/Manuka-font/manuka-black.woff2") format("woff2");
 }
 a.button--call-to-action, .ckeditor-readmore-wrapper .ckeditor-readmore-toggler {
   display: inline;
