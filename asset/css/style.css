@@ -1165,6 +1165,7 @@ footer a:hover {
   }
   #content h2 {
     margin-top: 0;
+    letter-spacing: 0.25px;
   }
   #content h3 {
     line-height: normal;
@@ -1209,6 +1210,7 @@ footer a:hover {
   #content .site-promo-container h2 {
     grid-row: 2;
     margin: 0.5rem 0;
+    letter-spacing: 0.25px;
     font-size: 18px;
     line-height: normal;
   }

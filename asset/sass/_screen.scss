@@ -618,6 +618,7 @@ nav.sub-menu {
   line-height: $base-font-size * 1.5;
   h2 {
     margin-top: 0;
+    letter-spacing: 0.25px;
   }
   h3 {
     line-height: normal;
@@ -665,6 +666,7 @@ nav.sub-menu {
     h2 {
       grid-row: 2;
       margin: 0.5rem 0;
+      letter-spacing: 0.25px;
       font-size: $base-font-size;
       line-height: normal;
     }
