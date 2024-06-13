@@ -49,8 +49,6 @@ $spacing-m:                             0.5 * $base-line-height;
 $spacing-l:                             $base-line-height;
 
 // Paths
-$basepath:                              "..";
-$fontfolder:                            $basepath + "/fonts";
 $dart-sprite-path:                      "../img/sprite-dart.png";
 
 // Mixins
@@ -59,38 +57,3 @@ $dart-sprite-path:                      "../img/sprite-dart.png";
   margin-right: auto;
   margin-left: auto;
 }
-
-@mixin font-face($style-name, $file, $family, $category:"",$weight:"") {
-  $filepath: $fontfolder + "/" + $family + "/" + $file;
-
-  %#{$style-name} {
-    font: {
-      @if $category != "" {
-        $family: "#{$style-name}", #{$category};
-      }
-
-      @else {
-        $family: "#{$style-name}";
-      }
-    }
-  }
-
-  @font-face {
-    font-family: "#{$style-name}";
-    src: url($filepath + ".eot");
-    src: url($filepath + ".eot?#iefix") format("embedded-opentype"), url($filepath + ".woff") format("woff"), url($filepath + ".ttf")  format("truetype"), url($filepath + ".svg#" + $style-name + "") format("svg");
-
-    @if $weight == "bold" {
-      font-weight: 700;
-    }
-
-    @else {
-      font-weight: normal;
-    }
-  }
-}
-
-// Fonts
-@include font-face("National2", "National2-Light", "National2", "sans-serif");
-@include font-face("National2-Regular", "National2-Regular", "National2", "sans-serif");
-@include font-face("National2-Bold", "National2-Bold", "National2", "sans-serif");
