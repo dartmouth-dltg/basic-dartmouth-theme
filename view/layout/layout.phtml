@@ -54,6 +54,8 @@ $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
 $this->trigger('view.layout');
 $userBar = $this->userBar();
+
+$site_layout = $this->themeSetting('site_layout') !== null ? $this->themeSetting('site_layout') : 'default';
 ?>
 <?php echo $this->doctype(); ?>
 <?php echo $this->htmlElement('html'); ?>
@@ -83,7 +85,7 @@ $userBar = $this->userBar();
     <?php echo $this->htmlElement('body'); ?>
         <a id="skipnav" href="#content"><?php echo $this->translate('Skip to main content'); ?></a>
         <?php echo $userBar; ?>
-        <div class="page-wrapper">
+        <div class="page-wrapper <?php echo $site_layout; ?>">
             <header class="<?php echo $content_class; ?>">
                 <div>
                     <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>   
