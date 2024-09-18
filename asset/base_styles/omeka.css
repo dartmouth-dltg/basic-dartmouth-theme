@@ -3186,7 +3186,11 @@ body .region-home-feature-primary-third a:focus,
 }
 
 a.button--call-to-action {
+  margin-right: 18px;
   color: #fff;
+}
+a.button--call-to-action:first-of-type {
+  margin-right: 0;
 }
 
 .main-container.container fieldset legend a.filter-label {
