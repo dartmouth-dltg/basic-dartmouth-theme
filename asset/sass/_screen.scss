@@ -6,6 +6,7 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-size: $base-font-size;
 }
 
 body {
@@ -363,6 +364,11 @@ footer {
     color: $white;
     border-bottom: 1.5px solid $spring-green;
   }
+  .footer-social a[class^="icon-"] {
+    &::after {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 .site-page-pagination {
@@ -462,7 +468,7 @@ footer {
   }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .standard-dcl-footer {
     h2 {
       margin-bottom: 0;
@@ -477,7 +483,7 @@ footer {
   }
 }
 
-@media (max-width: 450px) {
+@media screen and (max-width: 450px) {
   .standard-dcl-footer {
     .row-1 {
       #footer-aboutus-collapse .menu {
@@ -749,37 +755,62 @@ nav.sub-menu {
   .left.assets {
     margin: 0 $base-font-size $base-font-size 0;
   }
-  .item-showcase {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: $base-font-size * 2;
-    text-align: left;
-    .resource.item {
-      padding: 0 0 $base-font-size * 2 0;
-      &:not(:only-child) {
-        width: 100%;
+
+  .page-layout-normal {
+    .block {
+      &.block-layout-alignment-block-right {
+        max-width: 33%;
+        margin-left: 2rem;
+      }
+      &.block-layout-alignment-block-left {
+        max-width: 33%;
+        margin-right: 2rem;
+      }
+      &.block-media {
+        display: flow-root;
+        clear: both;
+      }
+    }
+  }
+  .media-embed {
+    padding-top: 1rem;
+    h3 {
+      max-width: 100%;
+      margin-bottom: $base-font-size * 0.5;
+      font-size: $base-font-size;
+      line-height: normal;
+    }
+    p {
+      max-width: 100%;
+    }
+    &.multiple-attachments {
+      border-top: 1px solid $gray !important;
+    }
+    &.media-display-thumbnail {
+      align-items: start;
+      margin-top: 3rem;
+      .resource.item {
+        padding: 0 0 $base-font-size * 2 0;
+        &:not(:only-child) {
+          width: 100%;
+          img {
+            max-height: $base-font-size * 10;
+          }
+        }
+        .caption {
+          font-family: $font-family-serif;
+          font-size: $base-font-size;
+          line-height: normal;
+        }
+        > a {
+          display: inline-block;
+          img {
+            margin-bottom: -1.5px;
+          }
+        }
         img {
           max-height: $base-font-size * 10;
         }
-      }
-      h3 {
-        margin-bottom: $base-font-size * 0.5;
-        font-size: $base-font-size;
-        line-height: normal;
-      }
-      .caption {
-        font-family: $font-family-serif;
-        font-size: $base-font-size;
-        line-height: normal;
-      }
-      > a {
-        display: inline-block;
-        img {
-          margin-bottom: -1.5px;
-        }
-      }
-      img {
-        max-height: $base-font-size * 10;
       }
     }
   }
@@ -905,17 +936,21 @@ nav.sub-menu {
 
 // @end
 
-@media (max-width: 990px) {
+@media screen and (max-width: 990px) {
   #content {
+    max-width: 100%;
     .item-showcase.random-items {
       grid-template-columns: 100%;
     }
   }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   // random items
   #content {
+    &.used-for-site-promo .blocks-inner {
+      grid-template-columns: 1fr;
+    }
     .random-items {
       grid-template-columns: 100%;
       .random-items-button {
@@ -1200,7 +1235,7 @@ li#sharing-embed a {
 
 // @end
 
-@media (max-width: 990px) {
+@media screen and (max-width: 990px) {
   #content.used-for-site-promo .blocks {
     grid-template-columns: 1fr 1fr;
   }
@@ -1209,7 +1244,7 @@ li#sharing-embed a {
   }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   header {
     select {
       font-size: 0.7rem;
@@ -1235,7 +1270,7 @@ li#sharing-embed a {
   }
 }
 
-@media (max-width: 575px) {
+@media screen and (max-width: 575px) {
   header {
     > div {
       grid-template-columns: 1fr;
@@ -1307,7 +1342,7 @@ li#sharing-embed a {
   }
 }
 
-@media (max-width: 450px) {
+@media screen and (max-width: 450px) {
   .item.resource {
     &.show {
       .media-list {
