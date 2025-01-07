@@ -987,7 +987,7 @@ footer a:hover {
   }
   .standard-dcl-footer .row-1 {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 5rem;
     margin-bottom: 18px;
     padding-bottom: 18px;
@@ -998,10 +998,6 @@ footer a:hover {
   }
   .standard-dcl-footer .row-1 li ul {
     margin-top: 6px;
-  }
-  .standard-dcl-footer .row-1 #footer-aboutus-collapse .menu {
-    column-count: 2;
-    column-gap: 2rem;
   }
   .standard-dcl-footer .row-2 {
     text-align: center;
@@ -1018,6 +1014,9 @@ footer a:hover {
   }
   .standard-dcl-footer ul ul.menu {
     padding-left: 1rem;
+  }
+  .standard-dcl-footer .region-footer-copyright .block-system-branding-block a {
+    background-image: url("../img/Dartmouth_Libraries_Lockup_White_RGB.png");
   }
 }
 @media screen and (max-width: 767px) {
@@ -1165,7 +1164,6 @@ footer a:hover {
   }
   #content h2 {
     margin-top: 0;
-    letter-spacing: 0.25px;
   }
   #content h3 {
     line-height: normal;
@@ -1210,7 +1208,6 @@ footer a:hover {
   #content .site-promo-container h2 {
     grid-row: 2;
     margin: 0.5rem 0;
-    letter-spacing: 0.25px;
     font-size: 18px;
     line-height: normal;
   }

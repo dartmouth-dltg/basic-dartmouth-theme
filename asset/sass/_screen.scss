@@ -427,7 +427,7 @@ footer {
   }
   .row-1 {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 5rem;
     margin-bottom: $base-font-size;
     padding-bottom: $base-font-size;
@@ -437,10 +437,6 @@ footer {
       ul {
         margin-top: 6px;
       }
-    }
-    #footer-aboutus-collapse .menu {
-      column-count: 2;
-      column-gap: 2rem;
     }
   }
   .row-2 {
@@ -460,6 +456,9 @@ footer {
     ul.menu {
       padding-left: 1rem;
     }
+  }
+  .region-footer-copyright .block-system-branding-block a {
+    background-image: url("../img/Dartmouth_Libraries_Lockup_White_RGB.png");
   }
 }
 
@@ -618,7 +617,6 @@ nav.sub-menu {
   line-height: $base-font-size * 1.5;
   h2 {
     margin-top: 0;
-    letter-spacing: 0.25px;
   }
   h3 {
     line-height: normal;
@@ -666,7 +664,6 @@ nav.sub-menu {
     h2 {
       grid-row: 2;
       margin: 0.5rem 0;
-      letter-spacing: 0.25px;
       font-size: $base-font-size;
       line-height: normal;
     }
