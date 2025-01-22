@@ -196,8 +196,8 @@
   .slick-prev,
   .slick-next {
     bottom: 0;
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       border-radius: 50%;
       background-color: $white;
     }
@@ -206,7 +206,7 @@
     bottom: 5px;
     .slick-pause-icon,
     .slick-play-icon {
-      &:before {
+      &::before {
         border-radius: 50%;
         background-color: $white;
       }
@@ -236,7 +236,8 @@
   color: $white;
   border: 0;
   border-radius: 0;
-  background: url(../../asset/img/svg/icons/fullscreen_white_icon.svg) no-repeat 90%;
+  background: url("../../asset/img/svg/icons/fullscreen_white_icon.svg")
+    no-repeat 90%;
   background-size: 20px;
 
   &:hover {
@@ -244,7 +245,8 @@
     color: $white;
     border: 0;
     border-radius: 0;
-    background: url(../../asset/img/svg/icons/fullscreen_white_icon.svg) no-repeat 90%;
+    background: url("../../asset/img/svg/icons/fullscreen_white_icon.svg")
+      no-repeat 90%;
     background-color: $gray-dark;
     background-size: 20px;
   }
@@ -303,8 +305,8 @@
       font-weight: bold;
       line-height: $base-font-size * 1.5;
     }
-    &:hover:before,
-    &:hover:after {
+    &:hover::before,
+    &:hover::after {
       color: $spring-green;
     }
     &:focus {
@@ -318,14 +320,14 @@
 
   .slick-prev {
     left: 0;
-    &:before {
+    &::before {
       content: "\f0a8";
     }
   }
 
   .slick-next {
     left: $base-font-size * 4;
-    &:after {
+    &::after {
       right: 0;
       left: unset;
       content: "\f0a9";
@@ -360,7 +362,7 @@
     }
 
     &.left {
-      &:after {
+      &::after {
         background: $dartgreen;
       }
     }
