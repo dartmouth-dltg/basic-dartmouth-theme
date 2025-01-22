@@ -786,6 +786,9 @@ nav.sub-menu {
     p {
       max-width: 100%;
     }
+    &.layout-horizontal {
+      align-items: start;
+    }
     &.multiple-attachments {
       border-top: 1px solid $gray !important;
     }
@@ -815,6 +818,11 @@ nav.sub-menu {
           max-height: $base-font-size * 10;
         }
       }
+    }
+  }
+  .block-layout-alignment-text-center .media-embed {
+    caption p {
+      margin: 0 auto;
     }
   }
   .tobii-zoom__icon {
