@@ -1364,3 +1364,8 @@ li#sharing-embed a {
     }
   }
 }
+
+// libchat
+.lcs_slide_out-r .lcs_header a::before {
+  font-size: $base-font-size * 1.5;
+}

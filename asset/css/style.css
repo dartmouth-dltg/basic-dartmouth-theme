@@ -1764,4 +1764,9 @@ body .main-container p.dcl-highlight {
     flex-basis: 100%;
   }
 }
+@media screen {
+  .lcs_slide_out-r .lcs_header a::before {
+    font-size: 27px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
