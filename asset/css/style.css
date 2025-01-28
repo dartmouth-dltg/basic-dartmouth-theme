@@ -1671,6 +1671,13 @@ body .main-container p.dcl-highlight {
   li#sharing-embed a::before {
     content: "\e80d";
   }
+  .media-group-attachments figcaption {
+    font-family: "Times New Roman", georgia, garamond, serif;
+    font-style: normal;
+  }
+  .font-family-serif-loaded .media-group-attachments figcaption {
+    font-family: "DartmouthRuzicka", "Times New Roman", georgia, garamond, serif;
+  }
 }
 @media screen and (max-width: 990px) {
   #content.used-for-site-promo .blocks {

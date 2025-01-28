@@ -1246,6 +1246,16 @@ li#sharing-embed a {
 
 // @end
 
+// custom blocks styling
+
+.media-group-attachments figcaption {
+  font-family: $font-family-serif-base;
+  font-style: normal;
+  .font-family-serif-loaded & {
+    font-family: $font-family-serif;
+  }
+}
+
 @media screen and (max-width: 990px) {
   #content.used-for-site-promo .blocks {
     grid-template-columns: 1fr 1fr;
