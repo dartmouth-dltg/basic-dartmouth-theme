@@ -2903,9 +2903,8 @@ body .main-container p.dcl-highlight {
 
 #dept-info ul li.social-links a[href^="https://www.facebook.com"] ::before, .icon-facebook::after {
   margin-left: 4px;
-  content: "\f09a";
-  font-family: "FontAwesome";
-  font-size: 2rem;
+  content: "\f39e";
+  font: var(--fa-font-brands);
 }
 
 .icon-groups::after {
@@ -2930,8 +2929,7 @@ body .main-container p.dcl-highlight {
 .icon-instagram::after {
   margin-left: 4px;
   content: "\f16d";
-  font-family: "FontAwesome";
-  font-size: 2rem;
+  font: var(--fa-font-brands);
 }
 
 .icon-location-on::after {
@@ -2949,8 +2947,7 @@ body .main-container p.dcl-highlight {
 .icon-linkedin::after {
   margin-left: 4px;
   content: "\f0e1";
-  font-family: "FontAwesome";
-  font-size: 2rem;
+  font: var(--fa-font-brands);
 }
 
 [id^=block-bootstrap-dcl-hoursloginmenu] ul.menu--hours-login-menu > li.account > span.dropdown-toggle::before {
@@ -2999,8 +2996,7 @@ body .main-container p.dcl-highlight {
 .icon-spinner::after {
   margin-left: 4px;
   content: "\f110";
-  font-family: "FontAwesome";
-  font-size: 2rem;
+  font: var(--fa-font-brands);
 }
 
 .root-menu-link a::before {
@@ -3011,9 +3007,8 @@ body .main-container p.dcl-highlight {
 
 .icon-twitter::after {
   margin-left: 4px;
-  content: "\f099";
-  font-family: "FontAwesome";
-  font-size: 2rem;
+  content: "\e61b";
+  font: var(--fa-font-brands);
 }
 
 #block-utilitymenu-3 ul li a[href*=accounts]::before,
@@ -3060,8 +3055,7 @@ body .main-container p.dcl-highlight {
 .icon-youtube::after {
   margin-left: 4px;
   content: "\f16a";
-  font-family: "FontAwesome";
-  font-size: 2rem;
+  font: var(--fa-font-brands);
 }
 
 .icon-margin-left {
@@ -3576,7 +3570,8 @@ footer ul.footer-social li a {
 }
 footer ul.footer-social li a::after {
   margin-left: 0;
-  line-height: 1.6;
+  font-size: 23.994px;
+  line-height: 31.95px;
 }
 footer ul.footer-social li a:hover {
   color: #fff;
@@ -3616,7 +3611,7 @@ footer .region-footer-copyright .block-system-branding-block {
 footer .region-footer-copyright .block-system-branding-block a {
   height: 100%;
   border-bottom: 2px transparent !important;
-  background-image: url("../../images/Dartmouth_Libraries_Lockup_White_RGB.png");
+  background-image: url("/Dartmouth_Libraries_Lockup_White_RGB.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -4383,9 +4378,7 @@ ul.mobile-active-menu > li:not(.active-trail) {
 }
 
 .region-primary-menu nav.column-menu {
-  -ms-flex-item-align: center;
-  align-self: center;
-  justify-self: right;
+  place-self: center right;
 }
 .region-primary-menu nav.column-menu > h2 {
   color: #fff;
@@ -5088,8 +5081,7 @@ body.mobile-nav-open .dcl-fixed-header {
 }
 html.mobile-nav-open .dcl-fixed-header .region-mobile-menu,
 body.mobile-nav-open .dcl-fixed-header .region-mobile-menu {
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden scroll;
 }
 
 @media (max-width: 61.9375em) {
