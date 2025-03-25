@@ -2,7 +2,20 @@
 $this->headLink()->appendStylesheet($this->assetUrl('css/page-blocks.css', 'Omeka'));
 $this->htmlElement('body')->appendAttribute('class', $pageBodyClass);
 $this->pageTitle($page->title(), 2);
+$nav = $site->publicNav();
+$activePage = $nav->findActive($nav->getContainer());
+switch ($this->siteSetting('subnav_display')) {
+    case 'show';
+        $displaySubnav = $this->displayNavigation;
+        break;
+    case 'hide':
+        $displaySubnav = false;
+        break;
+    default:
+        $displaySubnav = $displaySubnav = $this->displayNavigation && $activePage && $activePage['page']->hasPages();
+}
 $showPagePagination = $this->siteSetting('show_page_pagination', true);
+
 if ($this->themeSetting('theme_og_image') && $this->themeSetting('theme_og_image_include') == 1) {
   $this->headMeta()->appendProperty('og:image', $this->themeSettingAssetUrl('theme_og_image'));
   if ($this->themeSettingAsset('theme_og_image')->altText()) {
@@ -11,21 +24,16 @@ if ($this->themeSetting('theme_og_image') && $this->themeSetting('theme_og_image
 }
 ?>
 
-<?php
-$nav = $site->publicNav();
-$container = $nav->getContainer();
-$activePage = $nav->findActive($container);
-if ($activePage):
-?>
-    <?php if ($activePage['depth'] !== 0): ?>
-    <nav class="breadcrumbs"><?php echo $nav->breadcrumbs(); ?></nav>
-    <?php endif; ?>
+<?php if ($activePage): ?>
+<?php if ($activePage['depth'] !== 0): ?>
+<nav class="breadcrumbs"><?php echo $nav->breadcrumbs(); ?></nav>
+<?php endif; ?>
 <?php endif; ?>
 
 <?php if ($activePage): ?>
-    <?php if ($this->displayNavigation && $activePage['page']->hasPages()): ?>
-    <button class="dcl-sub-menu-control" aria-controls="dcl-sub-menu-content" aria-expanded="false" role="button">Read More</button>
-    <nav class="sub-menu" id="dcl-sub-menu-content"><?php echo $nav->menu()->renderSubMenu(); ?></nav>
+    <?php if ($displaySubnav): ?>
+      <button class="dcl-sub-menu-control" aria-controls="dcl-sub-menu-content" aria-expanded="false" role="button">Read More</button>
+      <nav class="sub-menu" id="dcl-sub-menu-content"><?php echo $nav->menu()->renderSubMenu(); ?></nav>
     <?php endif; ?>
 <?php endif; ?>
 

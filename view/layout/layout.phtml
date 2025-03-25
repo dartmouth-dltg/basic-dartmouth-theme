@@ -36,7 +36,8 @@ $this->headLink([
 ], 'PREPEND');
 $this->headTitle()->append($this->setting('installation_title', 'Omeka S'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
-$this->headLink()->prependStylesheet($this->assetUrl('font-awesome/css/font-awesome.min.css'));
+$this->headLink()->prependStylesheet($this->assetUrl('fontawesome-free-6.7.2-web/css/fontawesome.min.css'));
+$this->headLink()->prependStylesheet($this->assetUrl('fontawesome-free-6.7.2-web/css/brands.min.css'));
 $this->headLink()->prependStylesheet('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 $this->headLink()->appendStylesheet($this->assetUrl('../node_modules/@accessible360/accessible-slick/slick/accessible-slick-theme.min.css'));
 $this->headLink()->appendStylesheet($this->assetUrl('../node_modules/@accessible360/accessible-slick/slick/slick.min.css'));
@@ -54,6 +55,8 @@ $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
 $this->trigger('view.layout');
 $userBar = $this->userBar();
+
+$site_layout = $this->themeSetting('site_layout') !== null ? $this->themeSetting('site_layout') : 'default';
 ?>
 <?php echo $this->doctype(); ?>
 <?php echo $this->htmlElement('html'); ?>
@@ -83,7 +86,7 @@ $userBar = $this->userBar();
     <?php echo $this->htmlElement('body'); ?>
         <a id="skipnav" href="#content"><?php echo $this->translate('Skip to main content'); ?></a>
         <?php echo $userBar; ?>
-        <div class="page-wrapper">
+        <div class="page-wrapper <?php echo $site_layout; ?>">
             <header class="<?php echo $content_class; ?>">
                 <div>
                     <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>   
@@ -169,7 +172,7 @@ $userBar = $this->userBar();
                                             <ul class="library-info">
                                                 <li>25 North Main Street<br> Hanover, NH, USA 03755</li>
                                                 <li>Phone: <a href="tel:+1-603-646-2567">603-646-2567</a></li>
-                                                <li><a href="https://www.library.dartmouth.edu/help/contact-us">Contact Us</a></li>
+                                                <li><a href="https://www.library.dartmouth.edu/about-us/contact">Contact Us</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -207,7 +210,7 @@ $userBar = $this->userBar();
                                         <li role="menuitem"><a class="icon-youtube hide-txt" href="https://www.youtube.com/playlist?list=PLA161361549CB448C"><span class="visually-hidden">YouTube</span></a></li>
                                     </ul>
                                     <div>
-                                        <a href="https://www.library.dartmouth.edu/about/privacy-policy" data-entity-type="node" data-entity-uuid="a2b641d3-0a06-4065-be6f-92f1a6231a6b" data-entity-substitution="canonical" title="Privacy Policy">Privacy Policy</a>
+                                        <a href="https://www.library.dartmouth.edu/about-us/policies/privacy" data-entity-type="node" data-entity-uuid="a2b641d3-0a06-4065-be6f-92f1a6231a6b" data-entity-substitution="canonical" title="Privacy Policy">Privacy Policy</a>
                                     </div>
                                 </div>
                             </section>
@@ -233,10 +236,10 @@ $userBar = $this->userBar();
                     </div>
                 </div>
             </footer>
-                <a id="back-to-top-btn" href="#" data-offset="100" data-duration="300">
-                    <svg aria-hidden="true" class="icon" viewBox="0 0 16 16"><title>Go to top of page</title><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,11.5 8,4 0.5,11.5 "></polyline></g></svg>
-                    <span class="sr-only">Back to top</span>
-                </a>
+            <a id="back-to-top-btn" href="#" data-offset="100" data-duration="300">
+                <svg aria-hidden="true" class="icon" viewBox="0 0 16 16"><title>Go to top of page</title><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,11.5 8,4 0.5,11.5 "></polyline></g></svg>
+                <span class="sr-only">Back to top</span>
+            </a>
         </div>
     </body>
 </html>
