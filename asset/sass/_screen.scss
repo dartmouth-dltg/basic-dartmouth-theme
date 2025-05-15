@@ -379,6 +379,7 @@ footer {
   display: grid;
   grid-template-columns: 33% 33%;
   gap: 9px;
+  margin-top: $base-font-size * 4;
   .site-pagination-next,
   .site-pagination-prev {
     display: grid;
