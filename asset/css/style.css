@@ -887,6 +887,7 @@ body .main-container p.dcl-highlight {
     display: grid;
     grid-template-columns: 33% 33%;
     gap: 9px;
+    margin-top: 72px;
   }
   .site-page-pagination .site-pagination-next,
   .site-page-pagination .site-pagination-prev {
