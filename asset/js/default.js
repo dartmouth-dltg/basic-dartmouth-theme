@@ -60,6 +60,11 @@
       if ($(this).children('.media-render').length == 1) {
         return;
       }
+      if ($(this).closest('.page-wrapper.speakout').length > 0) {
+        // don't slick-ify media embeds on speakout pages
+        return;
+      }
+      // only initialize slick if not already done
       $(this).not('.slick-initalized').slick(
         {
           slidesToShow: 1,
