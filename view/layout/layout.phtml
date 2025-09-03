@@ -148,7 +148,7 @@ $site_layout = $this->themeSetting('site_layout') !== null ? $this->themeSetting
                                 <h2 id="block-footeraboutus-menu">
                                     About Us
                                 </h2>
-                                <div class="collapse" id="footer-aboutus-collapse" role="list" aria-expanded="false">
+                                <div id="footer-aboutus-collapse" role="list">
                                     <div role="listitem">
                                         <ul class="menu menu--footer-about-us nav">
                                             <li class="first"> <a href="https://www.library.dartmouth.edu/directory" data-drupal-link-system-path="directory">Staff Directory</a> </li>
@@ -238,10 +238,12 @@ $site_layout = $this->themeSetting('site_layout') !== null ? $this->themeSetting
                     </div>
                 </div>
             </footer>
-            <a id="back-to-top-btn" href="#" data-offset="100" data-duration="300">
-                <svg aria-hidden="true" class="icon" viewBox="0 0 16 16"><title>Go to top of page</title><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,11.5 8,4 0.5,11.5 "></polyline></g></svg>
-                <span class="sr-only">Back to top</span>
-            </a>
+            <div role="navigation" aria-label="back to top navigation">
+                <a id="back-to-top-btn" href="#" data-offset="100" data-duration="300">
+                    <svg aria-hidden="true" class="icon" viewBox="0 0 16 16"><title>Go to top of page</title><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,11.5 8,4 0.5,11.5 "></polyline></g></svg>
+                    <span class="sr-only">Back to top</span>
+                </a>
+            </div>
         </div>
     </body>
 </html>

@@ -5,7 +5,7 @@ $this->headLink()->appendStylesheet($this->assetUrl('css/resource-page-blocks.cs
 $this->htmlElement('body')->appendAttribute('class', 'item resource show');
 $embedMedia = $this->siteSetting('item_media_embed', false);
 $itemMedia = $item->media();
-
+$nav = $site->publicNav();
 $filterLocale = (bool) $this->siteSetting('filter_locale_values');
 $lang = $this->lang();
 $valueLang = $filterLocale ? [$lang, ''] : null;
@@ -39,6 +39,15 @@ if ($site_layout == 'speakout') {
     $audioClass = !$thismedia['transcript'] ? 'no-transcript' : 'third';
 }
 ?>
+<nav class="breadcrumbs">
+    <a href="<?php echo $site->siteUrl(); ?>"><?php echo $site->title(); ?></a> >
+    <?php foreach ($item->sitePages($site->id()) as $sitePage): ?>
+        <?php if ($sitePage->title() != $site->title()): ?>
+            <?php echo $sitePage->link($sitePage->title()); ?> >
+        <?php endif; ?>
+    <?php endforeach; ?>
+    <?php echo $item->displayTitle(null, $valueLang); ?>
+</nav>
 <?php echo $this->pageTitle($item->displayTitle(null, $valueLang), 2); ?>
 <?php $this->trigger('view.show.before'); ?>
 <?php if ($site_layout == 'speakout'): ?>

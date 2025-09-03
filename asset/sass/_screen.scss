@@ -177,7 +177,8 @@ header {
     }
     h1 {
       margin: 0;
-      font-size: $base-font-size * 2;
+      font-size: $base-font-size * 1.8;
+      font-weight: 600;
       line-height: normal;
     }
     .site-summary {
@@ -1214,7 +1215,31 @@ ul.resource-list {
 }
 
 .browse-controls {
-  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0 2rem 0;
+  button {
+    height: 2.3em;
+    margin-left: 0.8rem;
+    padding: 0 0.5rem;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    background-color: $dart-green;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: $forest-green;
+    }
+  }
+}
+nav.pagination {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 // Sharing Module
@@ -1449,6 +1474,9 @@ li#sharing-embed a {
       #809eb9 83%,
       #c5b4cb 100%
     );
+    &.item-browse-link {
+      display: inline-block;
+    }
   }
   .speakout-item-layout {
     display: grid;
