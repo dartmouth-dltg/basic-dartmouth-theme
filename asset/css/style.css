@@ -1867,6 +1867,18 @@ body .main-container p.dcl-highlight {
     color: #000;
     background-color: #a5d75f;
   }
+  .speakout #content .speakout-item-layout #itemproperties .media-render {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 90px;
+  }
+  .speakout #content .speakout-item-layout #itemproperties .media-render iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
   .speakout #content .speakout-item-layout #transcriptinfo {
     display: grid;
     grid-template-columns: 1fr 1fr;

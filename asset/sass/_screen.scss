@@ -1486,6 +1486,18 @@ li#sharing-embed a {
       padding: 1rem;
       color: $black;
       background-color: $spring-green;
+      .media-render {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 90px;
+        iframe {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
     #transcriptinfo {
       display: grid;

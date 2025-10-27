@@ -20,18 +20,18 @@ if ($this->themeSetting('theme_og_image') && $this->themeSetting('theme_og_image
 
 if ($site_layout == 'speakout') {
     //build media contents
-    $thismedia = array('transcript' => false, 'audio' => false, 'pdf' => false);
+    $thismedia = array('transcript' => null, 'audio' => null, 'pdf' => null);
     if ($embedMedia && $itemMedia) {
         foreach ($itemMedia as $media) {
-            $thismediatype=$media->value('dcterms:type');
-            if ($thismediatype=='viewable_transcript') {
-                $thismedia['transcript']=$media->render();
+            $thismediatype = $media->value('dcterms:type');
+            if ($thismediatype == 'viewable_transcript') {
+                $thismedia['transcript'] = $media->render();
             }
-            elseif ($thismediatype=='audio') {
-                $thismedia['audio'][$media->title()]=$media->render();
+            elseif ($thismediatype == 'audio') {
+                $thismedia['audio'][$media->title()] = $media->render();
             }
-            elseif ($thismediatype=='pdf_transcript') {
-                $thismedia['pdf']=$media->originalUrl();
+            elseif ($thismediatype == 'pdf_transcript') {
+                $thismedia['pdf'] = $media->originalUrl();
             }
         }
     }
