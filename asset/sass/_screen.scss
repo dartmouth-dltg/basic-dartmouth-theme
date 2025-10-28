@@ -1421,6 +1421,24 @@ li#sharing-embed a {
 }
 
 // speakout specifics
+.page-wrapper.speakout header {
+  margin: 0;
+}
+.speakout-header-bar {
+  width: 100%;
+  height: 10px;
+  margin-bottom: $base-font-size;
+  background: linear-gradient(
+    to right,
+    $speakoutredbg 0%,
+    $speakoutorangebg 17%,
+    $speakoutyellowbg 33%,
+    $speakoutgreenbg 50%,
+    $speakoutlightbluebg 67%,
+    $speakoutbluebg 83%,
+    $speakoutpurplebg 100%
+  );
+}
 .speakout #content {
   .bluebg {
     background-color: #809eb9 !important;
@@ -1482,10 +1500,11 @@ li#sharing-embed a {
     display: grid;
     grid-template-columns: minmax(300px, 30%) 1fr;
     gap: 3rem;
-    #itemproperties {
-      padding: 1rem;
-      color: $black;
-      background-color: $spring-green;
+    .speakout-audio {
+      position: sticky;
+      top: 0;
+      padding-top: 1rem;
+      background-color: $white;
       .media-render {
         position: relative;
         overflow: hidden;
@@ -1496,8 +1515,14 @@ li#sharing-embed a {
           inset: 0;
           width: 100%;
           height: 100%;
+          border: none;
         }
       }
+    }
+    #itemproperties {
+      padding: 1rem;
+      color: $black;
+      background-color: $spring-green;
     }
     #transcriptinfo {
       display: grid;
@@ -1538,8 +1563,22 @@ li#sharing-embed a {
   }
 }
 
+@media screen and (max-width: 990px) {
+  .speakout #content {
+    .speakout-item-layout {
+      grid-template-columns: 100%;
+      .speakout-audio {
+        position: static;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .speakout #content {
+    .speakout-item-layout {
+      grid-template-columns: 100%;
+    }
     .speakout-grid-block {
       grid-template-columns: 100%;
     }

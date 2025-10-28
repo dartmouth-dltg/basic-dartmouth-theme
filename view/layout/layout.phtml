@@ -116,6 +116,10 @@ $site_layout = $this->themeSetting('site_layout') !== null ? $this->themeSetting
                     <?php endif; ?>
                 </div>
             </header>
+            <?php if($site_layout == 'speakout'): ?>
+                <div class="speakout-header-bar">
+                </div>
+            <?php endif; ?>
             <div id="content" role="main" class="<?php echo $content_class; ?>">
                 <?php echo $this->content; ?>
             </div>

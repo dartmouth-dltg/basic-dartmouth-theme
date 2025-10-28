@@ -1812,6 +1812,15 @@ body .main-container p.dcl-highlight {
   .lcs_slide_out-r .lcs_header a::before {
     font-size: 27px;
   }
+  .page-wrapper.speakout header {
+    margin: 0;
+  }
+  .speakout-header-bar {
+    width: 100%;
+    height: 10px;
+    margin-bottom: 18px;
+    background: linear-gradient(to right, rgb(206, 138.5, 150.5) 0%, rgb(255, 207.5, 135) 17%, rgb(250, 237.5, 180) 33%, rgb(127.5, 180, 158.5) 50%, rgb(146.5, 188.5, 220.5) 67%, rgb(127.5, 157.5, 185) 83%, rgb(196.5, 180, 202.5) 100%);
+  }
   .speakout #content .bluebg {
     background-color: #809eb9 !important;
   }
@@ -1862,22 +1871,29 @@ body .main-container p.dcl-highlight {
     grid-template-columns: minmax(300px, 30%) 1fr;
     gap: 3rem;
   }
-  .speakout #content .speakout-item-layout #itemproperties {
-    padding: 1rem;
-    color: #000;
-    background-color: #a5d75f;
+  .speakout #content .speakout-item-layout .speakout-audio {
+    position: sticky;
+    top: 0;
+    padding-top: 1rem;
+    background-color: #fff;
   }
-  .speakout #content .speakout-item-layout #itemproperties .media-render {
+  .speakout #content .speakout-item-layout .speakout-audio .media-render {
     position: relative;
     overflow: hidden;
     width: 100%;
     height: 90px;
   }
-  .speakout #content .speakout-item-layout #itemproperties .media-render iframe {
+  .speakout #content .speakout-item-layout .speakout-audio .media-render iframe {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
+    border: none;
+  }
+  .speakout #content .speakout-item-layout #itemproperties {
+    padding: 1rem;
+    color: #000;
+    background-color: #a5d75f;
   }
   .speakout #content .speakout-item-layout #transcriptinfo {
     display: grid;
@@ -1915,7 +1931,18 @@ body .main-container p.dcl-highlight {
     margin-top: 2rem;
   }
 }
+@media screen and (max-width: 990px) {
+  .speakout #content .speakout-item-layout {
+    grid-template-columns: 100%;
+  }
+  .speakout #content .speakout-item-layout .speakout-audio {
+    position: static;
+  }
+}
 @media screen and (max-width: 767px) {
+  .speakout #content .speakout-item-layout {
+    grid-template-columns: 100%;
+  }
   .speakout #content .speakout-grid-block {
     grid-template-columns: 100%;
   }

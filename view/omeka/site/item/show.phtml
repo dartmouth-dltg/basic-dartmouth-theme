@@ -53,15 +53,17 @@ if ($site_layout == 'speakout') {
 <?php if ($site_layout == 'speakout'): ?>
     <div class="speakout-item-layout">
         <div>
+            <?php if ($thismedia['audio']): ?>
+                <div class="speakout-audio <?php echo $audioClass; ?>">
+                    <?php foreach ($thismedia['audio'] as $audioTitle => $audio):
+                        if (count($thismedia['audio']) > 1):
+                        echo $audioTitle;
+                        endif;
+                        echo $audio;
+                    endforeach; ?>
+                </div>
+            <?php endif; ?>
             <div id="itemproperties" class="<?php echo $audioClass; ?>">
-                <?php if ($thismedia['audio']):
-                foreach ($thismedia['audio'] as $audioTitle => $audio):
-                    if (count($thismedia['audio']) > 1):
-                    echo $audioTitle;
-                    endif;
-                    echo $audio;
-                endforeach;
-                endif;?>
                 <div id="properties">
                     <div class="property">
                         <?php echo $item->displayValues(); ?>
