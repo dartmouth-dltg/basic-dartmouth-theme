@@ -100,7 +100,7 @@ $site_layout = $this->themeSetting('site_layout') !== null ? $this->themeSetting
                                     <span><?php echo $escape($siteTitle); ?></span>
                                 </a>
                             </h1>
-                            <?php if (strlen($site->summary()) > 0): ?>
+                            <?php if ($site->summary() && strlen($site->summary()) > 0): ?>
                                 <span class="site-summary secondary-title"><?php echo $site->summary(); ?></span>
                             <?php endif; ?>
                             <?php if ($this->themeSetting('use_harmful_content') == 1 && $harmfulContent = $this->themeSetting('harmful_content')): ?>
