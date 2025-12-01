@@ -669,8 +669,17 @@ body .main-container p.dcl-highlight {
   }
   header .logo-title h1 {
     margin: 0;
-    font-size: 18px;
+    font-size: 32.4px;
+    font-weight: 600;
     line-height: normal;
+  }
+  header .logo-title .site-summary {
+    display: inline-block;
+    padding: 0 0 0 18px;
+    letter-spacing: normal;
+    color: #fff;
+    font-size: 18px;
+    font-style: italic;
   }
   header .logo-title a,
   header .logo-title a:active,
@@ -689,14 +698,12 @@ body .main-container p.dcl-highlight {
   header .logo-title a:link span,
   header .logo-title a:visited span {
     display: inline-block;
-    margin-top: 8px;
     padding: 6px 0 6px 18px;
     -webkit-text-decoration: underline solid transparent 1.5px;
     text-decoration: underline solid transparent 1.5px;
     text-underline-offset: 4px;
     letter-spacing: normal;
     border-bottom: none;
-    font-size: 18px;
   }
   header .logo-title a:hover span, header .logo-title a:focus span,
   header .logo-title a:active:hover span,
@@ -1106,7 +1113,7 @@ body .main-container p.dcl-highlight {
     margin-right: auto;
     margin-left: auto;
     width: 90%;
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
     color: #000;
     line-height: 27px;
   }
@@ -1120,6 +1127,7 @@ body .main-container p.dcl-highlight {
     border: none;
   }
   #content .blocks .random-items {
+    margin-top: 2rem;
     border: none;
   }
   #content p span {
@@ -1641,7 +1649,30 @@ body .main-container p.dcl-highlight {
     margin-left: 0;
   }
   .browse-controls {
-    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0 2rem 0;
+  }
+  .browse-controls button {
+    height: 2.3em;
+    margin-left: 0.8rem;
+    padding: 0 0.5rem;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background-color: #00693e;
+  }
+  .browse-controls button:hover, .browse-controls button:focus {
+    cursor: pointer;
+    background-color: #12312b;
+  }
+  nav.pagination {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
   }
   li#sharing-email a::before,
   li#sharing-embed a::before {
@@ -1705,7 +1736,7 @@ body .main-container p.dcl-highlight {
     grid-template-columns: 50% 50%;
   }
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 767px) {
   header > div {
     grid-template-columns: 1fr;
     gap: 0;
@@ -1717,6 +1748,11 @@ body .main-container p.dcl-highlight {
   header .all-exhibits-link {
     margin-bottom: 6px;
     text-align: right;
+  }
+}
+@media screen and (max-width: 575px) {
+  header .logo-title h1 {
+    font-size: 18px;
   }
   nav.sub-menu ul.navigation li {
     width: 100%;
@@ -1775,6 +1811,140 @@ body .main-container p.dcl-highlight {
 @media screen {
   .lcs_slide_out-r .lcs_header a::before {
     font-size: 27px;
+  }
+  .page-wrapper.speakout header {
+    margin: 0;
+  }
+  .speakout-header-bar {
+    width: 100%;
+    height: 10px;
+    margin-bottom: 18px;
+    background: linear-gradient(to right, rgb(206, 138.5, 150.5) 0%, rgb(255, 207.5, 135) 17%, rgb(250, 237.5, 180) 33%, rgb(127.5, 180, 158.5) 50%, rgb(146.5, 188.5, 220.5) 67%, rgb(127.5, 157.5, 185) 83%, rgb(196.5, 180, 202.5) 100%);
+  }
+  .speakout #content .bluebg {
+    background-color: #809eb9 !important;
+  }
+  .speakout #content .greenbg {
+    background-color: #80b49f !important;
+  }
+  .speakout #content .orangebg {
+    background-color: #ffd087 !important;
+  }
+  .speakout #content .purplebg {
+    background-color: #c5b4cb !important;
+  }
+  .speakout #content .redbg {
+    background-color: #ce8b97 !important;
+  }
+  .speakout #content .yellowbg {
+    background-color: #faeeb4 !important;
+  }
+  .speakout #content .speakout-grid-block {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .speakout #content .speakout-grid-block .content-block {
+    padding: 1rem;
+  }
+  .speakout #content .speakout-grid-block .content-block a {
+    color: #000;
+    border-bottom: none;
+  }
+  .speakout #content .speakout-grid-block .content-block a:visited, .speakout #content .speakout-grid-block .content-block a:hover, .speakout #content .speakout-grid-block .content-block a:focus {
+    border-bottom: none;
+  }
+  .speakout #content .speakout-grid-block .content-block .centertext {
+    text-align: center;
+  }
+  .speakout #content .item.resource > a {
+    padding-bottom: 8px;
+    border-bottom: none;
+    background: linear-gradient(to right, #ce8b97 0%, #ffd087 17%, #faeeb4 33%, #80b49f 50%, #93bddd 67%, #809eb9 83%, #c5b4cb 100%);
+  }
+  .speakout #content .item.resource > a.item-browse-link {
+    display: inline-block;
+  }
+  .speakout #content .speakout-item-layout {
+    display: grid;
+    grid-template-columns: minmax(300px, 30%) 1fr;
+    gap: 3rem;
+  }
+  .speakout #content .speakout-item-layout .speakout-audio {
+    position: sticky;
+    top: 0;
+    padding-top: 1rem;
+    background-color: #fff;
+  }
+  .speakout #content .speakout-item-layout .speakout-audio .media-render {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 90px;
+  }
+  .speakout #content .speakout-item-layout .speakout-audio .media-render iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .speakout #content .speakout-item-layout #itemproperties {
+    padding: 1rem;
+    color: #000;
+    background-color: #a5d75f;
+  }
+  .speakout #content .speakout-item-layout #transcriptinfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    place-items: center end;
+  }
+  .speakout #content .speakout-item-layout #transcriptinfo h3 {
+    justify-self: start;
+  }
+  .speakout #content .speakout-item-layout #transcriptinfo a {
+    border-bottom: none;
+  }
+  .speakout #content .speakout-item-layout #transcriptinfo a button {
+    padding: 0.25rem 0.5rem;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background-color: #00693e;
+  }
+  .speakout #content .speakout-item-layout #transcriptinfo a button:hover, .speakout #content .speakout-item-layout #transcriptinfo a button:focus {
+    cursor: pointer;
+    background-color: #12312b;
+  }
+  .speakout #content .speakout-item-layout .interview {
+    padding: 15px 0;
+  }
+  .speakout #content .speakout-item-layout .interview .description {
+    display: none;
+  }
+  .speakout #content .speakout-item-layout .interview .interlocutor {
+    font-weight: bold;
+  }
+  .speakout #content #sharing-buttons {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 990px) {
+  .speakout #content .speakout-item-layout {
+    grid-template-columns: 100%;
+  }
+  .speakout #content .speakout-item-layout .speakout-audio {
+    position: static;
+  }
+}
+@media screen and (max-width: 767px) {
+  .speakout #content .speakout-item-layout {
+    grid-template-columns: 100%;
+  }
+  .speakout #content .speakout-grid-block {
+    grid-template-columns: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

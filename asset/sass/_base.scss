@@ -51,6 +51,26 @@ $spacing-l: $base-line-height;
 // Paths
 $dart-sprite-path: "../img/sprite-dart.png";
 
+// speakout specific
+$opacityfactor: 50%;
+$speakoutgreen: #00693e;
+$speakoutlightgreen: #c4dd88;
+$speakoutdarkgreen: #12312b;
+$speakoutyellow: #f5dc69;
+$speakoutorange: #ffa00f;
+$speakoutdarkorange: #e32d1c;
+$speakoutred: #9d162e;
+$speakoutpurple: #8a6996;
+$speakoutblue: #003c73;
+$speakoutlightblue: #267aba;
+$speakoutyellowbg: mix($white, $speakoutyellow, $opacityfactor);
+$speakoutorangebg: mix($white, $speakoutorange, $opacityfactor);
+$speakoutredbg: mix($white, $speakoutred, $opacityfactor);
+$speakoutgreenbg: mix($white, $speakoutgreen, $opacityfactor);
+$speakoutlightbluebg: mix($white, $speakoutlightblue, $opacityfactor);
+$speakoutbluebg: mix($white, $speakoutblue, $opacityfactor);
+$speakoutpurplebg: mix($white, $speakoutpurple, $opacityfactor);
+
 // Mixins
 @mixin container {
   max-width: 1450px;
