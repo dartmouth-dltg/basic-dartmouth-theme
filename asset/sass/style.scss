@@ -1,12 +1,3 @@
-@import "normalize";
-@import "base";
-@import "typography";
-
-@media screen {
-  @import "slick";
-  @import "screen";
-}
-
-@media screen and (min-width: 800px) {
-  @import "desktop";
-}
+@use "slick";
+@use "screen";
+@use "desktop";

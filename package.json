@@ -18,10 +18,14 @@
     "@midzer/tobii": "^2.5.0"
   },
   "devDependencies": {
-    "@dltg/gulp-build": "^1.0.4"
+    "@dltg/gulp-build": "^2.0.0",
+    "gulp": "^5.0.0"
   },
   "scripts": {
-    "preinstall": "make clean",
-    "postinstall": "if test -d node_modules/@dltg/gulp-build; then make linters; fi"
+    "build": "gulp build",
+    "ubuild": "gulp ubuild",
+    "watch": "gulp watch",
+    "clean": "gulp clean",
+    "lint:js": "gulp jsLint"
   }
 }
