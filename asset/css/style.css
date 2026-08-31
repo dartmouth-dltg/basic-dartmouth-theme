@@ -242,6 +242,11 @@ body .main-container p.dcl-highlight {
   .slideshow .item img.img-portrait {
     object-fit: contain;
   }
+  .slideshow .item .slide-contents {
+    max-width: 1200px;
+    font-size: 17.6px;
+    line-height: 1.5;
+  }
   .slideshow .item.slide-fit-cover img {
     object-fit: cover;
   }

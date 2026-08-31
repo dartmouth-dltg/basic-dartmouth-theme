@@ -104,6 +104,11 @@
           object-fit: contain;
         }
       }
+      .slide-contents {
+        max-width: bd.$max-paragraph-width;
+        font-size: bd.$base-font-size * 0.8;
+        line-height: 1.5;
+      }
       &.slide-fit-cover {
         img {
           object-fit: cover;
