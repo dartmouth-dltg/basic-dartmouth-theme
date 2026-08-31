@@ -1308,6 +1308,9 @@ body .main-container p.dcl-highlight {
   #content .block-layout-alignment-text-center .media-embed caption p {
     margin: 0 auto;
   }
+  #content .block.block-html.is-after-left-align > * {
+    max-width: calc(33% + 80ch) !important;
+  }
   #content .tobii-zoom__icon {
     top: 0;
     right: 0;

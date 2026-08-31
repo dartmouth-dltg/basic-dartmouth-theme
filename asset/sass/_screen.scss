@@ -827,6 +827,9 @@
         margin: 0 auto;
       }
     }
+    .block.block-html.is-after-left-align > * {
+      max-width: calc(33% + 80ch) !important;
+    }
     .tobii-zoom__icon {
       top: 0;
       right: 0;
