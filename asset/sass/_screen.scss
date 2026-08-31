@@ -51,7 +51,7 @@
     color: bd.$gray-medium-dark;
     border: none !important;
     font-family: bd.$font-family-serif !important;
-    font-style: normal !important;
+    line-height: 1.3;
   }
 
   select {
@@ -381,6 +381,9 @@
         font-size: 1.2rem;
       }
     }
+    ul.nav li ul li a {
+      font-size: 90%;
+    }
   }
 
   .site-page-pagination {
@@ -388,10 +391,14 @@
     grid-template-columns: 33% 33%;
     gap: 9px;
     margin-top: bd.$base-font-size * 4;
+    .btn {
+      padding: 6px 12px;
+    }
     .site-pagination-next,
     .site-pagination-prev {
       display: grid;
       gap: 9px;
+      align-items: center;
       text-align: left;
       white-space: normal;
       color: bd.$white !important;
@@ -525,6 +532,7 @@
     font-size: bd.$base-font-size * 0.9;
     font-weight: bold;
     &:hover {
+      cursor: pointer;
       color: bd.$white !important;
       outline: none;
       background-color: bd.$forest-green;
@@ -655,8 +663,8 @@
       h2 {
         grid-row: 2;
         margin: 0.5rem 0;
-        font-size: bd.$base-font-size;
-        line-height: normal;
+        font-size: bd.$base-font-size * 1.25;
+        line-height: 1.5;
       }
     }
     .site-promo-harmful-content-flag {
@@ -707,11 +715,16 @@
       grid-row: 3;
       grid-column: 1;
       p {
+        display: -webkit-box;
+        overflow: hidden;
         margin: 0.25rem 0 1rem 0;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
       }
     }
     p {
-      max-width: bd.$max-paragraph-width;
+      max-width: 80ch;
+      margin-bottom: bd.$component-spacing-bottom;
     }
     .blocks {
       .left,
@@ -758,7 +771,7 @@
       }
     }
     .media-embed {
-      padding-top: 1rem;
+      padding-top: 0.5rem;
       h3 {
         max-width: 100%;
         margin-bottom: bd.$base-font-size * 0.5;
@@ -789,6 +802,13 @@
             font-family: bd.$font-family-serif;
             font-size: bd.$base-font-size;
             line-height: normal;
+            p {
+              display: -webkit-box;
+              overflow: hidden;
+              margin: 0.25rem 0 1rem 0;
+              -webkit-line-clamp: 5;
+              -webkit-box-orient: vertical;
+            }
           }
           > a {
             display: inline-block;
@@ -888,7 +908,7 @@
         &::before {
           margin-right: 4px;
           content: "\e043";
-          vertical-align: top;
+          vertical-align: middle;
           font-family: bd.$font-primary-icons;
           font-size: bd.$base-font-size * 1.5;
           font-variation-settings: "FILL" 1;

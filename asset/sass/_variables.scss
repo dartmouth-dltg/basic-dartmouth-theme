@@ -25,8 +25,8 @@ $yellow: #ffa00f;
 // Typography
 $material-symbols: "Material Symbols Outlined";
 $font-primary-icons: $material-symbols;
-$base-font-size: 18px;
-$base-line-height: 18px;
+$base-font-size: 22px;
+$base-line-height: 22px;
 $serif: "Lora", georgia, serif;
 $sansserif: "National2", verdana, sans-serif;
 $sansserif-bold: "National2-Bold", verdana, sans-serif;
@@ -42,7 +42,7 @@ $headings-font-family-others: "National2Web", $font-family-base;
 $font-weight-strong: 700;
 
 // Full-width page adjustment
-$max-text-width: 930px;
+$max-text-width: 80ch;
 $component-spacing-bottom: $base-font-size * 2;
 
 // Units

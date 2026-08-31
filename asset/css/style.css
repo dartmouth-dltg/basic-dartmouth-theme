@@ -1,11 +1,10 @@
 h1,
 .h1 {
   margin: 12px 0 18px 0;
-  letter-spacing: -1px;
   text-transform: none;
   font-family: verdana, geneva, sans-serif;
   font-weight: bold;
-  line-height: 100%;
+  line-height: 1.25;
 }
 .font-family-sans-serif-loaded h1,
 .font-family-sans-serif-loaded .h1 {
@@ -20,7 +19,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  max-width: 930px;
+  max-width: 80ch;
   font-family: "National2Web", verdana, geneva, sans-serif;
   font-weight: bold;
 }
@@ -37,45 +36,45 @@ h5,
 
 h1,
 .h1 {
-  font-size: 58.5px;
+  font-size: 71.5px;
 }
 
 h2,
 .h2 {
-  margin: 18px 0 18px 0;
-  letter-spacing: -1px;
+  max-width: 100%;
+  margin: 22px 0 22px 0;
   font-size: 36px;
-  line-height: 100%;
+  line-height: 1.25;
 }
 
 h3,
 .h3 {
-  margin: 18px 0 18px 0;
+  margin: 22px 0 22px 0;
   font-size: 24px;
-  line-height: 115%;
+  line-height: 1.35;
 }
 
 h4,
 .h4 {
-  margin: 18px 0 18px 0;
+  margin: 22px 0 22px 0;
   margin: 20px 0 15px;
   font-size: 21px;
-  line-height: 110%;
+  line-height: 1.35;
 }
 
 h5,
 .h5 {
-  margin: 18px 0 14.4px 0;
+  margin: 22px 0 17.6px 0;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   font-size: 12px;
-  line-height: 150%;
+  line-height: 1.5;
 }
 
 body {
   color: #000;
   font-family: verdana, geneva, sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.5;
 }
 .font-family-sans-serif-loaded body {
@@ -86,14 +85,14 @@ body strong {
 }
 body p,
 body ul {
-  max-width: 930px;
+  max-width: 80ch;
 }
 body blockquote {
   position: relative;
   margin: 20px 0;
   color: #ababab;
   font-family: "Times New Roman", georgia, garamond, serif;
-  font-size: 22.5px;
+  font-size: 27.5px;
 }
 .font-family-serif-loaded body blockquote {
   font-family: "DartmouthRuzicka", "Times New Roman", georgia, garamond, serif;
@@ -142,7 +141,7 @@ body .main-container p.dcl-highlight {
   body .region-home-feature-secondary-first,
   body .region-home-feature-secondary-second {
     color: #000;
-    font-size: em(17px);
+    font-size: 17px;
   }
 }
 @media screen {
@@ -338,14 +337,14 @@ body .main-container p.dcl-highlight {
     display: inline-block;
     margin-left: 9px;
     text-align: left;
-    font-size: 13.6px;
+    font-size: 17.6px;
     line-height: normal;
   }
   .slide-fullscreen-openBtn {
     display: grid;
     justify-content: left;
     width: auto;
-    min-width: 170px;
+    min-width: 220px;
     color: #fff;
     border: 0;
     border-radius: 0;
@@ -400,8 +399,8 @@ body .main-container p.dcl-highlight {
     z-index: 1000;
     top: unset;
     bottom: -46px;
-    width: 25.5px;
-    height: 25.5px;
+    width: 33px;
+    height: 33px;
     margin: 0;
     cursor: pointer;
   }
@@ -417,9 +416,9 @@ body .main-container p.dcl-highlight {
     left: 0;
     color: #a5d75f;
     font-family: "Font Awesome 5 Free";
-    font-size: 25.5px;
+    font-size: 33px;
     font-weight: bold;
-    line-height: 25.5px;
+    line-height: 33px;
   }
   .slideshow-block .slick-prev:hover::before, .slideshow-block .slick-prev:hover::after,
   .slideshow-block .slick-next:hover::before,
@@ -456,7 +455,7 @@ body .main-container p.dcl-highlight {
   }
   .slideshow-block .slick-next,
   .section-intro-splash .slick-next {
-    left: 68px;
+    left: 88px;
   }
   .slideshow-block .slick-next::after,
   .section-intro-splash .slick-next::after {
@@ -476,8 +475,8 @@ body .main-container p.dcl-highlight {
   .slideshow-block .slick-autoplay-toggle-button,
   .section-intro-splash .slick-autoplay-toggle-button {
     z-index: 1000;
-    bottom: -37px;
-    left: 30.6px;
+    bottom: -30px;
+    left: 39.6px;
     width: auto;
     min-width: auto;
     opacity: 1;
@@ -501,14 +500,14 @@ body .main-container p.dcl-highlight {
   .section-intro-splash .slick-autoplay-toggle-button .slick-pause-icon::before {
     content: "\f28b";
     font-family: "Font Awesome 5 Free";
-    font-size: 25.5px;
+    font-size: 33px;
     font-weight: bold;
   }
   .slideshow-block .slick-autoplay-toggle-button .slick-play-icon::before,
   .section-intro-splash .slick-autoplay-toggle-button .slick-play-icon::before {
     content: "\f144";
     font-family: "Font Awesome 5 Free";
-    font-size: 25.5px;
+    font-size: 33px;
     font-weight: bold;
   }
 }
@@ -529,15 +528,15 @@ body .main-container p.dcl-highlight {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-size: 17px;
+    font-size: 22px;
   }
   body {
     margin: 0;
     word-wrap: break-word;
     background-color: #fff;
     font-family: "National2Web", verdana, geneva, sans-serif;
-    font-size: 17px;
-    line-height: 18px;
+    font-size: 22px;
+    line-height: 22px;
   }
   a {
     text-underline-offset: 3px;
@@ -563,7 +562,7 @@ body .main-container p.dcl-highlight {
     color: #666;
     border: none !important;
     font-family: "DartmouthRuzicka", "Times New Roman", georgia, garamond, serif !important;
-    font-style: normal !important;
+    line-height: 1.3;
   }
   select {
     display: inline-block;
@@ -601,9 +600,9 @@ body .main-container p.dcl-highlight {
   #skipnav {
     position: fixed;
     z-index: -5;
-    top: 18px;
+    top: 22px;
     left: 50%;
-    padding: 4.5px;
+    padding: 5.5px;
     transform: translateX(-50%);
     opacity: 0;
     border: 1px solid #ababab;
@@ -619,12 +618,12 @@ body .main-container p.dcl-highlight {
   }
   .site-title h1 {
     margin: 0;
-    padding-right: 18px;
-    font-size: 21.25px;
+    padding-right: 22px;
+    font-size: 27.5px;
     line-height: normal;
   }
   header {
-    margin: 0 0 18px 0;
+    margin: 0 0 22px 0;
     padding: 9px calc(5% + 0.25rem);
     background-color: #00693e;
   }
@@ -660,7 +659,7 @@ body .main-container p.dcl-highlight {
     grid-column-gap: 1.5rem;
     align-items: center;
     width: 90%;
-    margin: 0 0 4.5px 0;
+    margin: 0 0 5.5px 0;
     padding: 0.8rem 0;
     line-height: 2.1rem;
   }
@@ -669,7 +668,7 @@ body .main-container p.dcl-highlight {
   }
   header .logo-title h1 {
     margin: 0;
-    font-size: 30.6px;
+    font-size: 39.6px;
     font-weight: 600;
     line-height: normal;
   }
@@ -678,7 +677,7 @@ body .main-container p.dcl-highlight {
     padding: 0 0 0 18px;
     letter-spacing: normal;
     color: #fff;
-    font-size: 17px;
+    font-size: 22px;
     font-style: italic;
   }
   header .logo-title a,
@@ -736,18 +735,18 @@ body .main-container p.dcl-highlight {
   }
   header .language-switcher-wrapper label {
     color: #fff;
-    font-size: 11.9px;
+    font-size: 15.4px;
   }
   header .language-switcher-wrapper select {
     margin-bottom: 9px;
     margin-left: 0;
     padding: 0 9px 0 9px;
-    font-size: 13.6px;
+    font-size: 17.6px;
   }
   header .all-exhibits-link {
     text-decoration: none;
     border: none;
-    font-size: 17px;
+    font-size: 22px;
     font-weight: bold;
   }
   header .all-exhibits-link:hover {
@@ -758,8 +757,8 @@ body .main-container p.dcl-highlight {
     border: none;
   }
   .breadcrumbs {
-    margin-bottom: 17px;
-    font-size: 13.6px;
+    margin-bottom: 22px;
+    font-size: 17.6px;
     font-weight: bold;
   }
   .breadcrumbs a {
@@ -769,11 +768,11 @@ body .main-container p.dcl-highlight {
   .harmful-content-wrapper {
     display: grid;
     grid-template-columns: fit-content(100%) 1fr;
-    gap: 4.25px;
-    margin-bottom: 17px;
-    padding: 0 0 0 17px;
+    gap: 5.5px;
+    margin-bottom: 22px;
+    padding: 0 0 0 22px;
     color: #fff;
-    font-size: 13.6px;
+    font-size: 17.6px;
   }
   header .harmful-content-wrapper::before,
   .harmful-content-wrapper::before {
@@ -781,7 +780,7 @@ body .main-container p.dcl-highlight {
     vertical-align: middle;
     font-family: "Material Symbols Outlined";
     font-variation-settings: "FILL" 1;
-    font-size: 21.25px;
+    font-size: 27.5px;
   }
   header .harmful-content-wrapper a,
   header .harmful-content-wrapper a:link,
@@ -844,13 +843,13 @@ body .main-container p.dcl-highlight {
   }
   #back-to-top-btn {
     position: fixed;
-    right: 17px;
-    bottom: 17px;
+    right: 22px;
+    bottom: 22px;
     display: none;
-    padding: 4.25px 4.25px 0px 4.25px;
+    padding: 5.5px 5.5px 0px 5.5px;
     color: #000;
     border: 1px solid #fff;
-    border-radius: 8.5px;
+    border-radius: 11px;
     background-color: #a5d75f;
   }
   #back-to-top-btn:hover {
@@ -859,12 +858,12 @@ body .main-container p.dcl-highlight {
     background-color: #12312b;
   }
   #back-to-top-btn svg {
-    width: 25.5px;
+    width: 33px;
   }
   footer {
     clear: both;
     width: 100%;
-    padding: 17px 0;
+    padding: 22px 0;
     background-color: #12312b;
   }
   footer > * {
@@ -890,23 +889,30 @@ body .main-container p.dcl-highlight {
   footer .footer-social a[class^=icon-]::after {
     font-size: 1.2rem;
   }
+  footer ul.nav li ul li a {
+    font-size: 90%;
+  }
   .site-page-pagination {
     display: grid;
     grid-template-columns: 33% 33%;
     gap: 9px;
-    margin-top: 68px;
+    margin-top: 88px;
+  }
+  .site-page-pagination .btn {
+    padding: 6px 12px;
   }
   .site-page-pagination .site-pagination-next,
   .site-page-pagination .site-pagination-prev {
     display: grid;
     gap: 9px;
+    align-items: center;
     text-align: left;
     white-space: normal;
     color: #fff !important;
     border: none !important;
     border-radius: 0;
     background-color: #00693e;
-    font-size: 15.3px;
+    font-size: 19.8px;
     font-weight: bold;
   }
   .site-page-pagination .site-pagination-next:hover, .site-page-pagination .site-pagination-next:focus,
@@ -919,7 +925,7 @@ body .main-container p.dcl-highlight {
   .site-page-pagination .site-pagination-prev::before {
     vertical-align: middle;
     font-family: "Material Symbols Outlined";
-    font-size: 25.5px;
+    font-size: 33px;
     font-variation-settings: "FILL" 1;
     line-height: 23px;
   }
@@ -941,7 +947,7 @@ body .main-container p.dcl-highlight {
     display: grid;
     grid-template-rows: fit-content(100%) fit-content(100%);
     color: #fff;
-    font-size: 13.6px;
+    font-size: 17.6px;
   }
   .standard-dcl-footer h2 {
     margin: 0;
@@ -949,14 +955,14 @@ body .main-container p.dcl-highlight {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #fff;
-    font-size: 10.2px;
+    font-size: 13.2px;
   }
   .standard-dcl-footer .row-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 5rem;
-    margin-bottom: 17px;
-    padding-bottom: 17px;
+    margin-bottom: 22px;
+    padding-bottom: 22px;
     border-bottom: 1px solid #fff;
   }
   .standard-dcl-footer .row-1 li {
@@ -1015,16 +1021,17 @@ body .main-container p.dcl-highlight {
     display: grid;
     grid-template-columns: 1fr fit-content(100%);
     gap: 9px;
-    margin-bottom: 17px;
+    margin-bottom: 22px;
     padding: 4.5px 9px;
     text-decoration: none;
     color: #fff !important;
     border: none;
     background-color: #00693e;
-    font-size: 15.3px;
+    font-size: 19.8px;
     font-weight: bold;
   }
   .dcl-sub-menu-control:hover {
+    cursor: pointer;
     color: #fff !important;
     outline: none;
     background-color: #12312b;
@@ -1095,7 +1102,7 @@ body .main-container p.dcl-highlight {
     width: 90%;
     padding-bottom: 2rem;
     color: #000;
-    line-height: 25.5px;
+    line-height: 33px;
   }
   #content h2 {
     margin-top: 0;
@@ -1112,7 +1119,7 @@ body .main-container p.dcl-highlight {
   }
   #content p span {
     font-family: "National2Web", verdana, geneva, sans-serif;
-    font-size: 17px;
+    font-size: 22px;
     line-height: normal;
   }
   #content a,
@@ -1144,8 +1151,8 @@ body .main-container p.dcl-highlight {
   #content .site-promo-container h2 {
     grid-row: 2;
     margin: 0.5rem 0;
-    font-size: 17px;
-    line-height: normal;
+    font-size: 27.5px;
+    line-height: 1.5;
   }
   #content .site-promo-harmful-content-flag {
     z-index: 2;
@@ -1159,7 +1166,7 @@ body .main-container p.dcl-highlight {
     text-align: center;
     color: #000;
     background-color: #a5d75f;
-    font-size: 13.6px;
+    font-size: 17.6px;
     font-weight: bold;
   }
   #content .site-promo-harmful-content-flag p::before {
@@ -1168,7 +1175,7 @@ body .main-container p.dcl-highlight {
     vertical-align: middle;
     font-family: "Material Symbols Outlined";
     font-variation-settings: "FILL" 1;
-    font-size: 21.25px;
+    font-size: 27.5px;
   }
   #content .site-promo-image {
     grid-row: 1;
@@ -1196,10 +1203,15 @@ body .main-container p.dcl-highlight {
     grid-column: 1;
   }
   #content .site-promo-content p {
+    display: -webkit-box;
+    overflow: hidden;
     margin: 0.25rem 0 1rem 0;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
   }
   #content p {
-    max-width: 1200px;
+    max-width: 80ch;
+    margin-bottom: 44px;
   }
   #content .blocks .left.file,
   #content .blocks .right.file {
@@ -1210,7 +1222,7 @@ body .main-container p.dcl-highlight {
     padding: 0;
   }
   #content .center.large.file .item {
-    margin-bottom: 34px;
+    margin-bottom: 44px;
   }
   #content .center.large.file .item h3,
   #content .center.large.file .item p {
@@ -1222,7 +1234,7 @@ body .main-container p.dcl-highlight {
   }
   #content .left.file,
   #content .left.assets {
-    margin: 0 17px 17px 0;
+    margin: 0 22px 22px 0;
   }
   #content .page-layout-normal .block.block-layout-alignment-block-right {
     max-width: 33%;
@@ -1237,12 +1249,12 @@ body .main-container p.dcl-highlight {
     clear: both;
   }
   #content .media-embed {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
   }
   #content .media-embed h3 {
     max-width: 100%;
-    margin-bottom: 8.5px;
-    font-size: 17px;
+    margin-bottom: 11px;
+    font-size: 22px;
     line-height: normal;
   }
   #content .media-embed p {
@@ -1259,18 +1271,25 @@ body .main-container p.dcl-highlight {
     margin-top: 3rem;
   }
   #content .media-embed.media-display-thumbnail .resource.item {
-    padding: 0 0 34px 0;
+    padding: 0 0 44px 0;
   }
   #content .media-embed.media-display-thumbnail .resource.item:not(:only-child) {
     width: 100%;
   }
   #content .media-embed.media-display-thumbnail .resource.item:not(:only-child) img {
-    max-height: 170px;
+    max-height: 220px;
   }
   #content .media-embed.media-display-thumbnail .resource.item .caption {
     font-family: "DartmouthRuzicka", "Times New Roman", georgia, garamond, serif;
-    font-size: 17px;
+    font-size: 22px;
     line-height: normal;
+  }
+  #content .media-embed.media-display-thumbnail .resource.item .caption p {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0.25rem 0 1rem 0;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
   }
   #content .media-embed.media-display-thumbnail .resource.item > a {
     display: inline-block;
@@ -1279,7 +1298,7 @@ body .main-container p.dcl-highlight {
     margin-bottom: -1.5px;
   }
   #content .media-embed.media-display-thumbnail .resource.item img {
-    max-height: 170px;
+    max-height: 220px;
   }
   #content .block-layout-alignment-text-center .media-embed caption p {
     margin: 0 auto;
@@ -1345,13 +1364,13 @@ body .main-container p.dcl-highlight {
   }
   #content .random-items .random-items-button button {
     width: 100%;
-    padding: 8.5px;
+    padding: 11px;
     cursor: pointer;
     color: #fff;
     border: 1px solid #dedede;
     border-radius: 4px;
     background-color: #00693e;
-    font-size: 17px;
+    font-size: 22px;
   }
   #content .random-items .random-items-button button:hover {
     color: #fff;
@@ -1360,9 +1379,9 @@ body .main-container p.dcl-highlight {
   #content .random-items .random-items-button button::before {
     margin-right: 4px;
     content: "\e043";
-    vertical-align: top;
+    vertical-align: middle;
     font-family: "Material Symbols Outlined";
-    font-size: 25.5px;
+    font-size: 33px;
     font-variation-settings: "FILL" 1;
   }
   #content .random-items .item.resource .random-item {
@@ -1370,7 +1389,7 @@ body .main-container p.dcl-highlight {
     grid-template-rows: auto auto 1fr;
     grid-template-columns: 1fr 1fr;
     align-items: start;
-    column-gap: 51px;
+    column-gap: 66px;
   }
   #content .random-items .item.resource .random-item h2,
   #content .random-items .item.resource .random-item h3,
@@ -1390,7 +1409,7 @@ body .main-container p.dcl-highlight {
     grid-column: 2;
   }
   #content .random-items .item.resource .random-item img {
-    min-height: 340px;
+    min-height: 440px;
     max-height: calc(100vh - 13rem - 80px);
     object-fit: contain;
   }
@@ -1476,7 +1495,7 @@ body .main-container p.dcl-highlight {
   .item.resource .caption {
     margin-top: 6px;
     font-family: "DartmouthRuzicka", "Times New Roman", georgia, garamond, serif;
-    font-size: 15.3px;
+    font-size: 19.8px;
     line-height: normal;
   }
   .item.resource.show h3 {
@@ -1530,7 +1549,7 @@ body .main-container p.dcl-highlight {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 100%;
     padding: 0;
-    column-gap: 34px;
+    column-gap: 44px;
     list-style: none;
   }
   ul.resource-list li {
@@ -1748,7 +1767,7 @@ body .main-container p.dcl-highlight {
 }
 @media screen and (max-width: 575px) {
   header .logo-title h1 {
-    font-size: 17px;
+    font-size: 22px;
   }
   nav.sub-menu ul.navigation li {
     width: 100%;
@@ -1806,7 +1825,7 @@ body .main-container p.dcl-highlight {
 }
 @media screen {
   .lcs_slide_out-r .lcs_header a::before {
-    font-size: 25.5px;
+    font-size: 33px;
   }
   .page-wrapper.speakout header {
     margin: 0;
@@ -1814,7 +1833,7 @@ body .main-container p.dcl-highlight {
   .speakout-header-bar {
     width: 100%;
     height: 10px;
-    margin-bottom: 17px;
+    margin-bottom: 22px;
     background: linear-gradient(to right, rgb(80.7843137255%, 54.3137254902%, 59.0196078431%) 0%, rgb(100%, 81.3725490196%, 52.9411764706%) 17%, rgb(98.0392156863%, 93.137254902%, 70.5882352941%) 33%, rgb(50%, 70.5882352941%, 62.1568627451%) 50%, rgb(57.4509803922%, 73.9215686275%, 86.4705882353%) 67%, rgb(50%, 61.7647058824%, 72.5490196078%) 83%, rgb(77.0588235294%, 70.5882352941%, 79.4117647059%) 100%);
   }
   .speakout #content .bluebg {
