@@ -4,12 +4,17 @@ module.exports = {
   },
 
   product: {
-    dirs: ["asset/css"],
-    files: ["asset/css"],
+    dirs: ["asset/css", "asset/js"],
+    files: ["asset/css", "asset/js"],
   },
 
   sass: {
-    sources: ["asset/sass/**/*.scss"],
+    sources: ["src/sass/**/*.scss"],
     destination: "asset/css",
+  },
+
+  js: {
+    sources: ["src/js/**/*.js"],
+    destination: "asset/js",
   },
 };

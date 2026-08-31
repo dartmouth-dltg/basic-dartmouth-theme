@@ -47,10 +47,10 @@ $this->headScript()->appendFile($this->assetUrl('../node_modules/@midzer/tobii/d
 $this->headLink()->appendStylesheet($this->assetUrl('base_styles/omeka.min.css'));
 $this->headLink()->appendStylesheet($this->assetUrl('css/style.css'));
 $this->headScript()->appendFile('https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js');
-$this->headScript()->prependFile($this->assetUrl('js/fontsession.js'));
-$this->headScript()->prependFile($this->assetUrl('js/fontfaceobserver.js'));
-$this->headScript()->prependFile($this->assetUrl('js/autolink.js'));
-$this->headScript()->prependFile($this->assetUrl('js/default.js'));
+$this->headScript()->prependFile($this->assetUrl('js/fontfaceobserver.min.js'));
+$this->headScript()->prependFile($this->assetUrl('js/fontsession.min.js'));
+$this->headScript()->prependFile($this->assetUrl('js/autolink.min.js'));
+$this->headScript()->prependFile($this->assetUrl('js/default.min.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
 $this->trigger('view.layout');

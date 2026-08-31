@@ -325,7 +325,7 @@ body .main-container p.dcl-highlight {
     background-color: #fff;
   }
   .slideshow.slick-slider.fullscreen-enabled .slick-autoplay-toggle-button {
-    bottom: 5px;
+    bottom: 16px;
   }
   .slideshow.slick-slider.fullscreen-enabled .slick-autoplay-toggle-button .slick-pause-icon::before,
   .slideshow.slick-slider.fullscreen-enabled .slick-autoplay-toggle-button .slick-play-icon::before {
