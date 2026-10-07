@@ -1165,6 +1165,8 @@
     }
   }
   li#sharing-email a {
+    min-width: unset !important;
+    min-height: unset !important;
     color: bd.$white !important;
     background-color: bd.$dart-green !important;
     &:hover,

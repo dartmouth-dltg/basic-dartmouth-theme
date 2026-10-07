@@ -241,7 +241,7 @@
       control.addEventListener('click', () => {
         const isExpanded = control.getAttribute('aria-expanded') === 'true';
         control.setAttribute('aria-expanded', String(!isExpanded));
-        content.style.display = isExpanded ? 'none' : '';
+        content.style.display = isExpanded ? 'none' : 'block';
       });
     });
   };
