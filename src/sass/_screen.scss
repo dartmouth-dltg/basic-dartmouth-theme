@@ -20,6 +20,9 @@
     font-family: bd.$font-family-sans-serif;
     font-size: bd.$base-font-size;
     line-height: bd.$base-line-height;
+    * {
+      font-family: bd.$font-family-sans-serif !important;
+    }
   }
 
   a {
@@ -131,6 +134,7 @@
     margin: 0;
     padding-right: bd.$base-line-height;
     font-size: 1.25 * bd.$base-font-size;
+    font-weight: 700;
     line-height: normal;
   }
 
@@ -181,7 +185,7 @@
       h1 {
         margin: 0;
         font-size: bd.$base-font-size * 1.8;
-        font-weight: 600;
+        font-weight: 700;
         line-height: normal;
       }
       .site-summary {

@@ -543,6 +543,9 @@ body .main-container p.dcl-highlight {
     font-size: 20px;
     line-height: 20px;
   }
+  body * {
+    font-family: "National2Web", verdana, geneva, sans-serif !important;
+  }
   a {
     text-underline-offset: 3px;
   }
@@ -625,6 +628,7 @@ body .main-container p.dcl-highlight {
     margin: 0;
     padding-right: 20px;
     font-size: 25px;
+    font-weight: 700;
     line-height: normal;
   }
   header {
@@ -674,7 +678,7 @@ body .main-container p.dcl-highlight {
   header .logo-title h1 {
     margin: 0;
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: normal;
   }
   header .logo-title .site-summary {
