@@ -36,27 +36,27 @@ h5,
 
 h1,
 .h1 {
-  font-size: 65px;
+  font-size: 58.5px;
 }
 
 h2,
 .h2 {
   max-width: 100%;
-  margin: 20px 0 20px 0;
+  margin: 18px 0 18px 0;
   font-size: 36px;
   line-height: 1.25;
 }
 
 h3,
 .h3 {
-  margin: 20px 0 20px 0;
+  margin: 18px 0 18px 0;
   font-size: 24px;
   line-height: 1.35;
 }
 
 h4,
 .h4 {
-  margin: 20px 0 20px 0;
+  margin: 18px 0 18px 0;
   margin: 20px 0 15px;
   font-size: 21px;
   line-height: 1.35;
@@ -64,7 +64,7 @@ h4,
 
 h5,
 .h5 {
-  margin: 20px 0 16px 0;
+  margin: 18px 0 14.4px 0;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   font-size: 12px;
@@ -74,7 +74,7 @@ h5,
 body {
   color: #000;
   font-family: verdana, geneva, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
 }
 .font-family-sans-serif-loaded body {
@@ -92,7 +92,7 @@ body blockquote {
   margin: 20px 0;
   color: #ababab;
   font-family: "Times New Roman", georgia, garamond, serif;
-  font-size: 25px;
+  font-size: 22.5px;
 }
 .font-family-serif-loaded body blockquote {
   font-family: "DartmouthRuzicka", "Times New Roman", georgia, garamond, serif;
@@ -244,7 +244,7 @@ body .main-container p.dcl-highlight {
   }
   .slideshow .item .slide-contents {
     max-width: 1200px;
-    font-size: 16px;
+    font-size: 14.4px;
     line-height: 1.5;
   }
   .slideshow .item.slide-fit-cover img {
@@ -342,14 +342,14 @@ body .main-container p.dcl-highlight {
     display: inline-block;
     margin-left: 9px;
     text-align: left;
-    font-size: 16px;
+    font-size: 14.4px;
     line-height: normal;
   }
   .slide-fullscreen-openBtn {
     display: grid;
     justify-content: left;
     width: auto;
-    min-width: 200px;
+    min-width: 180px;
     color: #fff;
     border: 0;
     border-radius: 0;
@@ -404,8 +404,8 @@ body .main-container p.dcl-highlight {
     z-index: 1000;
     top: unset;
     bottom: -46px;
-    width: 30px;
-    height: 30px;
+    width: 27px;
+    height: 27px;
     margin: 0;
     cursor: pointer;
   }
@@ -421,9 +421,9 @@ body .main-container p.dcl-highlight {
     left: 0;
     color: #a5d75f;
     font-family: "Font Awesome 5 Free";
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
-    line-height: 30px;
+    line-height: 27px;
   }
   .slideshow-block .slick-prev:hover::before, .slideshow-block .slick-prev:hover::after,
   .slideshow-block .slick-next:hover::before,
@@ -460,7 +460,7 @@ body .main-container p.dcl-highlight {
   }
   .slideshow-block .slick-next,
   .section-intro-splash .slick-next {
-    left: 80px;
+    left: 72px;
   }
   .slideshow-block .slick-next::after,
   .section-intro-splash .slick-next::after {
@@ -481,7 +481,7 @@ body .main-container p.dcl-highlight {
   .section-intro-splash .slick-autoplay-toggle-button {
     z-index: 1000;
     bottom: -30px;
-    left: 36px;
+    left: 32.4px;
     width: auto;
     min-width: auto;
     opacity: 1;
@@ -505,14 +505,14 @@ body .main-container p.dcl-highlight {
   .section-intro-splash .slick-autoplay-toggle-button .slick-pause-icon::before {
     content: "\f28b";
     font-family: "Font Awesome 5 Free";
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
   }
   .slideshow-block .slick-autoplay-toggle-button .slick-play-icon::before,
   .section-intro-splash .slick-autoplay-toggle-button .slick-play-icon::before {
     content: "\f144";
     font-family: "Font Awesome 5 Free";
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
   }
 }
@@ -533,15 +533,15 @@ body .main-container p.dcl-highlight {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 18px;
   }
   body {
     margin: 0;
     word-wrap: break-word;
     background-color: #fff;
     font-family: "National2Web", verdana, geneva, sans-serif;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 18px;
   }
   body * {
     font-family: "National2Web", verdana, geneva, sans-serif !important;
@@ -608,9 +608,9 @@ body .main-container p.dcl-highlight {
   #skipnav {
     position: fixed;
     z-index: -5;
-    top: 20px;
+    top: 18px;
     left: 50%;
-    padding: 5px;
+    padding: 4.5px;
     transform: translateX(-50%);
     opacity: 0;
     border: 1px solid #ababab;
@@ -626,13 +626,13 @@ body .main-container p.dcl-highlight {
   }
   .site-title h1 {
     margin: 0;
-    padding-right: 20px;
-    font-size: 25px;
+    padding-right: 18px;
+    font-size: 22.5px;
     font-weight: 700;
     line-height: normal;
   }
   header {
-    margin: 0 0 20px 0;
+    margin: 0 0 18px 0;
     padding: 9px calc(5% + 0.25rem);
     background-color: #00693e;
   }
@@ -668,7 +668,7 @@ body .main-container p.dcl-highlight {
     grid-column-gap: 1.5rem;
     align-items: center;
     width: 90%;
-    margin: 0 0 5px 0;
+    margin: 0 0 4.5px 0;
     padding: 0.8rem 0;
     line-height: 2.1rem;
   }
@@ -677,7 +677,7 @@ body .main-container p.dcl-highlight {
   }
   header .logo-title h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 32.4px;
     font-weight: 700;
     line-height: normal;
   }
@@ -686,7 +686,7 @@ body .main-container p.dcl-highlight {
     padding: 0 0 0 18px;
     letter-spacing: normal;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-style: italic;
   }
   header .logo-title a,
@@ -749,18 +749,18 @@ body .main-container p.dcl-highlight {
   }
   header .language-switcher-wrapper label {
     color: #fff;
-    font-size: 14px;
+    font-size: 12.6px;
   }
   header .language-switcher-wrapper select {
     margin-bottom: 9px;
     margin-left: 0;
     padding: 0 9px 0 9px;
-    font-size: 16px;
+    font-size: 14.4px;
   }
   header .all-exhibits-link {
     text-decoration: none;
     border: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
   }
   header .all-exhibits-link:hover {
@@ -771,8 +771,8 @@ body .main-container p.dcl-highlight {
     border: none;
   }
   .breadcrumbs {
-    margin-bottom: 20px;
-    font-size: 16px;
+    margin-bottom: 18px;
+    font-size: 14.4px;
     font-weight: bold;
   }
   .breadcrumbs a {
@@ -782,11 +782,11 @@ body .main-container p.dcl-highlight {
   .harmful-content-wrapper {
     display: grid;
     grid-template-columns: fit-content(100%) 1fr;
-    gap: 5px;
-    margin-bottom: 20px;
-    padding: 0 0 0 20px;
+    gap: 4.5px;
+    margin-bottom: 18px;
+    padding: 0 0 0 18px;
     color: #fff;
-    font-size: 16px;
+    font-size: 14.4px;
   }
   header .harmful-content-wrapper::before,
   .harmful-content-wrapper::before {
@@ -794,7 +794,7 @@ body .main-container p.dcl-highlight {
     vertical-align: middle;
     font-family: "Material Symbols Outlined";
     font-variation-settings: "FILL" 1;
-    font-size: 25px;
+    font-size: 22.5px;
   }
   header .harmful-content-wrapper a,
   header .harmful-content-wrapper a:link,
@@ -857,13 +857,13 @@ body .main-container p.dcl-highlight {
   }
   #back-to-top-btn {
     position: fixed;
-    right: 20px;
-    bottom: 20px;
+    right: 18px;
+    bottom: 18px;
     display: none;
-    padding: 5px 5px 0px 5px;
+    padding: 4.5px 4.5px 0px 4.5px;
     color: #000;
     border: 1px solid #fff;
-    border-radius: 10px;
+    border-radius: 9px;
     background-color: #a5d75f;
   }
   #back-to-top-btn:hover {
@@ -872,12 +872,12 @@ body .main-container p.dcl-highlight {
     background-color: #12312b;
   }
   #back-to-top-btn svg {
-    width: 30px;
+    width: 27px;
   }
   footer {
     clear: both;
     width: 100%;
-    padding: 20px 0;
+    padding: 18px 0;
     background-color: #12312b;
   }
   footer > * {
@@ -910,7 +910,7 @@ body .main-container p.dcl-highlight {
     display: grid;
     grid-template-columns: 33% 33%;
     gap: 9px;
-    margin-top: 80px;
+    margin-top: 72px;
   }
   .site-page-pagination .btn {
     padding: 6px 12px;
@@ -926,7 +926,7 @@ body .main-container p.dcl-highlight {
     border: none !important;
     border-radius: 0;
     background-color: #00693e;
-    font-size: 18px;
+    font-size: 16.2px;
     font-weight: bold;
   }
   .site-page-pagination .site-pagination-next:hover, .site-page-pagination .site-pagination-next:focus,
@@ -939,7 +939,7 @@ body .main-container p.dcl-highlight {
   .site-page-pagination .site-pagination-prev::before {
     vertical-align: middle;
     font-family: "Material Symbols Outlined";
-    font-size: 30px;
+    font-size: 27px;
     font-variation-settings: "FILL" 1;
     line-height: 23px;
   }
@@ -961,7 +961,7 @@ body .main-container p.dcl-highlight {
     display: grid;
     grid-template-rows: fit-content(100%) fit-content(100%);
     color: #fff;
-    font-size: 16px;
+    font-size: 14.4px;
   }
   .standard-dcl-footer h2 {
     margin: 0;
@@ -969,14 +969,14 @@ body .main-container p.dcl-highlight {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #fff;
-    font-size: 12px;
+    font-size: 10.8px;
   }
   .standard-dcl-footer .row-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 5rem;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
     border-bottom: 1px solid #fff;
   }
   .standard-dcl-footer .row-1 li {
@@ -1035,13 +1035,13 @@ body .main-container p.dcl-highlight {
     display: grid;
     grid-template-columns: 1fr fit-content(100%);
     gap: 9px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     padding: 4.5px 9px;
     text-decoration: none;
     color: #fff !important;
     border: none;
     background-color: #00693e;
-    font-size: 18px;
+    font-size: 16.2px;
     font-weight: bold;
   }
   .dcl-sub-menu-control:hover {
@@ -1116,7 +1116,7 @@ body .main-container p.dcl-highlight {
     width: 90%;
     padding-bottom: 2rem;
     color: #000;
-    line-height: 30px;
+    line-height: 27px;
   }
   #content h2 {
     margin-top: 0;
@@ -1133,7 +1133,7 @@ body .main-container p.dcl-highlight {
   }
   #content p span {
     font-family: "National2Web", verdana, geneva, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: normal;
   }
   #content a,
@@ -1165,7 +1165,7 @@ body .main-container p.dcl-highlight {
   #content .site-promo-container h2 {
     grid-row: 2;
     margin: 0.5rem 0;
-    font-size: 23px;
+    font-size: 20.7px;
     line-height: 1.5;
   }
   #content .site-promo-harmful-content-flag {
@@ -1180,7 +1180,7 @@ body .main-container p.dcl-highlight {
     text-align: center;
     color: #000;
     background-color: #a5d75f;
-    font-size: 16px;
+    font-size: 14.4px;
     font-weight: bold;
   }
   #content .site-promo-harmful-content-flag p::before {
@@ -1189,7 +1189,7 @@ body .main-container p.dcl-highlight {
     vertical-align: middle;
     font-family: "Material Symbols Outlined";
     font-variation-settings: "FILL" 1;
-    font-size: 25px;
+    font-size: 22.5px;
   }
   #content .site-promo-image {
     grid-row: 1;
@@ -1226,7 +1226,7 @@ body .main-container p.dcl-highlight {
   #content p {
     max-width: 80ch;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 18px;
     line-height: 1.5;
   }
   #content .blocks .left.file,
@@ -1238,7 +1238,7 @@ body .main-container p.dcl-highlight {
     padding: 0;
   }
   #content .center.large.file .item {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
   #content .center.large.file .item h3,
   #content .center.large.file .item p {
@@ -1250,7 +1250,7 @@ body .main-container p.dcl-highlight {
   }
   #content .left.file,
   #content .left.assets {
-    margin: 0 20px 20px 0;
+    margin: 0 18px 18px 0;
   }
   #content .page-layout-normal .block.block-layout-alignment-block-right {
     max-width: 33%;
@@ -1269,8 +1269,8 @@ body .main-container p.dcl-highlight {
   }
   #content .media-embed h3 {
     max-width: 100%;
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-bottom: 9px;
+    font-size: 18px;
     line-height: normal;
   }
   #content .media-embed p {
@@ -1287,17 +1287,17 @@ body .main-container p.dcl-highlight {
     margin-top: 3rem;
   }
   #content .media-embed.media-display-thumbnail .resource.item {
-    padding: 0 0 40px 0;
+    padding: 0 0 36px 0;
   }
   #content .media-embed.media-display-thumbnail .resource.item:not(:only-child) {
     width: 100%;
   }
   #content .media-embed.media-display-thumbnail .resource.item:not(:only-child) img {
-    max-height: 200px;
+    max-height: 180px;
   }
   #content .media-embed.media-display-thumbnail .resource.item .caption {
     font-family: "DartmouthRuzicka", "Times New Roman", georgia, garamond, serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: normal;
   }
   #content .media-embed.media-display-thumbnail .resource.item .caption p {
@@ -1314,7 +1314,7 @@ body .main-container p.dcl-highlight {
     margin-bottom: -1.5px;
   }
   #content .media-embed.media-display-thumbnail .resource.item img {
-    max-height: 200px;
+    max-height: 180px;
   }
   #content .block-layout-alignment-text-center .media-embed caption p {
     margin: 0 auto;
@@ -1383,13 +1383,13 @@ body .main-container p.dcl-highlight {
   }
   #content .random-items .random-items-button button {
     width: 100%;
-    padding: 10px;
+    padding: 9px;
     cursor: pointer;
     color: #fff;
     border: 1px solid #dedede;
     border-radius: 4px;
     background-color: #00693e;
-    font-size: 20px;
+    font-size: 18px;
   }
   #content .random-items .random-items-button button:hover {
     color: #fff;
@@ -1400,7 +1400,7 @@ body .main-container p.dcl-highlight {
     content: "\e043";
     vertical-align: middle;
     font-family: "Material Symbols Outlined";
-    font-size: 30px;
+    font-size: 27px;
     font-variation-settings: "FILL" 1;
   }
   #content .random-items .item.resource .random-item {
@@ -1408,7 +1408,7 @@ body .main-container p.dcl-highlight {
     grid-template-rows: auto auto 1fr;
     grid-template-columns: 1fr 1fr;
     align-items: start;
-    column-gap: 60px;
+    column-gap: 54px;
   }
   #content .random-items .item.resource .random-item h2,
   #content .random-items .item.resource .random-item h3,
@@ -1428,7 +1428,7 @@ body .main-container p.dcl-highlight {
     grid-column: 2;
   }
   #content .random-items .item.resource .random-item img {
-    min-height: 400px;
+    min-height: 360px;
     max-height: calc(100vh - 13rem - 80px);
     object-fit: contain;
   }
@@ -1514,7 +1514,7 @@ body .main-container p.dcl-highlight {
   .item.resource .caption {
     margin-top: 6px;
     font-family: "DartmouthRuzicka", "Times New Roman", georgia, garamond, serif;
-    font-size: 18px;
+    font-size: 16.2px;
     line-height: normal;
   }
   .item.resource.show h3 {
@@ -1568,7 +1568,7 @@ body .main-container p.dcl-highlight {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 100%;
     padding: 0;
-    column-gap: 40px;
+    column-gap: 36px;
     list-style: none;
   }
   ul.resource-list li {
@@ -1788,7 +1788,7 @@ body .main-container p.dcl-highlight {
 }
 @media screen and (max-width: 575px) {
   header .logo-title h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   nav.sub-menu ul.navigation li {
     width: 100%;
@@ -1846,7 +1846,7 @@ body .main-container p.dcl-highlight {
 }
 @media screen {
   .lcs_slide_out-r .lcs_header a::before {
-    font-size: 30px;
+    font-size: 27px;
   }
   .page-wrapper.speakout header {
     margin: 0;
@@ -1854,7 +1854,7 @@ body .main-container p.dcl-highlight {
   .speakout-header-bar {
     width: 100%;
     height: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     background: linear-gradient(to right, rgb(80.7843137255%, 54.3137254902%, 59.0196078431%) 0%, rgb(100%, 81.3725490196%, 52.9411764706%) 17%, rgb(98.0392156863%, 93.137254902%, 70.5882352941%) 33%, rgb(50%, 70.5882352941%, 62.1568627451%) 50%, rgb(57.4509803922%, 73.9215686275%, 86.4705882353%) 67%, rgb(50%, 61.7647058824%, 72.5490196078%) 83%, rgb(77.0588235294%, 70.5882352941%, 79.4117647059%) 100%);
   }
   .speakout #content .bluebg {
