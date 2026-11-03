@@ -722,6 +722,11 @@ body .main-container p.dcl-highlight {
   header .logo-title a:visited:focus span {
     text-decoration-color: #a5d75f;
   }
+  header .subtitle-tagline {
+    padding-left: 18px;
+    color: #fff;
+    font-style: italic;
+  }
   header a,
   header a:active,
   header a:hover,
@@ -1216,7 +1221,9 @@ body .main-container p.dcl-highlight {
   }
   #content p {
     max-width: 80ch;
+    margin-top: 0;
     margin-bottom: 40px;
+    line-height: 1.5;
   }
   #content .blocks .left.file,
   #content .blocks .right.file {
@@ -1930,16 +1937,13 @@ body .main-container p.dcl-highlight {
     justify-self: start;
   }
   .speakout #content .speakout-item-layout #transcriptinfo a {
-    border-bottom: none;
-  }
-  .speakout #content .speakout-item-layout #transcriptinfo a button {
     padding: 0.25rem 0.5rem;
     color: #fff;
     border: none;
     border-radius: 4px;
     background-color: #00693e;
   }
-  .speakout #content .speakout-item-layout #transcriptinfo a button:hover, .speakout #content .speakout-item-layout #transcriptinfo a button:focus {
+  .speakout #content .speakout-item-layout #transcriptinfo a:hover, .speakout #content .speakout-item-layout #transcriptinfo a:focus {
     cursor: pointer;
     background-color: #12312b;
   }

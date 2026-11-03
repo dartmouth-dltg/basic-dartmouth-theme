@@ -217,6 +217,11 @@
         }
       }
     }
+    .subtitle-tagline {
+      padding-left: 18px;
+      color: bd.$white;
+      font-style: italic;
+    }
     a,
     a:active,
     a:hover,
@@ -724,7 +729,9 @@
     }
     p {
       max-width: 80ch;
+      margin-top: 0;
       margin-bottom: bd.$component-spacing-bottom;
+      line-height: 1.5;
     }
     .blocks {
       .left,
@@ -1555,18 +1562,15 @@
           justify-self: start;
         }
         a {
-          border-bottom: none;
-          button {
-            padding: 0.25rem 0.5rem;
-            color: bd.$white;
-            border: none;
-            border-radius: 4px;
-            background-color: bd.$dart-green;
-            &:hover,
-            &:focus {
-              cursor: pointer;
-              background-color: bd.$forest-green;
-            }
+          padding: 0.25rem 0.5rem;
+          color: bd.$white;
+          border: none;
+          border-radius: 4px;
+          background-color: bd.$dart-green;
+          &:hover,
+          &:focus {
+            cursor: pointer;
+            background-color: bd.$forest-green;
           }
         }
       }
