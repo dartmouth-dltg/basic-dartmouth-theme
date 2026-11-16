@@ -1,21 +1,26 @@
 module.exports = {
   gulp: {
-    files:
-    ["./gulpfile.js", "./gulp-config.js"],
+    files: ["./gulpfile.js", "./gulp-config.js"],
   },
-  // The resource paths.
+
   product: {
-    // Directories containing solely Gulp generated files.  gulp clean
-    // deletes these directories.
-    dirs: ["asset/css"],
-
-    // List of generated files.  These files are watched and cleaned.
-    files: ["asset/css"],
-
+    dirs: ["asset/css", "asset/js"],
+    files: ["asset/css", "asset/js"],
   },
 
   sass: {
-    sources: ["asset/sass/**/*.scss"],
+    sources: ["src/sass/**/*.scss"],
     destination: "asset/css",
-  }
+  },
+
+  css: {
+    sources: ["asset/css/**/*.css"],
+    exclude: ["asset/css/**/*.min.css"],
+    destination: "asset/css",
+  },
+
+  js: {
+    sources: ["src/js/**/*.js"],
+    destination: "asset/js",
+  },
 };

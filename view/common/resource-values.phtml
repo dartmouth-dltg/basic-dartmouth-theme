@@ -14,27 +14,27 @@ $filterLocaleCallback = function ($value) use ($lang) {
 };
 
 ?>
-
-<dl>
-<?php
-foreach ($values as $term => $propertyData):
-    $propertyValues = $propertyData['values'];
-    if ($filterLocale) {
-        $propertyValues = array_filter($propertyValues, $filterLocaleCallback);
-    }
-    if (!$propertyValues) {
-        continue;
-    }
-    $property = $propertyData['property'];
-    $propertyLabel = $propertyData['alternate_label'] ?: $translate($property->label());
-    if ('term' === $labelInfo) {
-        $propertyTerm = $property->term();
-    } elseif ('vocab' === $labelInfo) {
-        $propertyTerm = $property->vocabulary()->label();
-    } else {
-        $propertyTerm = null;
-    }
-?>    
+<?php if (count($values) > 0): ?>
+    <dl>
+    <?php
+    foreach ($values as $term => $propertyData):
+        $propertyValues = $propertyData['values'];
+        if ($filterLocale) {
+            $propertyValues = array_filter($propertyValues, $filterLocaleCallback);
+        }
+        if (!$propertyValues) {
+            continue;
+        }
+        $property = $propertyData['property'];
+        $propertyLabel = $propertyData['alternate_label'] ?: $translate($property->label());
+        if ('term' === $labelInfo) {
+            $propertyTerm = $property->term();
+        } elseif ('vocab' === $labelInfo) {
+            $propertyTerm = $property->vocabulary()->label();
+        } else {
+            $propertyTerm = null;
+        }
+    ?>    
 <div class="property">
         <dt>
         <?php echo $escape($propertyLabel); ?>
@@ -53,6 +53,8 @@ foreach ($values as $term => $propertyData):
                 $class[] = $escape($value->valueResource()->resourceName());
             } elseif ('uri' == $valueType) {
                 $class[] = 'uri';
+            } else {
+                $class[] = $escape(str_replace(['_', ':'], '-', $valueType));
             }
             ?>
             <dd class="<?php echo implode(' ', $class); ?>"<?php if ($valueLang != ''): ?>lang="<?php echo $escape($valueLang); ?>"<?php endif; ?>>
@@ -60,7 +62,7 @@ foreach ($values as $term => $propertyData):
                     <span class="language"><?php echo $valueLang; ?></span>
                 <?php endif; ?>
                 <span class="value-content"><?php echo $filterLocale ? $value->asHtml($lang) : $value->asHtml(); ?></span>
-                <?php if(!$value->isPublic()): ?>
+                <?php if (!$value->isPublic()): ?>
                     <span class="o-icon-private" role="img" title="<?php echo $this->escapeHtml($translate('Private')); ?>" aria-label="<?php echo $this->escapeHtml($translate('Private')); ?>"></span>
                 <?php endif; ?>
                 <?php if ($valueAnnotation && $showValueAnnotations): ?>
@@ -77,3 +79,4 @@ foreach ($values as $term => $propertyData):
     </div>
 <?php endforeach; ?>
 </dl>
+<?php endif; ?>

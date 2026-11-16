@@ -45,12 +45,12 @@ $this->headScript()->appendFile($this->assetUrl('../node_modules/@accessible360/
 $this->headLink()->appendStylesheet($this->assetUrl('../node_modules/@midzer/tobii/dist/tobii.min.css'));
 $this->headScript()->appendFile($this->assetUrl('../node_modules/@midzer/tobii/dist/tobii.min.js'));
 $this->headLink()->appendStylesheet($this->assetUrl('base_styles/omeka.min.css'));
-$this->headLink()->appendStylesheet($this->assetUrl('css/style.css'));
+$this->headLink()->appendStylesheet($this->assetUrl('css/basicDartmouth-style.min.css'));
 $this->headScript()->appendFile('https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js');
-$this->headScript()->prependFile($this->assetUrl('js/default.js'));
-$this->headScript()->prependFile($this->assetUrl('js/fontsession.js'));
-$this->headScript()->prependFile($this->assetUrl('js/fontfaceobserver.js'));
-$this->headScript()->prependFile($this->assetUrl('js/autolink.js'));
+$this->headScript()->prependFile($this->assetUrl('js/fontfaceobserver.min.js'));
+$this->headScript()->prependFile($this->assetUrl('js/fontsession.min.js'));
+$this->headScript()->prependFile($this->assetUrl('js/autolink.min.js'));
+$this->headScript()->prependFile($this->assetUrl('js/default.min.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
 $this->trigger('view.layout');
@@ -100,13 +100,15 @@ $site_layout = $this->themeSetting('site_layout') !== null ? $this->themeSetting
                                     <span><?php echo $escape($siteTitle); ?></span>
                                 </a>
                             </h1>
-                            <?php if ($site->summary() && strlen($site->summary()) > 0): ?>
-                                <span class="site-summary secondary-title"><?php echo $site->summary(); ?></span>
+                            <?php if (!empty($this->siteSetting('dclomekamisc_tagline'))): ?>
+                                <span class="subtitle-tagline">
+                                    <?php echo $this->escapeHtml($this->siteSetting('dclomekamisc_tagline')); ?>
+                                </span>
                             <?php endif; ?>
                             <?php if ($this->themeSetting('use_harmful_content') == 1 && $harmfulContent = $this->themeSetting('harmful_content')): ?>
                                 <span class="harmful-content-wrapper">
                                     <span class="harmful-content-statement"><?php echo $harmfulContent; ?></span>
-                            </span>
+                                </span>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -136,13 +138,13 @@ $site_layout = $this->themeSetting('site_layout') !== null ? $this->themeSetting
                                     <ul class="dropdown-menu">
                                         <li class="first"> <a href="https://www.library.dartmouth.edu/book-arts">Book Arts Workshop</a> </li>
                                         <li> <a href="https://www.library.dartmouth.edu/evans">Evans Map Room</a></li>
-                                        <li class="last"> <a href="https://www.library.dartmouth.edu/jones">Jones Media Center</a></li>						
+                                        <li> <a href="https://www.library.dartmouth.edu/jones">Jones Media Center</a></li>
+                                        <li class="last"> <a href="https://www.library.dartmouth.edu/sherman">Sherman Art Library</a> </li>
                                     </ul>
                                     </li>
-                                    <li> <a href="https://www.library.dartmouth.edu/medlib">Medical and Health Sciences Libraries</a> </li>
                                     <li> <a href="https://www.library.dartmouth.edu/feldberg">Feldberg Business &amp; Engineering Library </a> </li>
-                                    <li> <a href="https://www.library.dartmouth.edu/rauner">Rauner Special Collections Library</a> </li>
-                                    <li class="last"> <a href="https://www.library.dartmouth.edu/sherman">Sherman Art Library</a> </li>
+                                    <li> <a href="https://www.library.dartmouth.edu/medlib">Medical and Health Sciences Libraries</a> </li>
+                                    <li class="last"> <a href="https://www.library.dartmouth.edu/rauner">Rauner Special Collections Library</a> </li>
                                 </ul>
                             </nav>
                         </div>
@@ -160,7 +162,7 @@ $site_layout = $this->themeSetting('site_layout') !== null ? $this->themeSetting
                                             <li> <a href="https://www.library.dartmouth.edu/about-us/policies">Policies</a> </li>
                                             <li> <a href="https://www.library.dartmouth.edu/about-us/employment">Employment</a> </li>
                                             <li> <a href="https://www.library.dartmouth.edu/visit/accessibility">Accessibility</a> </li>
-                                            <li class="last"> <a href="https://researchguides.dartmouth.edu/government_documents/home">Federal Depository Library</a> </li>
+                                            <li class="last"> <a href="https://www.library.dartmouth.edu/find/records-management">Records Management</a> </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -187,6 +189,9 @@ $site_layout = $this->themeSetting('site_layout') !== null ? $this->themeSetting
                                 <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
                                     <p>
                                         <a href="https://www.library.dartmouth.edu/feedback">Give Us Feedback</a>
+                                    </p>
+                                    <p class="fdlp-icon">
+                                        <a href="https://researchguides.dartmouth.edu/government_documents/home">Federal Depository Library Program</a>
                                     </p>
                                 </div>
                             </section>
@@ -215,7 +220,7 @@ $site_layout = $this->themeSetting('site_layout') !== null ? $this->themeSetting
                                         <li role="menuitem"><a class="icon-youtube hide-txt" href="https://www.youtube.com/playlist?list=PLA161361549CB448C"><span class="visually-hidden">YouTube</span></a></li>
                                     </ul>
                                     <div>
-                                        <a href="https://www.library.dartmouth.edu/about-us/policies/privacy" data-entity-type="node" data-entity-uuid="a2b641d3-0a06-4065-be6f-92f1a6231a6b" data-entity-substitution="canonical" title="Privacy Policy">Privacy Policy</a>
+                                        <a href="https://policies.dartmouth.edu/policy/dartmouth-libraries-privacy-principles" title="Privacy Policy">Privacy Policy</a>
                                     </div>
                                 </div>
                             </section>

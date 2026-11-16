@@ -1,11 +1,10 @@
 h1,
 .h1 {
   margin: 12px 0 18px 0;
-  letter-spacing: -1px;
   text-transform: none;
   font-family: verdana, geneva, sans-serif;
   font-weight: bold;
-  line-height: 100%;
+  line-height: 1.25;
 }
 .font-family-sans-serif-loaded h1,
 .font-family-sans-serif-loaded .h1 {
@@ -20,7 +19,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  max-width: 930px;
+  max-width: 80ch;
   font-family: "National2Web", verdana, geneva, sans-serif;
   font-weight: bold;
 }
@@ -42,17 +41,17 @@ h1,
 
 h2,
 .h2 {
+  max-width: 100%;
   margin: 18px 0 18px 0;
-  letter-spacing: -1px;
   font-size: 36px;
-  line-height: 100%;
+  line-height: 1.25;
 }
 
 h3,
 .h3 {
   margin: 18px 0 18px 0;
   font-size: 24px;
-  line-height: 115%;
+  line-height: 1.35;
 }
 
 h4,
@@ -60,7 +59,7 @@ h4,
   margin: 18px 0 18px 0;
   margin: 20px 0 15px;
   font-size: 21px;
-  line-height: 110%;
+  line-height: 1.35;
 }
 
 h5,
@@ -69,7 +68,7 @@ h5,
   letter-spacing: 0.6px;
   text-transform: uppercase;
   font-size: 12px;
-  line-height: 150%;
+  line-height: 1.5;
 }
 
 body {
@@ -86,7 +85,7 @@ body strong {
 }
 body p,
 body ul {
-  max-width: 930px;
+  max-width: 80ch;
 }
 body blockquote {
   position: relative;
@@ -142,7 +141,7 @@ body .main-container p.dcl-highlight {
   body .region-home-feature-secondary-first,
   body .region-home-feature-secondary-second {
     color: #000;
-    font-size: em(17px);
+    font-size: 17px;
   }
 }
 @media screen {
@@ -243,6 +242,11 @@ body .main-container p.dcl-highlight {
   .slideshow .item img.img-portrait {
     object-fit: contain;
   }
+  .slideshow .item .slide-contents {
+    max-width: 1200px;
+    font-size: 14.4px;
+    line-height: 1.5;
+  }
   .slideshow .item.slide-fit-cover img {
     object-fit: cover;
   }
@@ -321,7 +325,7 @@ body .main-container p.dcl-highlight {
     background-color: #fff;
   }
   .slideshow.slick-slider.fullscreen-enabled .slick-autoplay-toggle-button {
-    bottom: 5px;
+    bottom: 16px;
   }
   .slideshow.slick-slider.fullscreen-enabled .slick-autoplay-toggle-button .slick-pause-icon::before,
   .slideshow.slick-slider.fullscreen-enabled .slick-autoplay-toggle-button .slick-play-icon::before {
@@ -476,7 +480,7 @@ body .main-container p.dcl-highlight {
   .slideshow-block .slick-autoplay-toggle-button,
   .section-intro-splash .slick-autoplay-toggle-button {
     z-index: 1000;
-    bottom: -37px;
+    bottom: -30px;
     left: 32.4px;
     width: auto;
     min-width: auto;
@@ -539,6 +543,9 @@ body .main-container p.dcl-highlight {
     font-size: 18px;
     line-height: 18px;
   }
+  body * {
+    font-family: "National2Web", verdana, geneva, sans-serif !important;
+  }
   a {
     text-underline-offset: 3px;
   }
@@ -563,7 +570,7 @@ body .main-container p.dcl-highlight {
     color: #666;
     border: none !important;
     font-family: "DartmouthRuzicka", "Times New Roman", georgia, garamond, serif !important;
-    font-style: normal !important;
+    line-height: 1.3;
   }
   select {
     display: inline-block;
@@ -573,7 +580,7 @@ body .main-container p.dcl-highlight {
     height: 2.9em;
     margin: 0 0 0 1.1em;
     padding: 0.3em 2em 0.2em 0.6em;
-    color: rgb(89.25, 89.25, 89.25);
+    color: rgb(35%, 35%, 35%);
     border: 1px solid #666;
     border-radius: 4px;
     background-color: #fff;
@@ -621,6 +628,7 @@ body .main-container p.dcl-highlight {
     margin: 0;
     padding-right: 18px;
     font-size: 22.5px;
+    font-weight: 700;
     line-height: normal;
   }
   header {
@@ -650,7 +658,7 @@ body .main-container p.dcl-highlight {
   .site-title:hover span,
   .site-title:active span {
     -webkit-text-decoration: underline solid #a5d75f 1.5px;
-    text-decoration: underline solid #a5d75f 1.5px;
+            text-decoration: underline solid #a5d75f 1.5px;
   }
   header .logo-title {
     display: grid;
@@ -670,7 +678,7 @@ body .main-container p.dcl-highlight {
   header .logo-title h1 {
     margin: 0;
     font-size: 32.4px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: normal;
   }
   header .logo-title .site-summary {
@@ -700,7 +708,7 @@ body .main-container p.dcl-highlight {
     display: inline-block;
     padding: 6px 0 6px 18px;
     -webkit-text-decoration: underline solid transparent 1.5px;
-    text-decoration: underline solid transparent 1.5px;
+            text-decoration: underline solid transparent 1.5px;
     text-underline-offset: 4px;
     letter-spacing: normal;
     border-bottom: none;
@@ -717,6 +725,11 @@ body .main-container p.dcl-highlight {
   header .logo-title a:visited:hover span,
   header .logo-title a:visited:focus span {
     text-decoration-color: #a5d75f;
+  }
+  header .subtitle-tagline {
+    padding-left: 18px;
+    color: #fff;
+    font-style: italic;
   }
   header a,
   header a:active,
@@ -752,7 +765,7 @@ body .main-container p.dcl-highlight {
   }
   header .all-exhibits-link:hover {
     -webkit-text-decoration: underline solid #a5d75f 1.5px;
-    text-decoration: underline solid #a5d75f 1.5px;
+            text-decoration: underline solid #a5d75f 1.5px;
     text-underline-offset: 3px;
     opacity: 1;
     border: none;
@@ -793,7 +806,7 @@ body .main-container p.dcl-highlight {
   .harmful-content-wrapper a:visited {
     display: inline;
     -webkit-text-decoration: underline solid 1px;
-    text-decoration: underline solid 1px;
+            text-decoration: underline solid 1px;
     text-underline-offset: 3px;
     opacity: 1;
     color: #fff;
@@ -890,16 +903,23 @@ body .main-container p.dcl-highlight {
   footer .footer-social a[class^=icon-]::after {
     font-size: 1.2rem;
   }
+  footer ul.nav li ul li a {
+    font-size: 90%;
+  }
   .site-page-pagination {
     display: grid;
     grid-template-columns: 33% 33%;
     gap: 9px;
     margin-top: 72px;
   }
+  .site-page-pagination .btn {
+    padding: 6px 12px;
+  }
   .site-page-pagination .site-pagination-next,
   .site-page-pagination .site-pagination-prev {
     display: grid;
     gap: 9px;
+    align-items: center;
     text-align: left;
     white-space: normal;
     color: #fff !important;
@@ -984,26 +1004,14 @@ body .main-container p.dcl-highlight {
   .standard-dcl-footer .region-footer-copyright .block-system-branding-block a {
     background-image: url("../img/Dartmouth_Libraries_Lockup_White_RGB.png");
   }
-}
-@media screen and (max-width: 767px) {
-  .standard-dcl-footer h2 {
-    margin-bottom: 0;
+  .standard-dcl-footer .fdlp-icon::before {
+    width: 2.25rem;
+    height: 2.25rem;
+    content: " ";
+    background-image: url("../img/fdlp-emblem-color-stroke.png");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
-  .standard-dcl-footer .row-1 {
-    grid-template-columns: 100%;
-  }
-  .standard-dcl-footer .row-1 .region-footer-fourth section {
-    padding-left: 0;
-    border-left: none;
-  }
-}
-@media screen and (max-width: 450px) {
-  .standard-dcl-footer .row-1 #footer-aboutus-collapse .menu {
-    column-count: 1;
-    column-gap: 0;
-  }
-}
-@media screen {
   .visually-hidden {
     position: absolute;
     overflow: hidden;
@@ -1045,6 +1053,7 @@ body .main-container p.dcl-highlight {
     font-weight: bold;
   }
   .dcl-sub-menu-control:hover {
+    cursor: pointer;
     color: #fff !important;
     outline: none;
     background-color: #12312b;
@@ -1079,6 +1088,10 @@ body .main-container p.dcl-highlight {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 4rem 3rem;
+  }
+  #content.used-for-site-promo .site-promo-image figure img {
+    height: auto;
+    aspect-ratio: 16/10;
   }
   #content.not-used-for-site-promo .site-promo-container {
     display: grid;
@@ -1164,8 +1177,8 @@ body .main-container p.dcl-highlight {
   #content .site-promo-container h2 {
     grid-row: 2;
     margin: 0.5rem 0;
-    font-size: 18px;
-    line-height: normal;
+    font-size: 20.7px;
+    line-height: 1.5;
   }
   #content .site-promo-harmful-content-flag {
     z-index: 2;
@@ -1216,10 +1229,17 @@ body .main-container p.dcl-highlight {
     grid-column: 1;
   }
   #content .site-promo-content p {
+    display: -webkit-box;
+    overflow: hidden;
     margin: 0.25rem 0 1rem 0;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
   }
   #content p {
-    max-width: 1200px;
+    max-width: 80ch;
+    margin-top: 0;
+    margin-bottom: 18px;
+    line-height: 1.5;
   }
   #content .blocks .left.file,
   #content .blocks .right.file {
@@ -1257,7 +1277,7 @@ body .main-container p.dcl-highlight {
     clear: both;
   }
   #content .media-embed {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
   }
   #content .media-embed h3 {
     max-width: 100%;
@@ -1292,6 +1312,13 @@ body .main-container p.dcl-highlight {
     font-size: 18px;
     line-height: normal;
   }
+  #content .media-embed.media-display-thumbnail .resource.item .caption p {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0.25rem 0 1rem 0;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
   #content .media-embed.media-display-thumbnail .resource.item > a {
     display: inline-block;
   }
@@ -1303,6 +1330,9 @@ body .main-container p.dcl-highlight {
   }
   #content .block-layout-alignment-text-center .media-embed caption p {
     margin: 0 auto;
+  }
+  #content .block.block-html.is-after-left-align > * {
+    max-width: calc(33% + 80ch) !important;
   }
   #content .tobii-zoom__icon {
     top: 0;
@@ -1380,7 +1410,7 @@ body .main-container p.dcl-highlight {
   #content .random-items .random-items-button button::before {
     margin-right: 4px;
     content: "\e043";
-    vertical-align: top;
+    vertical-align: middle;
     font-family: "Material Symbols Outlined";
     font-size: 27px;
     font-variation-settings: "FILL" 1;
@@ -1414,49 +1444,6 @@ body .main-container p.dcl-highlight {
     max-height: calc(100vh - 13rem - 80px);
     object-fit: contain;
   }
-}
-@media screen and (max-width: 990px) {
-  #content {
-    max-width: 100%;
-  }
-  #content .item-showcase.random-items {
-    grid-template-columns: 100%;
-  }
-}
-@media screen and (max-width: 767px) {
-  #content.used-for-site-promo .blocks-inner {
-    grid-template-columns: 1fr;
-  }
-  #content .random-items {
-    grid-template-columns: 100%;
-  }
-  #content .random-items .random-items-button {
-    grid-row: 4;
-    grid-column: 1;
-  }
-  #content .random-items .item.resource .random-item {
-    display: grid;
-    grid-template-rows: auto 1fr auto auto;
-    grid-template-columns: 100%;
-    align-items: start;
-  }
-  #content .random-items .item.resource .random-item h2,
-  #content .random-items .item.resource .random-item h3,
-  #content .random-items .item.resource .random-item h4,
-  #content .random-items .item.resource .random-item h5 {
-    grid-row: 1;
-    grid-column: 1;
-  }
-  #content .random-items .item.resource .random-item .random-item-image {
-    grid-row: 2;
-    grid-column: 1;
-  }
-  #content .random-items .item.resource .random-item .random-item-description {
-    grid-row: 3;
-    grid-column: 1;
-  }
-}
-@media screen {
   .lds-ring {
     position: relative;
     display: inline-block;
@@ -1483,14 +1470,6 @@ body .main-container p.dcl-highlight {
   }
   .lds-ring div:nth-child(3) {
     animation-delay: -0.15s;
-  }
-  @keyframes lds-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
   }
   .lds-ellipsis {
     position: relative;
@@ -1524,30 +1503,6 @@ body .main-container p.dcl-highlight {
     left: 56px;
     animation: lds-ellipsis3 0.6s infinite;
   }
-  @keyframes lds-ellipsis1 {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @keyframes lds-ellipsis3 {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-  @keyframes lds-ellipsis2 {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(24px, 0);
-    }
-  }
   .tobii .tobii__slide figure > img {
     max-width: calc(100% - 10em);
     max-height: calc(100% - 4em);
@@ -1562,7 +1517,7 @@ body .main-container p.dcl-highlight {
   .item.resource a.resource-link span.resource-name {
     display: block;
     -webkit-text-decoration: underline solid #00693e 1.5px;
-    text-decoration: underline solid #00693e 1.5px;
+            text-decoration: underline solid #00693e 1.5px;
     text-underline-offset: 3px;
   }
   .item.resource a.resource-link:hover span.resource-name, .item.resource a.resource-link:focus span.resource-name {
@@ -1682,6 +1637,8 @@ body .main-container p.dcl-highlight {
     font-variation-settings: "FILL" 1;
   }
   li#sharing-email a {
+    min-width: unset !important;
+    min-height: unset !important;
     color: #fff !important;
     background-color: #00693e !important;
   }
@@ -1709,6 +1666,97 @@ body .main-container p.dcl-highlight {
   }
   .font-family-serif-loaded .media-group-attachments figcaption {
     font-family: "DartmouthRuzicka", "Times New Roman", georgia, garamond, serif;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .standard-dcl-footer h2 {
+    margin-bottom: 0;
+  }
+  .standard-dcl-footer .row-1 {
+    grid-template-columns: 100%;
+  }
+  .standard-dcl-footer .row-1 .region-footer-fourth section {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .standard-dcl-footer .row-1 #footer-aboutus-collapse .menu {
+    column-count: 1;
+    column-gap: 0;
+  }
+}
+@media screen and (max-width: 990px) {
+  #content {
+    max-width: 100%;
+  }
+  #content .item-showcase.random-items {
+    grid-template-columns: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #content.used-for-site-promo .blocks-inner {
+    grid-template-columns: 1fr;
+  }
+  #content .random-items {
+    grid-template-columns: 100%;
+  }
+  #content .random-items .random-items-button {
+    grid-row: 4;
+    grid-column: 1;
+  }
+  #content .random-items .item.resource .random-item {
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-columns: 100%;
+    align-items: start;
+  }
+  #content .random-items .item.resource .random-item h2,
+  #content .random-items .item.resource .random-item h3,
+  #content .random-items .item.resource .random-item h4,
+  #content .random-items .item.resource .random-item h5 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  #content .random-items .item.resource .random-item .random-item-image {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  #content .random-items .item.resource .random-item .random-item-description {
+    grid-row: 3;
+    grid-column: 1;
   }
 }
 @media screen and (max-width: 990px) {
@@ -1819,7 +1867,7 @@ body .main-container p.dcl-highlight {
     width: 100%;
     height: 10px;
     margin-bottom: 18px;
-    background: linear-gradient(to right, rgb(206, 138.5, 150.5) 0%, rgb(255, 207.5, 135) 17%, rgb(250, 237.5, 180) 33%, rgb(127.5, 180, 158.5) 50%, rgb(146.5, 188.5, 220.5) 67%, rgb(127.5, 157.5, 185) 83%, rgb(196.5, 180, 202.5) 100%);
+    background: linear-gradient(to right, rgb(80.7843137255%, 54.3137254902%, 59.0196078431%) 0%, rgb(100%, 81.3725490196%, 52.9411764706%) 17%, rgb(98.0392156863%, 93.137254902%, 70.5882352941%) 33%, rgb(50%, 70.5882352941%, 62.1568627451%) 50%, rgb(57.4509803922%, 73.9215686275%, 86.4705882353%) 67%, rgb(50%, 61.7647058824%, 72.5490196078%) 83%, rgb(77.0588235294%, 70.5882352941%, 79.4117647059%) 100%);
   }
   .speakout #content .bluebg {
     background-color: #809eb9 !important;
@@ -1905,16 +1953,13 @@ body .main-container p.dcl-highlight {
     justify-self: start;
   }
   .speakout #content .speakout-item-layout #transcriptinfo a {
-    border-bottom: none;
-  }
-  .speakout #content .speakout-item-layout #transcriptinfo a button {
     padding: 0.25rem 0.5rem;
     color: #fff;
     border: none;
     border-radius: 4px;
     background-color: #00693e;
   }
-  .speakout #content .speakout-item-layout #transcriptinfo a button:hover, .speakout #content .speakout-item-layout #transcriptinfo a button:focus {
+  .speakout #content .speakout-item-layout #transcriptinfo a:hover, .speakout #content .speakout-item-layout #transcriptinfo a:focus {
     cursor: pointer;
     background-color: #12312b;
   }
@@ -1947,4 +1992,4 @@ body .main-container p.dcl-highlight {
     grid-template-columns: 100%;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=basicDartmouth-style.css.map */
