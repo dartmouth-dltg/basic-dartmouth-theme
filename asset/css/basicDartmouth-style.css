@@ -1004,6 +1004,14 @@ body .main-container p.dcl-highlight {
   .standard-dcl-footer .region-footer-copyright .block-system-branding-block a {
     background-image: url("../img/Dartmouth_Libraries_Lockup_White_RGB.png");
   }
+  .standard-dcl-footer .fdlp-icon::before {
+    width: 2.25rem;
+    height: 2.25rem;
+    content: " ";
+    background-image: url("../img/fdlp-emblem-color-stroke.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   .visually-hidden {
     position: absolute;
     overflow: hidden;
