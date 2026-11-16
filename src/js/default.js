@@ -11,14 +11,6 @@
 
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
-  const debounce = (fn, wait = 150) => {
-    let timer;
-    return (...args) => {
-      clearTimeout(timer);
-      timer = setTimeout(() => fn(...args), wait);
-    };
-  };
-
   const storage = {
     get(key) {
       try {
@@ -78,16 +70,6 @@
         html.classList.add(`${key}-failed`);
       }
     });
-  };
-
-  // ------------------------------------------------------- site promo image
-
-  const PROMO_IMAGE_RATIO = 0.625;
-
-  const syncPromoImageHeight = () => {
-    const img = document.querySelector('#content.used-for-site-promo .site-promo-image figure img');
-    if (!img) return;
-    img.style.height = `${img.clientWidth * PROMO_IMAGE_RATIO}px`;
   };
 
   // -------------------------------------------------------- media carousels
@@ -263,9 +245,6 @@
 
   const init = () => {
     loadFonts();
-
-    syncPromoImageHeight();
-    window.addEventListener('resize', debounce(syncPromoImageHeight), { passive: true });
 
     initMediaCarousels();
     linkifyValues();

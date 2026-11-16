@@ -1089,6 +1089,10 @@ body .main-container p.dcl-highlight {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 4rem 3rem;
   }
+  #content.used-for-site-promo .site-promo-image figure img {
+    height: auto;
+    aspect-ratio: 16/10;
+  }
   #content.not-used-for-site-promo .site-promo-container {
     display: grid;
     grid-template-rows: auto 1fr;

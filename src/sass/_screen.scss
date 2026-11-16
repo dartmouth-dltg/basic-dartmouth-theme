@@ -591,6 +591,11 @@
     grid-gap: 4rem 3rem;
   }
 
+  #content.used-for-site-promo .site-promo-image figure img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
   #content.not-used-for-site-promo {
     .site-promo-container {
       display: grid;
